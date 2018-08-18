@@ -106,6 +106,8 @@ p {
       color: #9c2815; }
       .side-menu .menuOptions .menuOption.hover {
         background: #e44c32; }
+      .side-menu .menuOptions .menuOption.active {
+        background: #c4523e; }
       .side-menu .menuOptions .menuOption:not(:last-child) {
         border-right: 1px solid #c9341b; }
 

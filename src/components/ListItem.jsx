@@ -8,10 +8,15 @@ class ListItem extends Component {
     };
 
     this.handleHover = this.handleHover.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   handleHover() {
     this.setState(prevStep => ({ isHoverOn: !prevStep.isHoverOn }));
+  }
+
+  handleClick() {
+    this.props.onClick(this.props.id);
   }
 
   render() {
@@ -29,6 +34,7 @@ class ListItem extends Component {
         onMouseEnter={this.handleHover}
         onMouseLeave={this.handleHover}
         className={styleClass}
+        onClick={this.handleClick}
       >
         {this.props.item}
       </li>

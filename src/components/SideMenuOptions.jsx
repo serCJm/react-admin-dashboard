@@ -29,15 +29,20 @@ class SideMenuOptions extends Component {
       },
       currentOption: "home"
     };
+
+    this.handleOptionClick = this.handleOptionClick.bind(this);
   }
 
-  handleClick() {}
+  handleOptionClick(optionId) {
+    this.setState({ currentOption: optionId });
+  }
   render() {
     return (
       <ListMenu
         classNames={this.state.classNames}
         listItems={this.state.items}
         current={this.state.currentOption}
+        onClick={this.handleOptionClick}
       />
     );
   }

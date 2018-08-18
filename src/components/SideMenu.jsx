@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Avatar from "./Avatar";
 import SideMenuOptions from "./SideMenuOptions";
+import SideMenuHome from "./SideMenuHome";
 
 class SideMenu extends Component {
   render() {
@@ -8,6 +9,7 @@ class SideMenu extends Component {
       <nav className="side-menu">
         <Avatar />
         <SideMenuOptions />
+        {/* <SideMenuHome /> */}
       </nav>
     );
   }

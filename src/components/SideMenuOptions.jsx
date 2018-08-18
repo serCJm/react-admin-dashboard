@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ListMenu from "./ListMenu";
+import ListMenuOptions from "./ListMenuOptions";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome } from "@fortawesome/free-solid-svg-icons";
 import { faComments } from "@fortawesome/free-solid-svg-icons";
@@ -38,7 +38,7 @@ class SideMenuOptions extends Component {
   }
   render() {
     return (
-      <ListMenu
+      <ListMenuOptions
         classNames={this.state.classNames}
         listItems={this.state.items}
         current={this.state.currentOption}

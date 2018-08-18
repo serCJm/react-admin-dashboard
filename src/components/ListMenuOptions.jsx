@@ -1,9 +1,9 @@
 import React from "react";
-import ListItem from "./ListItem";
+import ListMenuOptionsItem from "./ListMenuOptionsItem";
 
-function ListMenu(props) {
+function ListMenuOptions(props) {
   const listItems = props.listItems.map(item => (
-    <ListItem
+    <ListMenuOptionsItem
       id={item.id}
       current={props.current}
       key={item.id}
@@ -15,4 +15,4 @@ function ListMenu(props) {
   return <ul className={props.classNames.ul}>{listItems}</ul>;
 }
 
-export default ListMenu;
+export default ListMenuOptions;

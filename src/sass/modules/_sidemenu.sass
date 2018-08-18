@@ -1,0 +1,55 @@
+.side-menu
+    position: fixed
+    top: 0
+    left: 0
+    height: 3rem
+    width: $sidemenuWidth
+    .avatar
+        background: $lightRed
+        height: 6rem
+        @include flexCenter
+        &-img
+            border-radius: 50%
+        &-info
+            margin: 0 1rem
+        &-name
+            color: $white
+            margin-top: 0
+            margin-bottom: .5rem
+        &-progress-bar
+            height: .3rem
+            border-radius: 5px
+        &-progress-bar.field
+            width: 10rem
+            background: darken($red, 20%)
+            position: relative
+        &-progress-bar.fill
+            position: absolute
+            top: 0
+            left: 0
+            width: 3rem
+            background: $white
+        &-lock
+            padding-top: 1rem
+            color: darken($red, 20%)
+            cursor: pointer
+
+    .menuOptions
+        display: flex
+        justify-content: space-between
+        align-items: center
+        background: darken($red, 3%)
+        margin: 0
+        height: 3rem
+        cursor: pointer
+        .menuOption
+            height: 100%
+            width: ($sidemenuWidth/5)
+            @include flexCenter
+            color: darken($red, 25%)
+            &.hover
+                background: darken($red, 5%)
+            &:not(:last-child)
+                border-right: 1px solid darken($red, 15%)
+
+

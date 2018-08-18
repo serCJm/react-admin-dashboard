@@ -1,0 +1,112 @@
+:root {
+  font-size: calc(0.600em + .5vw); }
+
+h1 {
+  font-size: 1.602rem; }
+
+h2 {
+  font-size: 1.424rem; }
+
+h3 {
+  font-size: 1.266rem; }
+
+h4 {
+  font-size: 1.125rem; }
+
+p {
+  font-size: 1rem; }
+
+.avatar-lock {
+  font-size: 1.3rem; }
+
+.menuOption {
+  font-size: 1.5rem; }
+
+.header-top-menu {
+  height: 6rem;
+  display: flex;
+  justify-content: space-between; }
+  .header-top-menu .menu-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8rem; }
+    .header-top-menu .menu-btn-icon {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      font-size: 2.5rem;
+      width: 2.5rem;
+      height: 2.5rem;
+      color: #fff; }
+      .header-top-menu .menu-btn-icon .brg {
+        background: #fff;
+        height: 0.3rem; }
+  .header-top-menu .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #273035;
+    margin: 0;
+    width: 100%;
+    color: #fff;
+    text-transform: uppercase; }
+
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3rem;
+  width: 22rem; }
+  .side-menu .avatar {
+    background: #ea7661;
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .side-menu .avatar-img {
+      border-radius: 50%; }
+    .side-menu .avatar-info {
+      margin: 0 1rem; }
+    .side-menu .avatar-name {
+      color: #fff;
+      margin-top: 0;
+      margin-bottom: 0.5rem; }
+    .side-menu .avatar-progress-bar {
+      height: 0.3rem;
+      border-radius: 5px; }
+    .side-menu .avatar-progress-bar.field {
+      width: 10rem;
+      background: #b22e18;
+      position: relative; }
+    .side-menu .avatar-progress-bar.fill {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 3rem;
+      background: #fff; }
+    .side-menu .avatar-lock {
+      padding-top: 1rem;
+      color: #b22e18;
+      cursor: pointer; }
+  .side-menu .menuOptions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #e5543b;
+    margin: 0;
+    height: 3rem;
+    cursor: pointer; }
+    .side-menu .menuOptions .menuOption {
+      height: 100%;
+      width: 4.4rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #9c2815; }
+      .side-menu .menuOptions .menuOption.hover {
+        background: #e44c32; }
+      .side-menu .menuOptions .menuOption:not(:last-child) {
+        border-right: 1px solid #c9341b; }
+
+/*# sourceMappingURL=index.css.map */

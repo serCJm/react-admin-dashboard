@@ -9,7 +9,7 @@ class SideMenu extends Component {
       <nav className="side-menu">
         <Avatar />
         <SideMenuOptions />
-        {/* <SideMenuHome /> */}
+        <SideMenuHome />
       </nav>
     );
   }

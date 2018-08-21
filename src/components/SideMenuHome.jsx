@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import SideMenuHomePages from "./SideMenuHomePages";
+import SideMenuHomeComponents from "./SideMenuHomeComponents";
 
 class SideMenuHome extends Component {
   constructor(props) {
@@ -19,6 +20,10 @@ class SideMenuHome extends Component {
       <div className="home">
         <input type="text" placeholder="Search" className="search" />
         <SideMenuHomePages
+          handleActivePage={this.handleActivePage}
+          currentMenu={this.state.currentMenu}
+        />
+        <SideMenuHomeComponents
           handleActivePage={this.handleActivePage}
           currentMenu={this.state.currentMenu}
         />

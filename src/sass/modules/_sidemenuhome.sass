@@ -1,7 +1,8 @@
 @import '../base/animations'
 .home
     background: $darkGrey
-    height: 100%
+    min-height: 100%
+    max-height: 200%
     color: $greyFont
     .search
         background: $darkGrey
@@ -18,7 +19,7 @@
     .menu-item
         display: flex
         align-items: center
-        padding: 0 1.5rem
+        padding: 0 .5rem
         position: relative
         cursor: pointer
         border-left: 4px solid transparent
@@ -54,7 +55,7 @@
             height: 1.5rem
             border-radius: 5px
     .sub-menu
-        margin-left: 3rem
+        margin-left: 2rem
         border-left: 2px solid transparentize($greyFont, .8)
         .menu-item:before
             content: ''

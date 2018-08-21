@@ -1,0 +1,79 @@
+@import '../base/animations'
+.home
+    background: $darkGrey
+    height: 100%
+    color: $greyFont
+    .search
+        background: $darkGrey
+        border: none
+        border-bottom: 1px solid $greyFont
+        margin-top: 1rem
+        margin-left: 2rem
+        text-indent: 1rem
+        line-height: 1.5rem
+    .title
+        color: transparentize($greyFont, .5)
+        margin-bottom: 0
+        margin-left: 2rem
+    .menu-item
+        display: flex
+        align-items: center
+        padding: 0 1.5rem
+        position: relative
+        cursor: pointer
+        border-left: 4px solid transparent
+        &.active
+            border-left: 4px solid $lightRed
+            background: darken($darkGrey, 15%)
+        &.animate-close
+            animation: closeSubmenu .2s ease-in-out 1
+        &.submenu-parent:after
+            display: inline-block
+            content: ''
+            width: .7rem
+            height: .7rem
+            border-left: 3px solid $greyFont
+            border-bottom: 3px solid $greyFont
+            transform: rotate(45deg)
+            transition: all .5s
+        &.open-submenu
+            background: shade($darkGrey, 20%)
+        &.open-submenu:after
+            transform: rotate(-45deg)
+            
+        .menu-icon
+            padding: 1rem
+        &.hover
+            background: shade($darkGrey, 20%)
+        .text
+            width: 8rem
+        .submenu-count
+            @include flexCenter
+            margin-right: 1.5rem
+            width: 2rem
+            height: 1.5rem
+            border-radius: 5px
+    .sub-menu
+        margin-left: 3rem
+        border-left: 2px solid transparentize($greyFont, .8)
+        .menu-item:before
+            content: ''
+            position: absolute
+            top: 45%
+            left: -4px
+            width: 1rem
+            height: 2px
+            background: transparentize($greyFont, .8)
+        .menu-item.active:before
+            background: none
+        .menu-item.hover:before
+            background: none
+        &.animate-open
+            animation: showSubmenu .2s ease-in-out 1
+        
+
+
+        
+
+        
+        

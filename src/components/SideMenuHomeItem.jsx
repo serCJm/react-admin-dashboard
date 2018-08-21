@@ -4,40 +4,82 @@ class SideMenuHomeItem extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isHoverOn: false
+      isHoverOn: false,
+      showSubmenu: false,
+      closeSubmenu: null
     };
 
-    // this.handleHover = this.handleHover.bind(this);
-    // this.handleClick = this.handleClick.bind(this);
+    this.handleHover = this.handleHover.bind(this);
+    this.handleSubmenuClick = this.handleSubmenuClick.bind(this);
+    this.handleActivePage = this.handleActivePage.bind(this);
   }
 
-  // handleHover() {
-  //   this.setState(prevStep => ({ isHoverOn: !prevStep.isHoverOn }));
-  // }
+  handleHover() {
+    this.setState(prevStep => ({ isHoverOn: !prevStep.isHoverOn }));
+  }
 
-  // handleClick() {
-  //   this.props.onClick(this.props.id);
-  // }
+  handleSubmenuClick() {
+    if (this.state.closeSubmenu === null) {
+      this.setState({ closeSubmenu: false });
+    } else {
+      this.setState(prevStep => ({ closeSubmenu: !prevStep.closeSubmenu }));
+    }
+    this.setState(prevStep => ({ showSubmenu: !prevStep.showSubmenu }));
+  }
+
+  handleActivePage() {
+    this.props.handleActivePage(this.props.id);
+  }
 
   render() {
-    // let styleClass = this.props.classNames.li;
+    const {
+      id,
+      icon,
+      text,
+      submenu,
+      classNames,
+      countstyle,
+      currentMenu
+    } = this.props;
+
+    let listItemStyle = classNames.menuItem;
 
     // check if item id matches current tab to apply active class
-    // if (this.props.current === this.props.id) {
-    //   styleClass += " " + this.props.classNames.active;
-    // } else if (this.state.isHoverOn) {
-    //   styleClass += " " + this.props.classNames.hover;
-    // }
+    if (currentMenu === id) {
+      listItemStyle += " " + classNames.active;
+    } else if (this.state.isHoverOn) {
+      listItemStyle += " " + classNames.hover;
+    }
+
+    if (submenu && this.state.showSubmenu) {
+      listItemStyle += " " + classNames.subParent + " open-submenu";
+    } else if (submenu) {
+      listItemStyle += " " + classNames.subParent;
+    }
 
     return (
-      <li
-      // onMouseEnter={this.handleHover}
-      // onMouseLeave={this.handleHover}
-      // className={styleClass}
-      // onClick={this.handleClick}
-      >
-        {this.props.icon}
-        {this.props.text}
+      <li>
+        <a
+          onMouseEnter={this.handleHover}
+          onMouseLeave={this.handleHover}
+          className={
+            this.state.closeSubmenu
+              ? listItemStyle + " animate-close"
+              : listItemStyle
+          }
+          onClick={submenu ? this.handleSubmenuClick : this.handleActivePage}
+        >
+          <span className={classNames.menuIcon}>{icon}</span>
+          <span className={classNames.text}>{text}</span>
+          {submenu ? (
+            <span className={classNames.subMenuCount} style={countstyle}>
+              {submenu.length}
+            </span>
+          ) : null}
+        </a>
+        {submenu && this.state.showSubmenu ? (
+          <ul className={classNames.subMenu + " animate-open"}>{submenu}</ul>
+        ) : null}
       </li>
     );
   }

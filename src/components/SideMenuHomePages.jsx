@@ -89,6 +89,37 @@ class SideMenuHomePages extends Component {
         active: "active"
       }
     };
+    this.baseState = this.state.pages;
+    this.filterMenu = this.filterMenu.bind(this);
+  }
+
+  componentDidUpdate(prevProps) {
+    if (this.props.search !== prevProps.search) {
+      this.filterMenu();
+    }
+  }
+
+  filterMenu() {
+    const searchTerm = this.props.search;
+    // deep clone an array
+    // otherwise, slice and spread operator shallow clone
+    const pages = this.baseState.map(a => Object.assign({}, a));
+    const filtered = pages.filter(function f(item) {
+      console.log(item.text.toLowerCase().search(searchTerm.toLowerCase()));
+      if (item.submenu) {
+        item.submenu = item.submenu.filter(f);
+        if (item.submenu.length > 0) {
+          return true;
+        }
+      }
+      if (item.text.toLowerCase().search(searchTerm.toLowerCase()) !== -1) {
+        return true;
+      } else {
+        return false;
+      }
+    });
+
+    this.setState({ pages: filtered });
   }
 
   render() {

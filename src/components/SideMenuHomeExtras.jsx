@@ -11,7 +11,7 @@ class SideMenuHomeExtras extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      pages: [
+      extras: [
         {
           id: "login",
           icon: <FontAwesomeIcon icon={faSignInAlt} />,
@@ -64,7 +64,7 @@ class SideMenuHomeExtras extends Component {
           {Object.keys(this.state)[0]}
         </h2>
         <SideMenuHomeList
-          listItems={this.state.pages}
+          listItems={this.state.extras}
           classNames={this.state.classNames}
           handleActivePage={this.props.handleActivePage}
           currentMenu={this.props.currentMenu}

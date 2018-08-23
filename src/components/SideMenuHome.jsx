@@ -42,16 +42,19 @@ class SideMenuHome extends Component {
         <SideMenuHomeComponents
           handleActivePage={this.handleActivePage}
           currentMenu={this.state.currentMenu}
+          search={this.state.searchString}
         />
         <hr className="home-hr" />
         <SideMenuHomeExtras
           handleActivePage={this.handleActivePage}
           currentMenu={this.state.currentMenu}
+          search={this.state.searchString}
         />
         <hr className="home-hr" />
         <SideMenuHomeDocs
           handleActivePage={this.handleActivePage}
           currentMenu={this.state.currentMenu}
+          search={this.state.searchString}
         />
       </div>
     );

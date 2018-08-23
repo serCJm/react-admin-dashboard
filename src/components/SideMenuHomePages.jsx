@@ -105,7 +105,6 @@ class SideMenuHomePages extends Component {
     // otherwise, slice and spread operator shallow clone
     const pages = this.baseState.map(a => Object.assign({}, a));
     const filtered = pages.filter(function f(item) {
-      console.log(item.text.toLowerCase().search(searchTerm.toLowerCase()));
       if (item.submenu) {
         item.submenu = item.submenu.filter(f);
         if (item.submenu.length > 0) {

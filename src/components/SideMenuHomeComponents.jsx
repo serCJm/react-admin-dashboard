@@ -268,6 +268,69 @@ class SideMenuHomeComponents extends Component {
         active: "active"
       }
     };
+
+    this.baseState = this.state.components.map(a => Object.assign({}, a));
+    this.filterMenu = this.filterMenu.bind(this);
+  }
+
+  componentDidUpdate(prevProps) {
+    if (this.props.search !== prevProps.search) {
+      this.filterMenu();
+    }
+  }
+
+  filterMenu() {
+    const searchTerm = this.props.search;
+    // deep clone an array
+    // otherwise, slice and spread operator shallow clone
+
+    const pages = this.baseState.map(item => Object.assign({}, item));
+    // unfortunately, have to hard-code the assignment
+    // because even Object.assign goes only 2 levels deep
+    // 3rd level is passed by reference only
+    // resulting in modified baseState property upon filter
+    pages[1].submenu[0].submenu = [
+      {
+        id: "line-series",
+        icon: null,
+        text: "Line Series"
+      },
+      {
+        id: "area-series",
+        icon: null,
+        text: "Area Series"
+      },
+      {
+        id: "bar-column-series",
+        icon: null,
+        text: "Bar+Column Series"
+      },
+      {
+        id: "mixed",
+        icon: null,
+        text: "Mixed Series"
+      },
+      {
+        id: "pie-donut-series",
+        icon: null,
+        text: "Pie+Donut Series"
+      }
+    ];
+    const filtered = pages.filter(function f(item) {
+      if (item.submenu) {
+        item.submenu = item.submenu.filter(f);
+        if (item.submenu.length > 0) {
+          return true;
+        }
+      }
+      if (item.text.toLowerCase().search(searchTerm.toLowerCase()) !== -1) {
+        return true;
+      } else {
+        return false;
+      }
+    });
+
+    this.setState({ components: filtered });
   }
 
   render() {

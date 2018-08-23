@@ -16,7 +16,7 @@ class ListMenuOptionsItem extends Component {
   }
 
   handleClick() {
-    this.props.onClick(this.props.id);
+    this.props.handleOptionClick(this.props.id);
   }
 
   render() {

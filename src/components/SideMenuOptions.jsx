@@ -26,23 +26,17 @@ class SideMenuOptions extends Component {
         li: "menuOption",
         hover: "hover",
         active: "active"
-      },
-      currentOption: "home"
+      }
     };
-
-    this.handleOptionClick = this.handleOptionClick.bind(this);
   }
 
-  handleOptionClick(optionId) {
-    this.setState({ currentOption: optionId });
-  }
   render() {
     return (
       <ListMenuOptions
         classNames={this.state.classNames}
         listItems={this.state.items}
-        current={this.state.currentOption}
-        onClick={this.handleOptionClick}
+        current={this.props.currentOption}
+        handleOptionClick={this.props.handleOptionClick}
       />
     );
   }

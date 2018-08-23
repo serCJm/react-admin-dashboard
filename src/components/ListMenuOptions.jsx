@@ -9,7 +9,7 @@ function ListMenuOptions(props) {
       key={item.id}
       item={item.item}
       classNames={props.classNames}
-      onClick={props.onClick}
+      handleOptionClick={props.handleOptionClick}
     />
   ));
   return <ul className={props.classNames.ul}>{listItems}</ul>;

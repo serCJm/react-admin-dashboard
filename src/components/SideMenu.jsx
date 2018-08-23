@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Avatar from "./Avatar";
 import SideMenuOptions from "./SideMenuOptions";
 import SideMenuHome from "./SideMenuHome";
+import SideMenuUsers from "./SideMenuUsers";
 
 class SideMenu extends Component {
   constructor(props) {
@@ -17,6 +18,13 @@ class SideMenu extends Component {
     this.setState({ currentOption: optionId });
   }
   render() {
+    let currentTab;
+    if (this.state.currentOption === "home") {
+      currentTab = <SideMenuHome />;
+    } else if (this.state.currentOption === "comments") {
+      currentTab = <SideMenuUsers />;
+    }
+
     return (
       <nav className="side-menu">
         <Avatar />
@@ -24,7 +32,7 @@ class SideMenu extends Component {
           currentOption={this.state.currentOption}
           handleOptionClick={this.handleOptionClick}
         />
-        <SideMenuHome />
+        {currentTab}
       </nav>
     );
   }

@@ -22,9 +22,9 @@ p {
 .menuOption {
   font-size: 1.5rem; }
 
-.home .title {
+.side-menu .title {
   text-transform: uppercase;
-  font-size: 1rem; }
+  font-size: 0.8rem; }
 
 .header-top-menu {
   height: 6rem;
@@ -213,8 +213,20 @@ input, textarea {
         border-right: 1px solid #c9341b; }
   .side-menu .title {
     color: rgba(137, 148, 155, 0.5);
-    margin-bottom: 0;
-    margin-top: 1.5rem;
-    margin-left: 2rem; }
+    margin: 0 2rem 1rem;
+    padding-top: 1.5rem; }
+  .side-menu .user {
+    display: flex;
+    align-items: center;
+    cursor: pointer; }
+    .side-menu .user.hover {
+      background: #1f272a; }
+    .side-menu .user.active {
+      background: #1f272a; }
+    .side-menu .user .avatar {
+      border-radius: 50%;
+      margin-left: 2rem;
+      margin-right: 1rem;
+      background: #273135; }
 
 /*# sourceMappingURL=index.css.map */

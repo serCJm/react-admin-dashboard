@@ -9,11 +9,19 @@ class SideMenuHome extends Component {
     super(props);
     this.state = {
       currentMenu: "dashboard",
-      searchString: null
+      searchString: null,
+      exitAnimation: false
     };
 
     this.handleActivePage = this.handleActivePage.bind(this);
     this.handleSearchChange = this.handleSearchChange.bind(this);
+  }
+
+  componentWillReceiveProps(newProps) {
+    //check for the mounted props
+    if (newProps.current !== this.props.id) {
+      this.setState(prevState => ({ exitAnimation: !prevState.exitAnimation }));
+    }
   }
 
   handleActivePage(pageId) {
@@ -25,7 +33,11 @@ class SideMenuHome extends Component {
   }
   render() {
     return (
-      <div className="home">
+      <div
+        className={
+          this.state.exitAnimation ? "home animate-close" : "home animate-open"
+        }
+      >
         <input
           type="text"
           placeholder="Search"

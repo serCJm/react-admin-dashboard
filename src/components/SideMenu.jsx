@@ -9,20 +9,29 @@ class SideMenu extends Component {
     super(props);
 
     this.state = {
-      currentOption: "home"
+      currentOption: "home",
+      showCurrent: "home"
     };
     this.handleOptionClick = this.handleOptionClick.bind(this);
   }
 
   handleOptionClick(optionId) {
-    this.setState({ currentOption: optionId });
+    this.setState({ showCurrent: optionId });
+    setTimeout(
+      function() {
+        this.setState({ currentOption: optionId });
+      }.bind(this),
+      500
+    );
   }
   render() {
     let currentTab;
     if (this.state.currentOption === "home") {
-      currentTab = <SideMenuHome />;
+      currentTab = <SideMenuHome id="home" current={this.state.showCurrent} />;
     } else if (this.state.currentOption === "comments") {
-      currentTab = <SideMenuUsers />;
+      currentTab = (
+        <SideMenuUsers id="comments" current={this.state.showCurrent} />
+      );
     }
 
     return (

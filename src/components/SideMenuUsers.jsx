@@ -49,17 +49,32 @@ class SideMenuUsers extends Component {
         hover: "hover",
         active: "active"
       },
-      selectedUser: null
+      selectedUser: null,
+      exitAnimation: false
     };
     this.handleSelectUser = this.handleSelectUser.bind(this);
+  }
+
+  componentWillReceiveProps(newProps) {
+    //check for the mounted props
+    if (newProps.current !== this.props.id) {
+      this.setState(prevState => ({ exitAnimation: !prevState.exitAnimation }));
+    }
   }
 
   handleSelectUser(userID) {
     this.setState({ selectedUser: userID });
   }
+
   render() {
     return (
-      <div className="home users">
+      <div
+        className={
+          this.state.exitAnimation
+            ? "home users animate-close"
+            : "home users animate-open"
+        }
+      >
         <SideMenuUsersStatus
           classNames={this.state.classNames}
           status="online"

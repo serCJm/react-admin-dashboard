@@ -8,6 +8,10 @@ input, textarea
     max-height: 400%
     color: $greyFont
     padding-bottom: 3rem
+    &.animate-open
+        animation: openTab .5s ease-in-out 1
+    &.animate-close
+        animation: closeTab .5s ease-in-out 1
     .search
         background: $darkGrey
         border: none

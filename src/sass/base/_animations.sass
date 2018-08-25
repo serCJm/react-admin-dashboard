@@ -14,3 +14,26 @@
     100%
         max-height: 3.2rem
             
+
+@keyframes openTab
+    0%
+        transform: scaleX(0)
+        border-left: 3px solid $red
+        border-right: 3px solid $red
+        
+    100%
+        transform: scaleX(1)
+        border-left: none
+        border-right: none
+
+@keyframes closeTab
+    0%
+        transform: scaleX(1)
+        border-left: 3px solid $red
+        border-right: 3px solid $red
+        
+    100%
+        transform: scaleX(0)
+        border-left: none
+        border-right: none
+        

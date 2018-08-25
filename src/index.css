@@ -70,6 +70,24 @@ p {
     max-height: 2.8rem; }
   100% {
     max-height: 3.2rem; } }
+@keyframes openTab {
+  0% {
+    transform: scaleX(0);
+    border-left: 3px solid #e76049;
+    border-right: 3px solid #e76049; }
+  100% {
+    transform: scaleX(1);
+    border-left: none;
+    border-right: none; } }
+@keyframes closeTab {
+  0% {
+    transform: scaleX(1);
+    border-left: 3px solid #e76049;
+    border-right: 3px solid #e76049; }
+  100% {
+    transform: scaleX(0);
+    border-left: none;
+    border-right: none; } }
 input, textarea {
   color: #fff; }
 
@@ -79,6 +97,10 @@ input, textarea {
   max-height: 400%;
   color: #89949b;
   padding-bottom: 3rem; }
+  .home.animate-open {
+    animation: openTab 0.5s ease-in-out 1; }
+  .home.animate-close {
+    animation: closeTab 0.5s ease-in-out 1; }
   .home .search {
     background: #273135;
     border: none;
@@ -158,7 +180,8 @@ input, textarea {
   left: 0;
   height: 100%;
   width: 19rem;
-  overflow: scroll; }
+  overflow: scroll;
+  background: #273135; }
   .side-menu .avatar {
     background: #ea7661;
     height: 6rem;

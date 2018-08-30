@@ -17,10 +17,13 @@ class SideMenuHome extends Component {
     this.handleSearchChange = this.handleSearchChange.bind(this);
   }
 
-  componentWillReceiveProps(newProps) {
+  static getDerivedStateFromProps(nextProps, prevState) {
     //check for the mounted props
-    if (newProps.current !== this.props.id) {
-      this.setState(prevState => ({ exitAnimation: !prevState.exitAnimation }));
+    if (nextProps.current !== nextProps.id) {
+      const { exitAnimation } = { ...prevState };
+      return { exitAnimation: !exitAnimation };
+    } else {
+      return null;
     }
   }
 

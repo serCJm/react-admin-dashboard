@@ -3,6 +3,7 @@ import Avatar from "./Avatar";
 import SideMenuOptions from "./SideMenuOptions";
 import SideMenuHome from "./SideMenuHome";
 import SideMenuUsers from "./SideMenuUsers";
+import SideMenuGraphs from "./SideMenuGraphs";
 
 class SideMenu extends Component {
   constructor(props) {
@@ -24,6 +25,7 @@ class SideMenu extends Component {
       500
     );
   }
+
   render() {
     let currentTab;
     if (this.state.currentOption === "home") {
@@ -31,6 +33,10 @@ class SideMenu extends Component {
     } else if (this.state.currentOption === "comments") {
       currentTab = (
         <SideMenuUsers id="comments" current={this.state.showCurrent} />
+      );
+    } else if (this.state.currentOption === "chartbar") {
+      currentTab = (
+        <SideMenuGraphs id="chartbar" current={this.state.showCurrent} />
       );
     }
 

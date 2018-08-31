@@ -136,8 +136,8 @@ class PolarAreaChart extends Component {
             )`}
         >
           <path
-            d="M 0,0 L -10,-10 H -40 Q -50,-10 -50,-20 V -25 Q -50,-35
-            -40,-35 H 40 Q 50,-35 50,-25 V -20 Q 50,-10 40,-10 H 10 z"
+            d="M 0,0 L -10,-10 H -50 Q -60,-10 -60,-20 V -25 Q -60,-35
+            -50,-35 H 50 Q 60,-35 60,-25 V -20 Q 60,-10 50,-10 H 10 z"
             style={{
               fill: "rgba(7, 9, 10, .7)",
               stroke: "black"

@@ -255,13 +255,16 @@ input, textarea {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 94%;
+    width: 96%;
     margin: 0 auto; }
     .side-menu .graphs .stock-info {
       display: flex;
       justify-items: space-between;
       align-content: center;
-      margin-top: 1rem; }
+      margin-top: 0;
+      margin-bottom: 1rem; }
+      .side-menu .graphs .stock-info .title {
+        margin: 1rem 0; }
       .side-menu .graphs .stock-info .bar-green {
         fill: #52b27e; }
         .side-menu .graphs .stock-info .bar-green:hover {
@@ -270,5 +273,15 @@ input, textarea {
         fill: #ff5a5e; }
         .side-menu .graphs .stock-info .bar-red:hover {
           fill: #ff8d90; }
+      .side-menu .graphs .stock-info .yearly-change {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #52b27e;
+        width: 100%;
+        height: 40px;
+        color: #fff; }
+        .side-menu .graphs .stock-info .yearly-change .text {
+          padding: 0; }
 
 /*# sourceMappingURL=index.css.map */

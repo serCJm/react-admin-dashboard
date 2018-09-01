@@ -1,4 +1,5 @@
 import React from "react";
+import RectInfoBox from "./RectInfoBox";
 
 const LineWithCircle = props => {
   return (
@@ -18,24 +19,7 @@ const LineWithCircle = props => {
         r="2"
         fill="green"
       />
-      <g>
-        <rect
-          x={props.tooltip.x1 + 10}
-          y={props.tooltip.mouseY - 25}
-          width="28"
-          height="24"
-          fill="rgba(0, 0, 0, .6)"
-          stroke="none"
-        />
-        <text
-          x={props.tooltip.x1 + 24}
-          y={props.tooltip.mouseY - 7}
-          textAnchor="middle"
-          fill="white"
-        >
-          {props.tooltip.yValue}
-        </text>
-      </g>
+      <RectInfoBox tooltip={props.tooltip} />
     </g>
   );
 };

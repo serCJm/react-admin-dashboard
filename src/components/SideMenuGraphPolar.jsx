@@ -1,5 +1,5 @@
 import React from "react";
-import PolarAreaChart from "../graphs/PolarAreaChart";
+import PolarAreaChart from "./graphs/PolarAreaChart";
 
 const data = [
   {

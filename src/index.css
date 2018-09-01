@@ -254,6 +254,21 @@ input, textarea {
   .side-menu .graphs {
     display: flex;
     flex-direction: column;
-    align-items: center; }
+    align-items: center;
+    width: 94%;
+    margin: 0 auto; }
+    .side-menu .graphs .stock-info {
+      display: flex;
+      justify-items: space-between;
+      align-content: center;
+      margin-top: 1rem; }
+      .side-menu .graphs .stock-info .bar-green {
+        fill: #52b27e; }
+        .side-menu .graphs .stock-info .bar-green:hover {
+          fill: #75c298; }
+      .side-menu .graphs .stock-info .bar-red {
+        fill: #ff5a5e; }
+        .side-menu .graphs .stock-info .bar-red:hover {
+          fill: #ff8d90; }
 
 /*# sourceMappingURL=index.css.map */

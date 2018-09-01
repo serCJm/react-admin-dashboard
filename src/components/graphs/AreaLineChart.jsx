@@ -32,10 +32,11 @@ class AreaLineChart extends Component {
     if (!nextProps.data) return null;
     const { data } = nextProps;
     const { xScale, yScale, areaGenerator, lineGenerator } = prevState;
-    areaGenerator.x((d, i) => xScale(i)).y1(d => yScale(d));
 
     xScale.domain([0, d3.max(data, (d, i) => i)]);
     yScale.domain([0, d3.max(data, d => d)]);
+
+    areaGenerator.x((d, i) => xScale(i)).y1(d => yScale(d));
     areaGenerator.y0(yScale(0));
 
     lineGenerator.x((d, i) => xScale(i));

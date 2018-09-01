@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import SimpleBarChart from "./graphs/SimpleBarChart";
+import NumberDisplay from "./NumberDisplay";
 
 const data = [];
 for (let i = 0; i < 12; i++) {
@@ -20,15 +21,15 @@ class SideMenuGraphStock extends Component {
           <h2 className="title">{this.state.stockTitle}</h2>
           <SimpleBarChart
             data={data}
-            width="100"
-            height="30"
-            margin={{ top: 10 }}
+            width="110"
+            height="40"
+            margin={{ top: 10, right: 20 }}
             classNames={{ bar1: "bar-red", bar2: "bar-green" }}
           />
         </div>
         <div>
           <h2 className="title">Yearly Change</h2>
-          {/* <SimpleBarChart /> */}
+          <NumberDisplay classNames="yearly-change" number="+120%" />
         </div>
       </div>
     );

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import SideMenuGraphPolar from "./SideMenuGraphPolar";
 import SideMenuGraphArea from "./SideMenuGraphArea";
 import SideMenuGraphStock from "./SideMenuGraphStock";
+import SideMenuGraphMarket from "./SideMenuGraphMarket";
 
 class SideMenuGraphs extends Component {
   constructor(props) {
@@ -35,6 +36,8 @@ class SideMenuGraphs extends Component {
         <hr className="home-hr" />
         <SideMenuGraphArea />
         <SideMenuGraphStock />
+        <hr className="home-hr" />
+        <SideMenuGraphMarket />
       </div>
     );
   }

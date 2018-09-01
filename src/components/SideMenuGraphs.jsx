@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import SideMenuGraphPolar from "./SideMenuGraphPolar";
 import SideMenuGraphArea from "./SideMenuGraphArea";
+import SideMenuGraphStock from "./SideMenuGraphStock";
 
 class SideMenuGraphs extends Component {
   constructor(props) {
@@ -33,6 +34,7 @@ class SideMenuGraphs extends Component {
         <SideMenuGraphPolar />
         <hr className="home-hr" />
         <SideMenuGraphArea />
+        <SideMenuGraphStock />
       </div>
     );
   }

@@ -39,6 +39,7 @@ class SideMenuGraphMarket extends Component {
           <h2 className="title">DOW</h2>
           <DowGraph
             data={dataDow}
+            dataVolume={dowVolume}
             width="100"
             height="40"
             margin={{ top: 10, right: 20 }}

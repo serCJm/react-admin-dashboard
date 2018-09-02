@@ -11,6 +11,11 @@ class DowGraph extends Component {
       .scaleLinear()
       .range([+this.props.height, +this.props.margin.top]),
     lineGenerator: d3.line(),
+    bars: null,
+    xBarScale: d3.scaleLinear().range([0, +this.props.width]),
+    yBarScale: d3
+      .scaleLinear()
+      .range([+this.props.height, +this.props.margin.top]),
     tooltip: {
       show: false,
       xGraph: null,
@@ -29,9 +34,10 @@ class DowGraph extends Component {
 
   static getDerivedStateFromProps(nextProps, prevState) {
     if (!nextProps.data) return null;
-    const { data } = nextProps;
-    const { xScale, yScale, lineGenerator } = prevState;
+    const { data, dataVolume } = nextProps;
+    const { xScale, yScale, lineGenerator, xBarScale, yBarScale } = prevState;
 
+    // line chart
     xScale.domain([0, d3.max(data, (d, i) => i)]);
     yScale.domain(d3.extent(data, d => d));
 
@@ -39,7 +45,20 @@ class DowGraph extends Component {
     lineGenerator.y(d => yScale(d));
 
     const line = lineGenerator(data);
-    return { line };
+
+    // bar chart
+    xBarScale.domain([0, d3.max(dataVolume, (d, i) => i)]);
+    yBarScale.domain(d3.extent(dataVolume, d => d));
+    const bars = dataVolume.map((d, i) => {
+      return {
+        x: xBarScale(i),
+        y: yBarScale(d),
+        height: nextProps.height - yScale(d),
+        width: "2",
+        fill: "rgb(54, 74, 84)"
+      };
+    });
+    return { line, bars };
   }
 
   componentDidMount() {
@@ -93,6 +112,18 @@ class DowGraph extends Component {
         />
       );
     }
+
+    const barChart = this.state.bars.map((d, i) => (
+      <rect
+        key={i}
+        x={d.x}
+        y={d.y}
+        height={d.height}
+        width={d.width}
+        fill={d.fill}
+      />
+    ));
+
     return (
       <div>
         <svg
@@ -102,7 +133,10 @@ class DowGraph extends Component {
           onMouseMove={this.handleMouseHover}
           onMouseLeave={this.handleMouseLeave}
         >
-          <path d={this.state.line} fill="none" stroke="rgb(192, 96, 56)" />
+          <g>
+            {barChart}
+            <path d={this.state.line} fill="none" stroke="rgb(192, 96, 56)" />
+          </g>
           {tooltipLine}
         </svg>
         {tooltipBox}

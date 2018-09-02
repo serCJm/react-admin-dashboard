@@ -174,13 +174,29 @@ input, textarea {
     .home .sub-menu.animate-open {
       animation: showSubmenu 0.2s ease-in-out 1; }
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px; }
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; }
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; }
+
 .side-menu {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 19rem;
-  overflow: scroll;
+  overflow-y: scroll;
   background: #273135; }
   .side-menu .avatar {
     background: #ea7661;
@@ -290,8 +306,7 @@ input, textarea {
   position: fixed;
   background: rgba(0, 0, 0, 0.6);
   padding: 0.2rem;
-  color: #fff;
-  z-index: 10; }
+  color: #fff; }
   .tooltip-box .text {
     padding: 0;
     margin: 0; }

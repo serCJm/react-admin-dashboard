@@ -67,7 +67,7 @@ class NasdaqGraph extends Component {
     tooltip.yGraph = yScale(yValue);
     tooltip.mouseXAbs = e.clientX;
     tooltip.mouseYAbs = e.clientY;
-    tooltip.text1 = Number(yValue).toFixed(2);
+    tooltip.text1 = `Index: ${Number(yValue).toFixed(2)}`;
     this.setState({ tooltip: tooltip });
   };
 

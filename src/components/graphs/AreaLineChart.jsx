@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import * as d3 from "d3";
 import LineWithCircle from "./tooltips/LineWithCircle";
 import SimpleLine from "./SimpleLine";
+import TooltipBox from "./tooltips/TooltipBox";
 
 class AreaLineChart extends Component {
   constructor(props) {
@@ -15,8 +16,14 @@ class AreaLineChart extends Component {
       areaGenerator: d3.area(),
       tooltip: {
         show: false,
+        xGraph: null,
+        yGraph: null,
         y1: +this.props.height,
-        y2: this.props.margin.top
+        y2: this.props.margin.top,
+        mouseXAbs: null,
+        mouseYAbs: null,
+        text1: null,
+        text2: null
       }
     };
 
@@ -61,14 +68,14 @@ class AreaLineChart extends Component {
     const xValue = Math.floor(xScale.invert(cursporpt.x));
     const yValue = this.props.data[xValue];
 
-    const tooltipCoords = { ...this.state.tooltip };
-    tooltipCoords.show = true;
-    tooltipCoords.x1 = xScale(xValue);
-    tooltipCoords.x2 = xScale(xValue);
-    tooltipCoords.yExact = yScale(yValue);
-    tooltipCoords.mouseY = cursporpt.y;
-    tooltipCoords.yValue = yValue;
-    this.setState({ tooltip: tooltipCoords });
+    const tooltip = { ...this.state.tooltip };
+    tooltip.show = true;
+    tooltip.xGraph = xScale(xValue);
+    tooltip.yGraph = yScale(yValue);
+    tooltip.mouseXAbs = e.clientX;
+    tooltip.mouseYAbs = e.clientY;
+    tooltip.text1 = Number(yValue).toFixed(2);
+    this.setState({ tooltip: tooltip });
   }
 
   handleMouseLeave() {
@@ -78,28 +85,42 @@ class AreaLineChart extends Component {
   }
 
   render() {
-    let tooltip = null;
+    let tooltipLine = null,
+      tooltipBox = null;
+
     if (this.state.tooltip.show) {
-      tooltip = <LineWithCircle tooltip={this.state.tooltip} />;
+      tooltipLine = <LineWithCircle tooltip={this.state.tooltip} />;
+      tooltipBox = (
+        <TooltipBox
+          position={{
+            left: this.state.tooltip.mouseXAbs + 15,
+            top: this.state.tooltip.mouseYAbs - 15
+          }}
+          text1={this.state.tooltip.text1}
+        />
+      );
     }
 
     return (
-      <svg ref={this.svg} width={this.props.width} height={this.props.height}>
-        <g
-          onMouseMove={this.handleMouseHover}
-          onMouseLeave={this.handleMouseLeave}
-        >
-          <path d={this.state.area} fill="rgba(0, 0, 255, .4)" />
-          <SimpleLine
-            width={this.props.width}
-            height={this.props.height}
-            data={this.props.data}
-            stroke="rgb(0, 0, 255)"
-            margin={this.props.margin}
-          />
-        </g>
-        {tooltip}
-      </svg>
+      <div>
+        <svg ref={this.svg} width={this.props.width} height={this.props.height}>
+          <g
+            onMouseMove={this.handleMouseHover}
+            onMouseLeave={this.handleMouseLeave}
+          >
+            <path d={this.state.area} fill="rgba(0, 0, 255, .4)" />
+            <SimpleLine
+              width={this.props.width}
+              height={this.props.height}
+              data={this.props.data}
+              stroke="rgb(0, 0, 255)"
+              margin={this.props.margin}
+            />
+          </g>
+          {tooltipLine}
+        </svg>
+        {tooltipBox}
+      </div>
     );
   }
 }

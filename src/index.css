@@ -285,4 +285,15 @@ input, textarea {
         .side-menu .graphs .stock-info .yearly-change .text, .side-menu .graphs .market-info .yearly-change .text {
           padding: 0; }
 
+.tooltip-box {
+  display: block;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 0.2rem;
+  color: #fff;
+  z-index: 10; }
+  .tooltip-box .text {
+    padding: 0;
+    margin: 0; }
+
 /*# sourceMappingURL=index.css.map */

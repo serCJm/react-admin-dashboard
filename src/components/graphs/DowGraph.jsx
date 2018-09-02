@@ -3,7 +3,7 @@ import * as d3 from "d3";
 import LineWithCircle from "./tooltips/LineWithCircle";
 import TooltipBox from "./tooltips/TooltipBox";
 
-class NasdaqGraph extends Component {
+class DowGraph extends Component {
   state = {
     line: null,
     xScale: d3.scaleLinear().range([0, +this.props.width]),
@@ -102,7 +102,7 @@ class NasdaqGraph extends Component {
           onMouseMove={this.handleMouseHover}
           onMouseLeave={this.handleMouseLeave}
         >
-          <path d={this.state.line} fill="none" stroke="green" />
+          <path d={this.state.line} fill="none" stroke="rgb(192, 96, 56)" />
           {tooltipLine}
         </svg>
         {tooltipBox}
@@ -111,4 +111,4 @@ class NasdaqGraph extends Component {
   }
 }
 
-export default NasdaqGraph;
+export default DowGraph;

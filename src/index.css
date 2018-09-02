@@ -257,23 +257,24 @@ input, textarea {
     align-items: center;
     width: 96%;
     margin: 0 auto; }
-    .side-menu .graphs .stock-info {
+    .side-menu .graphs .stock-info, .side-menu .graphs .market-info {
       display: flex;
-      justify-items: space-between;
-      align-content: center;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 90%;
       margin-top: 0;
       margin-bottom: 1rem; }
-      .side-menu .graphs .stock-info .title {
+      .side-menu .graphs .stock-info .title, .side-menu .graphs .market-info .title {
         margin: 1rem 0; }
-      .side-menu .graphs .stock-info .bar-green {
+      .side-menu .graphs .stock-info .bar-green, .side-menu .graphs .market-info .bar-green {
         fill: #52b27e; }
-        .side-menu .graphs .stock-info .bar-green:hover {
+        .side-menu .graphs .stock-info .bar-green:hover, .side-menu .graphs .market-info .bar-green:hover {
           fill: #75c298; }
-      .side-menu .graphs .stock-info .bar-red {
+      .side-menu .graphs .stock-info .bar-red, .side-menu .graphs .market-info .bar-red {
         fill: #ff5a5e; }
-        .side-menu .graphs .stock-info .bar-red:hover {
+        .side-menu .graphs .stock-info .bar-red:hover, .side-menu .graphs .market-info .bar-red:hover {
           fill: #ff8d90; }
-      .side-menu .graphs .stock-info .yearly-change {
+      .side-menu .graphs .stock-info .yearly-change, .side-menu .graphs .market-info .yearly-change {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -281,7 +282,7 @@ input, textarea {
         width: 100%;
         height: 40px;
         color: #fff; }
-        .side-menu .graphs .stock-info .yearly-change .text {
+        .side-menu .graphs .stock-info .yearly-change .text, .side-menu .graphs .market-info .yearly-change .text {
           padding: 0; }
 
 /*# sourceMappingURL=index.css.map */

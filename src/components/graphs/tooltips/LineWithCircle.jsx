@@ -6,7 +6,7 @@ const LineWithCircle = props => {
     <g>
       <line
         x1={props.tooltip.x1}
-        x2={props.tooltip.x2}
+        x2={props.tooltip.x1}
         y1={props.tooltip.y1}
         y2={props.tooltip.y2}
         fill="none"

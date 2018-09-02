@@ -75,10 +75,13 @@ class DowGraph extends Component {
       this.svg.current.getScreenCTM().inverse()
     );
 
-    const { xScale, yScale } = { ...this.state };
+    const { xScale, yScale, xBarScale } = { ...this.state };
 
     const xValue = Math.round(xScale.invert(cursporpt.x));
     const yValue = this.props.data[xValue];
+
+    const xBarValue = Math.round(xBarScale.invert(cursporpt.x));
+    const yBarValue = this.props.dataVolume[xBarValue];
 
     const tooltip = { ...this.state.tooltip };
     tooltip.show = true;
@@ -87,6 +90,7 @@ class DowGraph extends Component {
     tooltip.mouseXAbs = e.clientX;
     tooltip.mouseYAbs = e.clientY;
     tooltip.text1 = `Index: ${Number(yValue).toFixed(2)}`;
+    tooltip.text2 = `Volume: ${Number(yBarValue).toFixed(2)}`;
     this.setState({ tooltip: tooltip });
   };
 
@@ -109,6 +113,7 @@ class DowGraph extends Component {
             top: this.state.tooltip.mouseYAbs - 15
           }}
           text1={this.state.tooltip.text1}
+          text2={this.state.tooltip.text2}
         />
       );
     }

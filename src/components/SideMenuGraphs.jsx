@@ -38,6 +38,7 @@ class SideMenuGraphs extends Component {
         <SideMenuGraphStock />
         <hr className="home-hr" />
         <SideMenuGraphMarket />
+        <hr className="home-hr" />
       </div>
     );
   }

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import NasdaqGraph from "./graphs/NasdaqGraph";
+// import NasdaqGraph from "./graphs/NasdaqGraphcopy";
 import DowGraph from "./graphs/DowGraph";
 import CurrencyInfo from "./CurrencyInfo";
 

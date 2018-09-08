@@ -3,6 +3,7 @@ import SideMenuGraphPolar from "./SideMenuGraphPolar";
 import SideMenuGraphArea from "./SideMenuGraphArea";
 import SideMenuGraphStock from "./SideMenuGraphStock";
 import SideMenuGraphMarket from "./SideMenuGraphMarket";
+import SideMenuGraphCompare from "./SideMenuGraphCompare";
 
 class SideMenuGraphs extends Component {
   constructor(props) {
@@ -39,6 +40,7 @@ class SideMenuGraphs extends Component {
         <hr className="home-hr" />
         <SideMenuGraphMarket />
         <hr className="home-hr" />
+        <SideMenuGraphCompare />
       </div>
     );
   }

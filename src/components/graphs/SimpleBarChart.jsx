@@ -11,7 +11,7 @@ class SimpleBarChart extends Component {
       .padding(0.1),
     yScale: d3
       .scaleLinear()
-      .rangeRound(this.props.height, this.props.margin.top),
+      .rangeRound([+this.props.height, +this.props.margin.top]),
 
     tooltip: {
       show: false
@@ -24,13 +24,13 @@ class SimpleBarChart extends Component {
     const { xScale, yScale } = prevState;
 
     xScale.domain(data.map((d, i) => i.toString()));
-    yScale.domain([0, d3.max(data, d => d)]);
+    yScale.domain([0, d3.max(data, d => Math.abs(d))]);
 
     const bars = data.map((d, i) => {
       return {
         x: xScale(i.toString()),
-        y: yScale(d),
-        height: nextProps.height - yScale(d),
+        y: yScale(Math.abs(d)),
+        height: nextProps.height - yScale(Math.abs(d)),
         width: xScale.bandwidth(),
         dataKey: i,
         dataValue: d,

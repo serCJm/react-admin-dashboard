@@ -338,6 +338,9 @@ input, textarea {
       margin-top: 0; }
       .side-menu .graphs .cur-value:last-child {
         margin-left: 0.5rem; }
+  .side-menu .graph-compare .title {
+    margin: 0;
+    padding: 0; }
   .side-menu .graph-compare .male {
     fill: #78b0ec; }
     .side-menu .graph-compare .male:hover {
@@ -346,6 +349,21 @@ input, textarea {
     fill: #ea7882; }
     .side-menu .graph-compare .female:hover {
       fill: #f8d0d4; }
+  .side-menu .graph-compare .graph-compare-icons {
+    margin-top: 2rem; }
+  .side-menu .graph-compare .gendre {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.5rem; }
+    .side-menu .graph-compare .gendre .icons {
+      display: flex;
+      justify-content: space-between;
+      width: 60%; }
+    .side-menu .graph-compare .gendre .icon-male {
+      color: #78b0ec; }
+    .side-menu .graph-compare .gendre .icon-female {
+      color: #ea7882; }
 
 .tooltip-box {
   display: block;

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import StackedBarChart from "./graphs/StackedBarChart";
+import SideMenuGraphCompareCount from "./SideMenuGraphCompareCount";
 
 const data = [];
 for (let i = 0; i < 31; i++) {
@@ -10,24 +11,22 @@ for (let i = 0; i < 31; i++) {
   data.push(newEntry);
 }
 
-class SideMenuGraphCompare extends Component {
-  state = {};
-
-  render() {
-    return (
-      <div className="graph-compare">
-        <StackedBarChart
-          data={data}
-          width="220"
-          height="70"
-          margin={{ top: 25, right: 20 }}
-          classNames={["male", "female"]}
-        />
-        <CompareCount type="male" />
-        <CompareCount type="female" />
+const SideMenuGraphCompare = () => {
+  return (
+    <div className="graph-compare">
+      <StackedBarChart
+        data={data}
+        width="220"
+        height="70"
+        margin={{ top: 25, right: 20 }}
+        classNames={["male", "female"]}
+      />
+      <div className="graph-compare-icons">
+        <SideMenuGraphCompareCount type="male" total={15} active={5} />
+        <SideMenuGraphCompareCount type="female" total={12} active={8} />
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default SideMenuGraphCompare;

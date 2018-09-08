@@ -338,6 +338,14 @@ input, textarea {
       margin-top: 0; }
       .side-menu .graphs .cur-value:last-child {
         margin-left: 0.5rem; }
+  .side-menu .graph-compare .male {
+    fill: #78b0ec; }
+    .side-menu .graph-compare .male:hover {
+      fill: #d1e4f9; }
+  .side-menu .graph-compare .female {
+    fill: #ea7882; }
+    .side-menu .graph-compare .female:hover {
+      fill: #f8d0d4; }
 
 .tooltip-box {
   display: block;

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import StackedBarChart from "./graphs/StackedBarChart";
 import SideMenuGraphCompareCount from "./SideMenuGraphCompareCount";
 

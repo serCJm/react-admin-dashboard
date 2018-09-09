@@ -4,6 +4,7 @@ import SideMenuOptions from "./SideMenuOptions";
 import SideMenuHome from "./SideMenuHome";
 import SideMenuUsers from "./SideMenuUsers";
 import SideMenuGraphs from "./SideMenuGraphs";
+import SideMenuHistory from "./SideMenuHistory";
 
 class SideMenu extends Component {
   constructor(props) {
@@ -38,8 +39,11 @@ class SideMenu extends Component {
       currentTab = (
         <SideMenuGraphs id="chartbar" current={this.state.showCurrent} />
       );
+    } else if (this.state.currentOption === "history") {
+      currentTab = (
+        <SideMenuHistory id="history" current={this.state.showCurrent} />
+      );
     }
-
     return (
       <nav className="side-menu">
         <Avatar />

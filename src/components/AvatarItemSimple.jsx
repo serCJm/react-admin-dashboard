@@ -2,14 +2,13 @@ import React from "react";
 
 const AvatarItemSimple = props => {
   return (
-    <div>
+    <div className="avatar-container">
       <img
         src={props.avatar}
         alt={`avatar ${props.name}`}
-        // style={this.props.avatarStyle}
-        // className={this.props.classNames.avatar}
-        width={75}
-        height={75}
+        width={36}
+        height={36}
+        className={`avatar-img ${props.style}`}
       />
       <p>{props.name}</p>
     </div>

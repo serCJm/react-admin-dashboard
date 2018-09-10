@@ -2,8 +2,9 @@ import React from "react";
 import AvatarItemSimple from "./AvatarItemSimple";
 import SimeMenuTimeLineAction from "./SideMenuTimeLineAction";
 import SimeMenuTimeLineLocation from "./SideMenuTimeLineLocation";
+import SideMenuTimeLineMessage from "./SideMenuTimeLineMessage";
 
-const SideMenuTimeLine = ({ data, classNames }) => {
+const SideMenuTimeLine = ({ data }) => {
   const content = data.messages.map((message, i) => {
     if (message.type === "action") {
       return (
@@ -17,8 +18,11 @@ const SideMenuTimeLine = ({ data, classNames }) => {
           style={data.style}
         />
       );
+    } else {
+      return (
+        <SideMenuTimeLineMessage key={i} message={message} style={data.style} />
+      );
     }
-    return null;
   });
 
   return (
@@ -27,7 +31,6 @@ const SideMenuTimeLine = ({ data, classNames }) => {
         name={data.name}
         avatar={data.avatar}
         style={data.style}
-        classNames={classNames}
       />
       <div className="timeline-content">{content}</div>
     </React.Fragment>

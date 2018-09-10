@@ -10,7 +10,7 @@ const AvatarItemSimple = props => {
         height={36}
         className={`avatar-img ${props.style}`}
       />
-      <p>{props.name}</p>
+      <p className="avatar-name">{props.name}</p>
     </div>
   );
 };

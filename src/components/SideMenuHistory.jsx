@@ -3,8 +3,9 @@ import SideMenuWrapper from "./SideMenuWrapper";
 import SideMenuTimeLine from "./SideMenuTimeLine";
 import avatar1 from "../images/avatar1.jpg";
 import avatar2 from "../images/avatar2.jpg";
-// import avatar3 from "../images/avatar3.jpg";
+import avatar3 from "../images/avatar3.jpg";
 import mapLocation from "../images/map-location.png";
+import beHappy from "../images/be-happy.png";
 
 class SideMenuHistory extends Component {
   state = {
@@ -40,10 +41,35 @@ class SideMenuHistory extends Component {
               alt="map location"
             />
           )
+        },
+        {
+          type: "message",
+          date: "Jul 19, 2015",
+          text: "Be Happy!",
+          extraContent: (
+            <img
+              src={beHappy}
+              width="175px"
+              height="100px"
+              alt="map location"
+            />
+          )
         }
       ]
     },
-    classNames: {}
+    entry3: {
+      name: "Mr. Engineer",
+      avatar: avatar3,
+      style: "style3",
+      messages: [
+        {
+          type: "message",
+          date: "Jul 19, 2015",
+          text: "You are soo awesome. Nice talking to you =)",
+          extraContent: null
+        }
+      ]
+    }
   };
   render() {
     return (
@@ -52,14 +78,9 @@ class SideMenuHistory extends Component {
         current={this.props.current}
         render={() => (
           <div className="timeline">
-            <SideMenuTimeLine
-              data={this.state.entry1}
-              classNames={this.state.classNames}
-            />
-            <SideMenuTimeLine
-              data={this.state.entry2}
-              classNames={this.state.classNames}
-            />
+            {Object.keys(this.state).map((entry, i) => (
+              <SideMenuTimeLine key={i} data={this.state[entry]} />
+            ))}
           </div>
         )}
       />

@@ -191,6 +191,7 @@
                 color: rgb(234, 120, 130)
     .timeline
         height: 100%
+        min-height: 1000px
         margin-left: 3rem
         border-left: 2px solid transparentize($greyFont, .5)
         .avatar-container
@@ -206,6 +207,11 @@
                     border: 2px solid yellow
                 &.style2
                     border: 2px solid blue
+                &.style3
+                    border: 2px solid green
+            .avatar-name
+                color: #89949b
+                margin-bottom: 0
         &-content
             margin-left: 16px + 18px
             padding-bottom: 1.5rem
@@ -226,6 +232,8 @@
                 background: yellow
             &.style2:before 
                 background: blue
+            &.style3:before 
+                background: green
         .action-btns
             display: flex
             justify-content: space-around

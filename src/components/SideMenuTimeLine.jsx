@@ -1,33 +1,26 @@
 import React from "react";
 import AvatarItemSimple from "./AvatarItemSimple";
-import SimeMenuTimeLineAction from "./SimeMenuTimeLineAction";
+import SimeMenuTimeLineAction from "./SideMenuTimeLineAction";
+import SimeMenuTimeLineLocation from "./SideMenuTimeLineLocation";
 
 const SideMenuTimeLine = ({ data, classNames }) => {
   const content = data.messages.map((message, i) => {
     if (message.type === "action") {
       return (
-        <SimeMenuTimeLineAction
-          key={message.text}
+        <SimeMenuTimeLineAction key={i} message={message} style={data.style} />
+      );
+    } else if (message.type === "location") {
+      return (
+        <SimeMenuTimeLineLocation
+          key={i}
           message={message}
           style={data.style}
         />
       );
-    } else if (message.type === "location") {
-      return (
-        <React.Fragment>
-          <h3 className={`timeline-date ${data.style}`}>{message.date}</h3>
-          <p>
-            Visiting&nbsp;
-            <span className="place">{message.place}</span>
-            &nbsp;at&nbsp;
-            <span className="address">{message.location}</span>
-          </p>
-          {message.extraContent}
-        </React.Fragment>
-      );
     }
     return null;
   });
+
   return (
     <React.Fragment>
       <AvatarItemSimple

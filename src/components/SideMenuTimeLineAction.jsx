@@ -1,6 +1,6 @@
 import React from "react";
 
-const SimeMenuTimeLineAction = ({ message, style }) => {
+const SideMenuTimeLineAction = ({ message, style }) => {
   return (
     <React.Fragment>
       <h3 className={`timeline-date ${style}`}>{message.date}</h3>
@@ -13,4 +13,4 @@ const SimeMenuTimeLineAction = ({ message, style }) => {
   );
 };
 
-export default SimeMenuTimeLineAction;
+export default SideMenuTimeLineAction;

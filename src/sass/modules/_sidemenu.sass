@@ -209,6 +209,11 @@
                     border: 2px solid blue
                 &.style3
                     border: 2px solid green
+                &.alert-system
+                    border: 2px solid rgb(218, 34, 68)
+                &.alert-node
+                    background: rgb(247, 184, 52)
+                    border: 2px solid rgb(247, 184, 52)
             .avatar-name
                 color: #89949b
                 margin-bottom: 0
@@ -234,6 +239,10 @@
                 background: blue
             &.style3:before 
                 background: green
+            &.alert-system:before
+                background: rgb(218, 34, 68)
+            &.alert-node:before
+                background: rgb(247, 184, 52)
         .action-btns
             display: flex
             justify-content: space-around
@@ -259,6 +268,14 @@
                     color: $white
         .place
             color: $green
+        .network-traffic
+            fill: rgb(218, 34, 68)
+        .cpu
+            fill: rgb(247, 184, 52)
+            &:hover
+                fill: lighten(rgb(247, 184, 52), 20%)
+        .node
+            color: rgb(247, 184, 52) 
 
 .tooltip-box
     display: block

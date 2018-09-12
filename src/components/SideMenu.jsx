@@ -5,6 +5,7 @@ import SideMenuHome from "./SideMenuHome";
 import SideMenuUsers from "./SideMenuUsers";
 import SideMenuGraphs from "./SideMenuGraphs";
 import SideMenuHistory from "./SideMenuHistory";
+import SideMenuNotifications from "./SideMenuNotifications";
 
 class SideMenu extends Component {
   constructor(props) {
@@ -42,6 +43,13 @@ class SideMenu extends Component {
     } else if (this.state.currentOption === "history") {
       currentTab = (
         <SideMenuHistory id="history" current={this.state.showCurrent} />
+      );
+    } else if (this.state.currentOption === "exclamation") {
+      currentTab = (
+        <SideMenuNotifications
+          id="exclamation"
+          current={this.state.showCurrent}
+        />
       );
     }
     return (

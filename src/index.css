@@ -34,6 +34,8 @@ p {
 .side-menu .timeline .address {
   font-style: italic;
   font-weight: bold; }
+.side-menu .timeline .node {
+  font-weight: bold; }
 
 .header-top-menu {
   height: 6rem;
@@ -393,6 +395,11 @@ input, textarea {
           border: 2px solid blue; }
         .side-menu .timeline .avatar-container .avatar-img.style3 {
           border: 2px solid green; }
+        .side-menu .timeline .avatar-container .avatar-img.alert-system {
+          border: 2px solid #da2244; }
+        .side-menu .timeline .avatar-container .avatar-img.alert-node {
+          background: #f7b834;
+          border: 2px solid #f7b834; }
       .side-menu .timeline .avatar-container .avatar-name {
         color: #89949b;
         margin-bottom: 0; }
@@ -418,6 +425,10 @@ input, textarea {
         background: blue; }
       .side-menu .timeline-date.style3:before {
         background: green; }
+      .side-menu .timeline-date.alert-system:before {
+        background: #da2244; }
+      .side-menu .timeline-date.alert-node:before {
+        background: #f7b834; }
     .side-menu .timeline .action-btns {
       display: flex;
       justify-content: space-around;
@@ -443,6 +454,14 @@ input, textarea {
           color: #fff; }
     .side-menu .timeline .place {
       color: #2eb398; }
+    .side-menu .timeline .network-traffic {
+      fill: #da2244; }
+    .side-menu .timeline .cpu {
+      fill: #f7b834; }
+      .side-menu .timeline .cpu:hover {
+        fill: #fbda96; }
+    .side-menu .timeline .node {
+      color: #f7b834; }
 
 .tooltip-box {
   display: block;

@@ -20,7 +20,7 @@ class SideMenuWrapper extends Component {
           this.state.exitAnimation ? "home animate-close" : "home animate-open"
         }
       >
-        {this.props.render()}
+        {this.props.children}
       </div>
     );
   }

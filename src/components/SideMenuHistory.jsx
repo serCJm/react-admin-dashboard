@@ -73,17 +73,13 @@ class SideMenuHistory extends Component {
   };
   render() {
     return (
-      <SideMenuWrapper
-        id={this.props.id}
-        current={this.props.current}
-        render={() => (
-          <div className="timeline">
-            {Object.keys(this.state).map((entry, i) => (
-              <SideMenuTimeLine key={i} data={this.state[entry]} />
-            ))}
-          </div>
-        )}
-      />
+      <SideMenuWrapper id={this.props.id} current={this.props.current}>
+        <div className="timeline">
+          {Object.keys(this.state).map((entry, i) => (
+            <SideMenuTimeLine key={i} data={this.state[entry]} />
+          ))}
+        </div>
+      </SideMenuWrapper>
     );
   }
 }

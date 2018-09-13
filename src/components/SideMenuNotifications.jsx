@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import SideMenuWrapper from "./SideMenuWrapper";
 import SideMenuTimeLine from "./SideMenuTimeLine";
 import SimpleBarChart from "./graphs/SimpleBarChart";
+import SimplePieChart from "./graphs/SimplePieChart";
 import redExclamation from "../images/red-exclamation-triangle.png";
 import yellowExclamation from "../images/yellow-exclamation-triangle.png";
 
@@ -15,6 +16,27 @@ const dataCPU = [];
 for (let i = 0; i < 25; i++) {
   const newNumber = Math.round(Math.random() * 100);
   dataCPU.push(newNumber);
+}
+
+const node1 = [];
+for (let i = 0; i < 2; i++) {
+  const newNumber = Math.random();
+  node1.push(newNumber);
+}
+const node2 = [];
+for (let i = 0; i < 2; i++) {
+  const newNumber = Math.random();
+  node2.push(newNumber);
+}
+const node5 = [];
+for (let i = 0; i < 4; i++) {
+  const newNumber = Math.random();
+  node5.push(newNumber);
+}
+const node7 = [];
+for (let i = 0; i < 6; i++) {
+  const newNumber = Math.random();
+  node7.push(newNumber);
 }
 
 class SideMenuNotifications extends Component {
@@ -71,7 +93,14 @@ class SideMenuNotifications extends Component {
           date: "May 5, 2015",
           text: "Running out of disk space on",
           nodes: ["Node 1", "Node 2", "Node 5", "Node 7"],
-          extraContent: null
+          extraContent: (
+            <div className="nodes">
+              <SimplePieChart data={node1} width="40" height="40" />
+              <SimplePieChart data={node2} width="40" height="40" />
+              <SimplePieChart data={node5} width="40" height="40" />
+              <SimplePieChart data={node7} width="40" height="40" />
+            </div>
+          )
         }
       ]
     }

@@ -462,6 +462,41 @@ input, textarea {
         fill: #fbda96; }
     .side-menu .timeline .node {
       color: #f7b834; }
+    .side-menu .timeline .nodes {
+      display: flex;
+      justify-content: space-between; }
+    .side-menu .timeline .pie-slice1 {
+      fill: #1b9e77; }
+    .side-menu .timeline .pie-slice2 {
+      fill: #d95f02; }
+    .side-menu .timeline .pie-slice3 {
+      fill: #7570b3; }
+    .side-menu .timeline .pie-slice4 {
+      fill: #e7298a; }
+    .side-menu .timeline .pie-slice5 {
+      fill: #66a61e; }
+    .side-menu .timeline .pie-slice6 {
+      fill: #e6ab02; }
+    .side-menu .timeline .pie-slice7 {
+      fill: #a6761d; }
+    .side-menu .timeline .pie-slice8 {
+      fill: #666666; }
+    .side-menu .timeline .pie-slice1:hover {
+      fill: #2bdba6; }
+    .side-menu .timeline .pie-slice2:hover {
+      fill: #fd862a; }
+    .side-menu .timeline .pie-slice3:hover {
+      fill: #a5a2ce; }
+    .side-menu .timeline .pie-slice4:hover {
+      fill: #ef6eb0; }
+    .side-menu .timeline .pie-slice5:hover {
+      fill: #8ddb36; }
+    .side-menu .timeline .pie-slice6:hover {
+      fill: #fdca37; }
+    .side-menu .timeline .pie-slice7:hover {
+      fill: #dca134; }
+    .side-menu .timeline .pie-slice8:hover {
+      fill: #8c8c8c; }
 
 .tooltip-box {
   display: block;

@@ -275,7 +275,17 @@
             &:hover
                 fill: lighten(rgb(247, 184, 52), 20%)
         .node
-            color: rgb(247, 184, 52) 
+            color: rgb(247, 184, 52)
+        .nodes
+            display: flex
+            justify-content: space-between
+        @for $i from 1 through length($pieColors)
+            .pie-slice#{$i}
+                fill: nth($pieColors, $i)
+        @for $i from 1 through length($pieColors)
+            .pie-slice#{$i}:hover
+                fill: lighten(nth($pieColors, $i), 15%)
+        
 
 .tooltip-box
     display: block

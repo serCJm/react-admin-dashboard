@@ -1,5 +1,5 @@
 import React from "react";
-import AreaLineChart from "./graphs/AreaLineChart";
+import AreaLineChart from "../graphs/AreaLineChart";
 
 const data = [];
 for (let i = 0; i < 31; i++) {

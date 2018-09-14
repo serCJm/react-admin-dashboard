@@ -1,5 +1,5 @@
 import React from "react";
-import AvatarItem from "./AvatarItem";
+import AvatarItem from "../AvatarItem";
 
 function SideMenuUsersStatus(props) {
   const users = props.users.map(user => (

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Avatar from "./Avatar";
+import Avatar from "../Avatar";
 import SideMenuOptions from "./SideMenuOptions";
 import SideMenuHome from "./SideMenuHome";
 import SideMenuUsers from "./SideMenuUsers";

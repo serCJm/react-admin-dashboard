@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import HeaderTopMenu from "../components/HeaderTopMenu";
-import SideMenu from "../components/SideMenu";
+import SideMenu from "../components/SideMenu/SideMenu";
 
 class Header extends Component {
   render() {

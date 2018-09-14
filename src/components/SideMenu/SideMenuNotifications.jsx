@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import SideMenuWrapper from "./SideMenuWrapper";
 import SideMenuTimeLine from "./SideMenuTimeLine";
-import SimpleBarChart from "./graphs/SimpleBarChart";
-import SimplePieChart from "./graphs/SimplePieChart";
-import redExclamation from "../images/red-exclamation-triangle.png";
-import yellowExclamation from "../images/yellow-exclamation-triangle.png";
+import SimpleBarChart from "../graphs/SimpleBarChart";
+import SimplePieChart from "../graphs/SimplePieChart";
+import redExclamation from "../../images/red-exclamation-triangle.png";
+import yellowExclamation from "../../images/yellow-exclamation-triangle.png";
 
 const dataNetworkTraffic = [];
 for (let i = 0; i < 41; i++) {

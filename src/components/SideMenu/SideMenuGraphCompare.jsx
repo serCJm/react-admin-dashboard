@@ -1,5 +1,5 @@
 import React from "react";
-import StackedBarChart from "./graphs/StackedBarChart";
+import StackedBarChart from "../graphs/StackedBarChart";
 import SideMenuGraphCompareCount from "./SideMenuGraphCompareCount";
 
 const data = [];

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import SimpleBarChart from "./graphs/SimpleBarChart";
-import NumberDisplay from "./NumberDisplay";
+import SimpleBarChart from "../graphs/SimpleBarChart";
+import NumberDisplay from "../NumberDisplay";
 
 const data = [];
 for (let i = 0; i < 12; i++) {

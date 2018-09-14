@@ -1,19 +1,19 @@
 import React, { Component } from "react";
 import SideMenuUsersStatus from "./SideMenuUsersStatus";
-import avatar1 from "../images/avatar1.jpg";
-import avatar2 from "../images/avatar2.jpg";
-import avatar3 from "../images/avatar3.jpg";
-import avatar4 from "../images/avatar4.jpg";
-import avatar5 from "../images/avatar5.jpg";
-import avatar6 from "../images/avatar6.jpg";
-import avatar7 from "../images/avatar7.jpg";
-import avatar8 from "../images/avatar8.jpg";
-import avatar9 from "../images/avatar9.jpg";
-import avatar10 from "../images/avatar10.jpg";
-import avatar11 from "../images/avatar11.jpg";
-import avatar12 from "../images/avatar12.png";
-import avatar13 from "../images/avatar13.jpg";
-import avatar14 from "../images/avatar14.jpg";
+import avatar1 from "../../images/avatar1.jpg";
+import avatar2 from "../../images/avatar2.jpg";
+import avatar4 from "../../images/avatar4.jpg";
+import avatar5 from "../../images/avatar5.jpg";
+import avatar6 from "../../images/avatar6.jpg";
+import avatar3 from "../../images/avatar3.jpg";
+import avatar7 from "../../images/avatar7.jpg";
+import avatar8 from "../../images/avatar8.jpg";
+import avatar9 from "../../images/avatar9.jpg";
+import avatar10 from "../../images/avatar10.jpg";
+import avatar11 from "../../images/avatar11.jpg";
+import avatar12 from "../../images/avatar12.png";
+import avatar13 from "../../images/avatar13.jpg";
+import avatar14 from "../../images/avatar14.jpg";
 
 class SideMenuUsers extends Component {
   constructor(props) {

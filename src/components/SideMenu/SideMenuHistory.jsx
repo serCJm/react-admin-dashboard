@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import SideMenuWrapper from "./SideMenuWrapper";
 import SideMenuTimeLine from "./SideMenuTimeLine";
-import avatar1 from "../images/avatar1.jpg";
-import avatar2 from "../images/avatar2.jpg";
-import avatar3 from "../images/avatar3.jpg";
-import mapLocation from "../images/map-location.png";
-import beHappy from "../images/be-happy.png";
+import avatar1 from "../../images/avatar1.jpg";
+import avatar2 from "../../images/avatar2.jpg";
+import avatar3 from "../../images/avatar3.jpg";
+import mapLocation from "../../images/map-location.png";
+import beHappy from "../../images/be-happy.png";
 
 class SideMenuHistory extends Component {
   state = {

@@ -1,5 +1,5 @@
 import React from "react";
-import AvatarItemSimple from "./AvatarItemSimple";
+import AvatarItemSimple from "../AvatarItemSimple";
 import SimeMenuTimeLineAction from "./SideMenuTimeLineAction";
 import SimeMenuTimeLineLocation from "./SideMenuTimeLineLocation";
 import SideMenuTimeLineMessage from "./SideMenuTimeLineMessage";

@@ -28,6 +28,23 @@
         width: 100%
         color: #fff
         text-transform: uppercase
+        @media #{$large-screen}
+            justify-content: space-between
+            padding-left: 2rem
     .header-controls
         display: flex
-        justify-content: space-around
+        height: 100%
+        &-item
+            display: flex
+            align-items: center
+            justify-content: space-between
+            padding: 0 2rem
+            border-left: solid 2px rgb(48, 58, 62)
+            color: $greyFont
+            font-size: 1.7rem
+        &-icon:not(:last-child)
+            padding-right: 2rem
+            
+            
+            
+            

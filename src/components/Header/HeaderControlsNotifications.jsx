@@ -1,6 +1,8 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faBell } from "@fortawesome/free-solid-svg-icons";
+import { faRss } from "@fortawesome/free-solid-svg-icons";
 
 const HeaderControlsNotifications = () => {
   return (
@@ -9,10 +11,12 @@ const HeaderControlsNotifications = () => {
         <FontAwesomeIcon icon={faEnvelope} />
       </span>
       <span className="header-controls-icon">
-        <FontAwesomeIcon icon={faEnvelope} />
+        <FontAwesomeIcon icon={faBell} />
+        <div className="bubble1">3</div>
       </span>
       <span className="header-controls-icon">
-        <FontAwesomeIcon icon={faEnvelope} />
+        <FontAwesomeIcon icon={faRss} />
+        <div className="bubble2">4</div>
       </span>
     </div>
   );

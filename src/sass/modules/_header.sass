@@ -1,7 +1,12 @@
 .header-top-menu
     height: 6rem
+    margin-left: 0
+    min-width: 400px
     display: flex
     justify-content: space-between
+    transition: all .5s
+    &.sidemenu-open
+        margin-left: $sidemenuWidth
     .menu-btn
         @include flexCenter
         width: 8rem

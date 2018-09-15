@@ -52,8 +52,15 @@ class SideMenu extends Component {
         />
       );
     }
+
+    let sideMenuClass;
+    if (this.props.mobile) {
+      sideMenuClass = this.props.sideMenu ? " open" : "";
+    } else {
+      sideMenuClass = " open";
+    }
     return (
-      <nav className="side-menu">
+      <nav className={`side-menu${sideMenuClass}`}>
         <Avatar />
         <SideMenuOptions
           currentOption={this.state.currentOption}

@@ -71,6 +71,9 @@ p {
     width: 100%;
     color: #fff;
     text-transform: uppercase; }
+  .header-top-menu .header-controls {
+    display: flex;
+    justify-content: space-around; }
 
 @keyframes showSubmenu {
   0% {

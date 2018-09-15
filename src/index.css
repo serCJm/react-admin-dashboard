@@ -1,5 +1,8 @@
 :root {
   font-size: calc(0.600em + .5vw); }
+  @media screen and (min-width: 800px) {
+    :root {
+      font-size: calc(0.350em + .5vw); } }
 
 h1 {
   font-size: 1.602rem; }
@@ -22,9 +25,11 @@ p {
 .menuOption {
   font-size: 1.5rem; }
 
+.side-menu .home {
+  font-size: 1.3rem; }
 .side-menu .title {
   text-transform: uppercase;
-  font-size: 0.8rem; }
+  font-size: 1rem; }
 .side-menu .timeline .avatar-name {
   font-weight: bold; }
 .side-menu .timeline .timeline-date {
@@ -36,6 +41,8 @@ p {
   font-weight: bold; }
 .side-menu .timeline .node {
   font-weight: bold; }
+.side-menu .timeline .action-btns {
+  font-size: 1rem; }
 
 .header-top-menu {
   height: 6rem;
@@ -71,9 +78,23 @@ p {
     width: 100%;
     color: #fff;
     text-transform: uppercase; }
+    @media screen and (min-width: 800px) {
+      .header-top-menu .logo {
+        justify-content: space-between;
+        padding-left: 2rem; } }
   .header-top-menu .header-controls {
     display: flex;
-    justify-content: space-around; }
+    height: 100%; }
+    .header-top-menu .header-controls-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2rem;
+      border-left: solid 2px #303a3e;
+      color: #89949b;
+      font-size: 1.7rem; }
+    .header-top-menu .header-controls-icon:not(:last-child) {
+      padding-right: 2rem; }
 
 @keyframes showSubmenu {
   0% {

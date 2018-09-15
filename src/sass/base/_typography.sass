@@ -1,6 +1,8 @@
 // SET FLUID TYPOGRAPHY - 16px at 400px viewport and 14px minimum
 \:root 
     font-size: calc(0.600em + .5vw)
+    @media #{$large-screen}
+        font-size: calc(0.350em + .5vw)
 
 h1 
     font-size: 1.602rem
@@ -25,9 +27,11 @@ p
     font-size: 1.5rem
 
 .side-menu
+    .home
+        font-size: 1.3rem
     .title
         text-transform: uppercase
-        font-size: .8rem
+        font-size: 1rem
     .timeline
         .avatar-name
             font-weight: bold
@@ -40,3 +44,5 @@ p
             font-weight: bold
         .node
             font-weight: bold
+        .action-btns
+            font-size: 1rem

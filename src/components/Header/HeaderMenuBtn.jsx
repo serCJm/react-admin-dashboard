@@ -22,6 +22,7 @@ class HeaderMenuBtn extends Component {
             ? { background: "rgba(46, 179, 152, .75)" }
             : { background: "rgba(46, 179, 152, 1)" }
         }
+        {...this.props}
       >
         <div className="menu-btn-icon">
           <div className="brg" />

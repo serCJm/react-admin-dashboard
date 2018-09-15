@@ -44,6 +44,24 @@
             font-size: 1.7rem
         &-icon:not(:last-child)
             padding-right: 2rem
+        &-icon
+            position: relative
+        &-icon:hover > svg
+            color: $white
+        .bubble1, .bubble2
+            @include flexCenter
+            position: absolute
+            top: -12px
+            left: 20px
+            border-radius: 50%
+            color: $greyFont
+            width: 1.5rem
+            height: 1.5rem
+        .bubble1
+            background: rgb(255, 196, 151)
+        .bubble2
+            background: rgb(68, 193, 172)
+
             
             
             

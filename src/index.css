@@ -44,6 +44,9 @@ p {
 .side-menu .timeline .action-btns {
   font-size: 1rem; }
 
+.header-top-menu .bubble1, .header-top-menu .bubble2 {
+  font-size: 1.5rem; }
+
 .header-top-menu {
   height: 6rem;
   margin-left: 0;
@@ -95,6 +98,25 @@ p {
       font-size: 1.7rem; }
     .header-top-menu .header-controls-icon:not(:last-child) {
       padding-right: 2rem; }
+    .header-top-menu .header-controls-icon {
+      position: relative; }
+    .header-top-menu .header-controls-icon:hover > svg {
+      color: #fff; }
+    .header-top-menu .header-controls .bubble1, .header-top-menu .header-controls .bubble2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: -12px;
+      left: 20px;
+      border-radius: 50%;
+      color: #89949b;
+      width: 1.5rem;
+      height: 1.5rem; }
+    .header-top-menu .header-controls .bubble1 {
+      background: #ffc497; }
+    .header-top-menu .header-controls .bubble2 {
+      background: #44c1ac; }
 
 @keyframes showSubmenu {
   0% {

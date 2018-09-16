@@ -99,7 +99,8 @@ p {
     .header-top-menu .header-controls-icon:not(:last-child) {
       padding-right: 2rem; }
     .header-top-menu .header-controls-icon {
-      position: relative; }
+      position: relative;
+      cursor: pointer; }
     .header-top-menu .header-controls-icon:hover > svg {
       color: #fff; }
     .header-top-menu .header-controls .bubble1, .header-top-menu .header-controls .bubble2 {
@@ -117,6 +118,60 @@ p {
       background: #ffc497; }
     .header-top-menu .header-controls .bubble2 {
       background: #44c1ac; }
+  .header-top-menu .theme-btn {
+    border: none;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer; }
+  .header-top-menu .theme-default {
+    background: #ea7661; }
+  .header-top-menu .theme-green {
+    background: #2eb398; }
+  .header-top-menu .theme-blue {
+    background: #79b0ec; }
+  .header-top-menu .theme-purple {
+    background: #b4a1dd; }
+  .header-top-menu .theme-brown {
+    background: #a8553a; }
+  .header-top-menu .theme-bay {
+    background: #68a0a5; }
+  .header-top-menu .pick-theme {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 2; }
+    .header-top-menu .pick-theme-menu {
+      width: 50rem;
+      height: 24rem;
+      background: #fff;
+      margin-bottom: 20rem; }
+    .header-top-menu .pick-theme-title {
+      background: #43525a;
+      text-align: center;
+      line-height: 5rem;
+      margin: 0 auto;
+      height: 5rem;
+      color: #fff; }
+    .header-top-menu .pick-theme-icons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+      height: 15rem;
+      margin: 2rem 0; }
+    .header-top-menu .pick-theme-btn {
+      width: 5rem;
+      height: 5rem;
+      margin: 0 5rem;
+      border-radius: 10px;
+      cursor: pointer; }
 
 @keyframes showSubmenu {
   0% {

@@ -11,8 +11,8 @@ const themes = [
 
 const HeaderControlsThemePick = props => {
   return (
-    <div className="pick-theme" {...props}>
-      <div className="pick-theme-menu">
+    <div className="pick-theme" onClick={props.onClick}>
+      <div className={`pick-theme-menu${props.animateOut}`}>
         <h1 className="pick-theme-title">Choose a theme:</h1>
         <div className="pick-theme-icons">
           {themes.map(theme => (

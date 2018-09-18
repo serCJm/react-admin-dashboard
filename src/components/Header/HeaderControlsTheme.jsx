@@ -4,21 +4,27 @@ import { ThemeContext } from "./theme-context";
 
 class HeaderControlsTheme extends Component {
   state = {
-    displayThemePicker: false
+    displayThemePicker: false,
+    animateOut: ""
   };
 
   displayThemePicker = () => {
-    this.setState(prevState => ({
-      displayThemePicker: !prevState.displayThemePicker
-    }));
-  };
-  render() {
-    let themePicker = null;
     if (this.state.displayThemePicker) {
-      themePicker = (
-        <HeaderControlsThemePick onClick={this.displayThemePicker} />
-      );
+      this.setState({ animateOut: " animate-out" });
+      setTimeout(() => {
+        this.setState(prevState => ({
+          displayThemePicker: !prevState.displayThemePicker,
+          animateOut: ""
+        }));
+      }, 400);
+    } else {
+      this.setState(prevState => ({
+        displayThemePicker: !prevState.displayThemePicker
+      }));
     }
+  };
+
+  render() {
     return (
       <div className="header-controls-item">
         <ThemeContext.Consumer>
@@ -28,7 +34,13 @@ class HeaderControlsTheme extends Component {
                 className={`theme-btn ${theme}`}
                 onClick={this.displayThemePicker}
               />
-              {themePicker}
+              {this.state.displayThemePicker ? (
+                <HeaderControlsThemePick
+                  onClick={this.displayThemePicker}
+                  animateOut={this.state.animateOut}
+                  theme={theme}
+                />
+              ) : null}
             </React.Fragment>
           )}
         </ThemeContext.Consumer>

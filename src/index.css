@@ -61,6 +61,18 @@ p {
     justify-content: center;
     align-items: center;
     width: 8rem; }
+    .header-top-menu .menu-btn.theme-default:hover {
+      background: #eb7e6a; }
+    .header-top-menu .menu-btn.theme-green:hover {
+      background: #30bb9f; }
+    .header-top-menu .menu-btn.theme-blue:hover {
+      background: #82b5ed; }
+    .header-top-menu .menu-btn.theme-purple:hover {
+      background: #baa8e0; }
+    .header-top-menu .menu-btn.theme-brown:hover {
+      background: #b0593d; }
+    .header-top-menu .menu-btn.theme-bay:hover {
+      background: #6ea4a9; }
     .header-top-menu .menu-btn-icon {
       display: flex;
       flex-direction: column;

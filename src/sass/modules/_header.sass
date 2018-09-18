@@ -10,6 +10,18 @@
     .menu-btn
         @include flexCenter
         width: 8rem
+        &.theme-default:hover
+            background: lighten($th-default, 2%)
+        &.theme-green:hover
+            background: lighten($th-green, 2%)
+        &.theme-blue:hover
+            background: lighten($th-blue, 2%)
+        &.theme-purple:hover
+            background: lighten($th-purple, 2%)
+        &.theme-brown:hover
+            background: lighten($th-brown, 2%)
+        &.theme-bay:hover
+            background: lighten($th-bay, 2%)
         &-icon
             display: flex
             flex-direction: column

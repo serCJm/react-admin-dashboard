@@ -5,9 +5,13 @@ import HeaderMenuBtn from "../components/Header/HeaderMenuBtn";
 import { ThemeContext, themes } from "../components/Header/theme-context";
 
 class Header extends Component {
+  handleThemeChange = themeID => {
+    this.setState({ theme: themeID });
+  };
   state = {
     mobile: window.matchMedia("(max-width: 800px)").matches,
-    theme: themes.default
+    theme: themes.default,
+    handleThemeChange: this.handleThemeChange
   };
 
   hangleScreenResize = () => {
@@ -30,7 +34,7 @@ class Header extends Component {
     }
     return (
       <header>
-        <ThemeContext.Provider value={this.state.theme}>
+        <ThemeContext.Provider value={this.state}>
           <HeaderTopMenu
             logo="Logo"
             headerMenuBtn={headerMenuBtn}

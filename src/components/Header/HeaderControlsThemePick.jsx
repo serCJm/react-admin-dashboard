@@ -1,13 +1,5 @@
 import React from "react";
-
-const themes = [
-  "theme-default",
-  "theme-green",
-  "theme-blue",
-  "theme-purple",
-  "theme-brown",
-  "theme-bay"
-];
+import { ThemeContext, themes } from "./theme-context";
 
 const HeaderControlsThemePick = props => {
   return (
@@ -15,9 +7,17 @@ const HeaderControlsThemePick = props => {
       <div className={`pick-theme-menu${props.animateOut}`}>
         <h1 className="pick-theme-title">Choose a theme:</h1>
         <div className="pick-theme-icons">
-          {themes.map(theme => (
-            <button key={theme} className={`pick-theme-btn ${theme}`} />
-          ))}
+          <ThemeContext.Consumer>
+            {({ handleThemeChange }) => {
+              return Object.values(themes).map(theme => (
+                <button
+                  key={theme}
+                  className={`pick-theme-btn ${theme}`}
+                  onClick={() => handleThemeChange(theme)}
+                />
+              ));
+            }}
+          </ThemeContext.Consumer>
         </div>
       </div>
     </div>

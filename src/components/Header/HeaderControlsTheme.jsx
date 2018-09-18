@@ -28,7 +28,7 @@ class HeaderControlsTheme extends Component {
     return (
       <div className="header-controls-item">
         <ThemeContext.Consumer>
-          {theme => (
+          {({ theme }) => (
             <React.Fragment>
               <button
                 className={`theme-btn ${theme}`}
@@ -38,7 +38,6 @@ class HeaderControlsTheme extends Component {
                 <HeaderControlsThemePick
                   onClick={this.displayThemePicker}
                   animateOut={this.state.animateOut}
-                  theme={theme}
                 />
               ) : null}
             </React.Fragment>

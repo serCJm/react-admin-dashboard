@@ -6,7 +6,7 @@ import { ThemeContext } from "./theme-context";
 const HeaderLogoutBtn = () => {
   return (
     <ThemeContext.Consumer>
-      {theme => (
+      {({ theme }) => (
         <button className={`menu-btn ${theme}`}>
           <span className="menu-btn-icon">
             <FontAwesomeIcon icon={faSignOutAlt} />

@@ -146,12 +146,16 @@ p {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.4);
-    z-index: 2; }
+    z-index: 2;
+    perspective: 2000px; }
     .header-top-menu .pick-theme-menu {
       width: 50rem;
       height: 24rem;
       background: #fff;
-      margin-bottom: 20rem; }
+      margin-bottom: 20rem;
+      animation: horizontal-flip-in 0.4s linear; }
+      .header-top-menu .pick-theme-menu.animate-out {
+        animation: horizontal-flip-out 0.4s linear; }
     .header-top-menu .pick-theme-title {
       background: #43525a;
       text-align: center;
@@ -205,6 +209,20 @@ p {
     transform: scaleX(0);
     border-left: none;
     border-right: none; } }
+@keyframes horizontal-flip-in {
+  0% {
+    opacity: 0;
+    transform: rotateY(-90deg); }
+  100% {
+    opacity: 1;
+    transform: rotateY(0deg); } }
+@keyframes horizontal-flip-out {
+  0% {
+    opacity: 1;
+    transform: rotateY(0deg); }
+  100% {
+    opacity: 0;
+    transform: rotateY(90deg); } }
 input, textarea {
   color: #fff; }
 

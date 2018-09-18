@@ -27,7 +27,6 @@
     &.open
         width: $sidemenuWidth 
     .avatar
-        background: $lightRed
         height: 6rem
         @include flexCenter
         &-img
@@ -43,8 +42,8 @@
             border-radius: 5px
         &-progress-bar.field
             width: 8rem
-            background: darken($red, 20%)
             position: relative
+            @include themes-darken(25%)
         &-progress-bar.fill
             position: absolute
             top: 0
@@ -55,6 +54,7 @@
             padding-top: 1rem
             color: darken($red, 20%)
             cursor: pointer
+            @include themes-darken-color(25%)
 
     .menuOptions
         display: flex

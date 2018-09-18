@@ -47,6 +47,24 @@ p {
 .header-top-menu .bubble1, .header-top-menu .bubble2 {
   font-size: 1.5rem; }
 
+.theme-default {
+  background: #ea7661; }
+
+.theme-green {
+  background: #2eb398; }
+
+.theme-blue {
+  background: #79b0ec; }
+
+.theme-purple {
+  background: #b4a1dd; }
+
+.theme-brown {
+  background: #a8553a; }
+
+.theme-bay {
+  background: #68a0a5; }
+
 .header-top-menu {
   height: 6rem;
   margin-left: 0;
@@ -136,18 +154,6 @@ p {
     width: 2rem;
     height: 2rem;
     cursor: pointer; }
-  .header-top-menu .theme-default {
-    background: #ea7661; }
-  .header-top-menu .theme-green {
-    background: #2eb398; }
-  .header-top-menu .theme-blue {
-    background: #79b0ec; }
-  .header-top-menu .theme-purple {
-    background: #b4a1dd; }
-  .header-top-menu .theme-brown {
-    background: #a8553a; }
-  .header-top-menu .theme-bay {
-    background: #68a0a5; }
   .header-top-menu .pick-theme {
     position: fixed;
     top: 0;
@@ -349,7 +355,6 @@ input, textarea {
   .side-menu.open {
     width: 19rem; }
   .side-menu .avatar {
-    background: #ea7661;
     height: 6rem;
     display: flex;
     justify-content: center;
@@ -367,8 +372,19 @@ input, textarea {
       border-radius: 5px; }
     .side-menu .avatar-progress-bar.field {
       width: 8rem;
-      background: #b22e18;
       position: relative; }
+      .side-menu .avatar-progress-bar.field.theme-default {
+        background: #b43018; }
+      .side-menu .avatar-progress-bar.field.theme-green {
+        background: #144e42; }
+      .side-menu .avatar-progress-bar.field.theme-blue {
+        background: #1d6fc9; }
+      .side-menu .avatar-progress-bar.field.theme-purple {
+        background: #6944bb; }
+      .side-menu .avatar-progress-bar.field.theme-brown {
+        background: #492519; }
+      .side-menu .avatar-progress-bar.field.theme-bay {
+        background: #355659; }
     .side-menu .avatar-progress-bar.fill {
       position: absolute;
       top: 0;
@@ -379,6 +395,18 @@ input, textarea {
       padding-top: 1rem;
       color: #b22e18;
       cursor: pointer; }
+      .side-menu .avatar-lock.theme-default {
+        color: #b43018; }
+      .side-menu .avatar-lock.theme-green {
+        color: #144e42; }
+      .side-menu .avatar-lock.theme-blue {
+        color: #1d6fc9; }
+      .side-menu .avatar-lock.theme-purple {
+        color: #6944bb; }
+      .side-menu .avatar-lock.theme-brown {
+        color: #492519; }
+      .side-menu .avatar-lock.theme-bay {
+        color: #355659; }
   .side-menu .menuOptions {
     display: flex;
     justify-content: space-between;

@@ -1,3 +1,4 @@
+@include themes
 .header-top-menu
     height: 6rem
     margin-left: 0
@@ -10,18 +11,7 @@
     .menu-btn
         @include flexCenter
         width: 8rem
-        &.theme-default:hover
-            background: lighten($th-default, 2%)
-        &.theme-green:hover
-            background: lighten($th-green, 2%)
-        &.theme-blue:hover
-            background: lighten($th-blue, 2%)
-        &.theme-purple:hover
-            background: lighten($th-purple, 2%)
-        &.theme-brown:hover
-            background: lighten($th-brown, 2%)
-        &.theme-bay:hover
-            background: lighten($th-bay, 2%)
+        @include themes-lighten-hover(2%)
         &-icon
             display: flex
             flex-direction: column
@@ -80,18 +70,6 @@
         width: 2rem
         height: 2rem
         cursor: pointer
-    .theme-default
-        background: $th-default
-    .theme-green
-        background: $th-green
-    .theme-blue
-        background: $th-blue
-    .theme-purple
-        background: $th-purple
-    .theme-brown
-        background: $th-brown
-    .theme-bay
-        background: $th-bay
     .pick-theme
         position: fixed
         top: 0

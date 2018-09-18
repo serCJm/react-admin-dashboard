@@ -3,6 +3,36 @@
     justify-content: center
     align-items: center
 
+@mixin themes
+    @each $theme, $rgb in $themes
+        .#{$theme}
+            background: $rgb
+
+@mixin themes-lighten ($per)
+    @each $theme, $rgb in $themes
+        &.#{$theme}
+            background: lighten($rgb, $per)
+
+@mixin themes-darken ($per)
+    @each $theme, $rgb in $themes
+        &.#{$theme}
+            background: darken($rgb, $per)
+
+@mixin themes-lighten-hover ($per)
+    @each $theme, $rgb in $themes
+        &.#{$theme}:hover
+            background: lighten($rgb, $per)
+
+@mixin themes-darken-hover ($per)
+    @each $theme, $rgb in $themes
+        &.#{$theme}:hover
+            background: darken($rgb, $per)
+
+@mixin themes-darken-color ($per)
+    @each $theme, $rgb in $themes
+        &.#{$theme}
+            color: darken($rgb, $per)
+
 // FUNCTIONS
 @function shade($color, $percentage) 
     @return mix(black, $color, $percentage)

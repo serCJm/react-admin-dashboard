@@ -8,6 +8,7 @@ export const themes = {
   bay: "theme-bay"
 };
 
-export const ThemeContext = React.createContext(
-  themes.default // default value
-);
+export const ThemeContext = React.createContext({
+  theme: themes.default,
+  handleThemeChange: () => {} // default value
+});

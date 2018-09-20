@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { ThemeContext } from "../Header/theme-context.js";
 
 class SideMenuHomeItem extends Component {
   constructor(props) {
@@ -59,24 +60,31 @@ class SideMenuHomeItem extends Component {
 
     return (
       <li>
-        <a
-          onMouseEnter={this.handleHover}
-          onMouseLeave={this.handleHover}
-          className={
-            this.state.closeSubmenu
-              ? listItemStyle + " animate-close"
-              : listItemStyle
-          }
-          onClick={submenu ? this.handleSubmenuClick : this.handleActivePage}
-        >
-          <span className={classNames.menuIcon}>{icon}</span>
-          <span className={classNames.text}>{text}</span>
-          {submenu ? (
-            <span className={classNames.subMenuCount} style={countstyle}>
-              {submenu.length}
-            </span>
-          ) : null}
-        </a>
+        <ThemeContext>
+          {({ theme }) => (
+            <a
+              onMouseEnter={this.handleHover}
+              onMouseLeave={this.handleHover}
+              className={`${
+                this.state.closeSubmenu
+                  ? listItemStyle + " animate-close"
+                  : listItemStyle
+              } ${theme}
+              `}
+              onClick={
+                submenu ? this.handleSubmenuClick : this.handleActivePage
+              }
+            >
+              <span className={classNames.menuIcon}>{icon}</span>
+              <span className={classNames.text}>{text}</span>
+              {submenu ? (
+                <span className={classNames.subMenuCount} style={countstyle}>
+                  {submenu.length}
+                </span>
+              ) : null}
+            </a>
+          )}
+        </ThemeContext>
         {submenu && this.state.showSubmenu ? (
           <ul className={classNames.subMenu + " animate-open"}>{submenu}</ul>
         ) : null}

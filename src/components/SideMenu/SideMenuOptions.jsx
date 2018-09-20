@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ListMenuOptions from "../ListMenuOptions";
+import ListMenuOptions from "./ListMenuOptions";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome } from "@fortawesome/free-solid-svg-icons";
 import { faComments } from "@fortawesome/free-solid-svg-icons";

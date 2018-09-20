@@ -275,10 +275,22 @@ input, textarea {
     padding: 0 0.5rem;
     position: relative;
     cursor: pointer;
-    border-left: 4px solid transparent; }
+    border-left: 4px solid transparent;
+    background: #273135; }
     .home .menu-item.active {
-      border-left: 4px solid #ea7661;
       background: #070809; }
+      .home .menu-item.active.theme-default {
+        border-left: 4px solid #ea7661; }
+      .home .menu-item.active.theme-green {
+        border-left: 4px solid #2eb398; }
+      .home .menu-item.active.theme-blue {
+        border-left: 4px solid #79b0ec; }
+      .home .menu-item.active.theme-purple {
+        border-left: 4px solid #b4a1dd; }
+      .home .menu-item.active.theme-brown {
+        border-left: 4px solid #a8553a; }
+      .home .menu-item.active.theme-bay {
+        border-left: 4px solid #68a0a5; }
     .home .menu-item.animate-close {
       animation: closeSubmenu 0.2s ease-in-out 1; }
     .home .menu-item.submenu-parent:after {

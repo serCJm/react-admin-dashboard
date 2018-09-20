@@ -43,6 +43,11 @@
         &.#{$theme}:not(:last-child)
             border-right: 1px solid darken($rgb, $per)
 
+@mixin themes-lighten-border-left ($per)
+    @each $theme, $rgb in $themes
+        &.#{$theme}
+            border-left: 4px solid lighten($rgb, $per)
+
 // FUNCTIONS
 @function shade($color, $percentage) 
     @return mix(black, $color, $percentage)

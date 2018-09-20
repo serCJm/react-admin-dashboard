@@ -34,9 +34,10 @@ input, textarea
         position: relative
         cursor: pointer
         border-left: 4px solid transparent
+        background: $darkGrey
         &.active
-            border-left: 4px solid $lightRed
             background: darken($darkGrey, 15%)
+            @include themes-lighten-border-left(0)
         &.animate-close
             animation: closeSubmenu .2s ease-in-out 1
         &.submenu-parent:after

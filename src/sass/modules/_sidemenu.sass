@@ -52,7 +52,6 @@
             background: $white
         &-lock
             padding-top: 1rem
-            color: darken($red, 20%)
             cursor: pointer
             @include themes-darken-color(25%)
 
@@ -60,7 +59,6 @@
         display: flex
         justify-content: space-between
         align-items: center
-        background: darken($red, 3%)
         margin: 0
         height: 2.5rem
         cursor: pointer
@@ -68,13 +66,12 @@
             height: 100%
             width: ($sidemenuWidth/5)
             @include flexCenter
-            color: darken($red, 25%)
-            &.hover
-                background: darken($red, 5%)
+            @include themes-darken(8%)
+            @include themes-darken-color(30%)
+            @include themes-darken-hover(5%)
             &.active
-                background: shade($red, 15%)
-            &:not(:last-child)
-                border-right: 1px solid darken($red, 15%)
+                @include themes-darken-shade(0)
+            @include themes-darken-border-right(15%)
     .title
         color: transparentize($greyFont, .5)
         margin: 0 2rem 1rem

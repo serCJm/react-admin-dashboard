@@ -393,7 +393,6 @@ input, textarea {
       background: #fff; }
     .side-menu .avatar-lock {
       padding-top: 1rem;
-      color: #b22e18;
       cursor: pointer; }
       .side-menu .avatar-lock.theme-default {
         color: #b43018; }
@@ -411,7 +410,6 @@ input, textarea {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #e5543b;
     margin: 0;
     height: 2.5rem;
     cursor: pointer; }
@@ -420,14 +418,67 @@ input, textarea {
       width: 3.8rem;
       display: flex;
       justify-content: center;
-      align-items: center;
-      color: #9c2815; }
-      .side-menu .menuOptions .menuOption.hover {
-        background: #e44c32; }
-      .side-menu .menuOptions .menuOption.active {
-        background: #c4523e; }
-      .side-menu .menuOptions .menuOption:not(:last-child) {
-        border-right: 1px solid #c9341b; }
+      align-items: center; }
+      .side-menu .menuOptions .menuOption.theme-default {
+        background: #e5573d; }
+      .side-menu .menuOptions .menuOption.theme-green {
+        background: #26937c; }
+      .side-menu .menuOptions .menuOption.theme-blue {
+        background: #559be7; }
+      .side-menu .menuOptions .menuOption.theme-purple {
+        background: #9c83d2; }
+      .side-menu .menuOptions .menuOption.theme-brown {
+        background: #8a4630; }
+      .side-menu .menuOptions .menuOption.theme-bay {
+        background: #558a8f; }
+      .side-menu .menuOptions .menuOption.theme-default {
+        color: #9d2a15; }
+      .side-menu .menuOptions .menuOption.theme-green {
+        color: #0f3931; }
+      .side-menu .menuOptions .menuOption.theme-blue {
+        color: #1963b3; }
+      .side-menu .menuOptions .menuOption.theme-purple {
+        color: #5f3da8; }
+      .side-menu .menuOptions .menuOption.theme-brown {
+        color: #361b13; }
+      .side-menu .menuOptions .menuOption.theme-bay {
+        color: #2b4649; }
+      .side-menu .menuOptions .menuOption.theme-default:hover {
+        background: #e7624a; }
+      .side-menu .menuOptions .menuOption.theme-green:hover {
+        background: #299f87; }
+      .side-menu .menuOptions .menuOption.theme-blue:hover {
+        background: #63a3e9; }
+      .side-menu .menuOptions .menuOption.theme-purple:hover {
+        background: #a58ed6; }
+      .side-menu .menuOptions .menuOption.theme-brown:hover {
+        background: #954b33; }
+      .side-menu .menuOptions .menuOption.theme-bay:hover {
+        background: #5b9499; }
+      .side-menu .menuOptions .menuOption.active.theme-default {
+        background: #ea7661; }
+      .side-menu .menuOptions .menuOption.active.theme-green {
+        background: #2eb398; }
+      .side-menu .menuOptions .menuOption.active.theme-blue {
+        background: #79b0ec; }
+      .side-menu .menuOptions .menuOption.active.theme-purple {
+        background: #b4a1dd; }
+      .side-menu .menuOptions .menuOption.active.theme-brown {
+        background: #a8553a; }
+      .side-menu .menuOptions .menuOption.active.theme-bay {
+        background: #68a0a5; }
+      .side-menu .menuOptions .menuOption.theme-default:not(:last-child) {
+        border-right: 1px solid #e13c1e; }
+      .side-menu .menuOptions .menuOption.theme-green:not(:last-child) {
+        border-right: 1px solid #1e7664; }
+      .side-menu .menuOptions .menuOption.theme-blue:not(:last-child) {
+        border-right: 1px solid #3689e3; }
+      .side-menu .menuOptions .menuOption.theme-purple:not(:last-child) {
+        border-right: 1px solid #8769c9; }
+      .side-menu .menuOptions .menuOption.theme-brown:not(:last-child) {
+        border-right: 1px solid #6f3826; }
+      .side-menu .menuOptions .menuOption.theme-bay:not(:last-child) {
+        border-right: 1px solid #487579; }
   .side-menu .title {
     color: rgba(137, 148, 155, 0.5);
     margin: 0 2rem 1rem;

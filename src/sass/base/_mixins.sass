@@ -33,6 +33,16 @@
         &.#{$theme}
             color: darken($rgb, $per)
 
+@mixin themes-darken-shade ($per)
+    @each $theme, $rgb in $themes
+        &.#{$theme}
+            background: shade($rgb, $per)
+
+@mixin themes-darken-border-right ($per)
+    @each $theme, $rgb in $themes
+        &.#{$theme}:not(:last-child)
+            border-right: 1px solid darken($rgb, $per)
+
 // FUNCTIONS
 @function shade($color, $percentage) 
     @return mix(black, $color, $percentage)

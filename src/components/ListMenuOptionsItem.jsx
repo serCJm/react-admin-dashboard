@@ -1,45 +1,25 @@
-import React, { Component } from "react";
+import React from "react";
+import { ThemeContext } from "./Header/theme-context.js";
 
-class ListMenuOptionsItem extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isHoverOn: false
-    };
+const ListMenuOptionsItem = props => {
+  let styleClass = props.classNames.li;
 
-    this.handleHover = this.handleHover.bind(this);
-    this.handleClick = this.handleClick.bind(this);
+  // check if item id matches current tab to apply active class
+  if (props.current === props.id) {
+    styleClass += " " + props.classNames.active;
   }
-
-  handleHover() {
-    this.setState(prevStep => ({ isHoverOn: !prevStep.isHoverOn }));
-  }
-
-  handleClick() {
-    this.props.handleOptionClick(this.props.id);
-  }
-
-  render() {
-    let styleClass = this.props.classNames.li;
-
-    // check if item id matches current tab to apply active class
-    if (this.props.current === this.props.id) {
-      styleClass += " " + this.props.classNames.active;
-    } else if (this.state.isHoverOn) {
-      styleClass += " " + this.props.classNames.hover;
-    }
-
-    return (
-      <li
-        onMouseEnter={this.handleHover}
-        onMouseLeave={this.handleHover}
-        className={styleClass}
-        onClick={this.handleClick}
-      >
-        {this.props.item}
-      </li>
-    );
-  }
-}
+  return (
+    <ThemeContext>
+      {({ theme }) => (
+        <li
+          className={`${styleClass} ${theme}`}
+          onClick={() => props.handleOptionClick(props.id)}
+        >
+          {props.item}
+        </li>
+      )}
+    </ThemeContext>
+  );
+};
 
 export default ListMenuOptionsItem;

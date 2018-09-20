@@ -48,6 +48,16 @@
         &.#{$theme}
             border-left: 4px solid lighten($rgb, $per)
 
+@mixin themes-lighten-border-top ($per)
+    @each $theme, $rgb in $themes
+        &.#{$theme}
+            border-top: 4px solid lighten($rgb, $per)
+
+@mixin themes-lighten-border-before ($wid, $per)
+    @each $theme, $rgb in $themes
+        &.#{$theme}:before
+            border: $wid solid lighten($rgb, $per)
+
 // FUNCTIONS
 @function shade($color, $percentage) 
     @return mix(black, $color, $percentage)

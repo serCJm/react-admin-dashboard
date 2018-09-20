@@ -46,6 +46,10 @@ p {
 
 .header-top-menu .bubble1, .header-top-menu .bubble2 {
   font-size: 1.5rem; }
+.header-top-menu .hover-menu-title {
+  font-size: 1rem; }
+.header-top-menu .hover-menu-lang-title {
+  font-weight: 200; }
 
 .theme-default {
   background: #ea7661; }
@@ -120,12 +124,15 @@ p {
     height: 100%; }
     .header-top-menu .header-controls-item {
       display: flex;
+      position: relative;
       align-items: center;
       justify-content: space-between;
       padding: 0 2rem;
       border-left: solid 2px #303a3e;
       color: #89949b;
-      font-size: 1.7rem; }
+      font-size: 1.7rem;
+      cursor: pointer;
+      z-index: 1; }
     .header-top-menu .header-controls-icon:not(:last-child) {
       padding-right: 2rem; }
     .header-top-menu .header-controls-icon {
@@ -148,6 +155,77 @@ p {
       background: #ffc497; }
     .header-top-menu .header-controls .bubble2 {
       background: #44c1ac; }
+    .header-top-menu .header-controls .hover-menu {
+      position: absolute;
+      top: 6rem;
+      right: 0;
+      background: #fff;
+      border: 1px solid #ededed;
+      border-radius: 0 0 5px 5px; }
+      .header-top-menu .header-controls .hover-menu.theme-default {
+        border-top: 4px solid #ea7661; }
+      .header-top-menu .header-controls .hover-menu.theme-green {
+        border-top: 4px solid #2eb398; }
+      .header-top-menu .header-controls .hover-menu.theme-blue {
+        border-top: 4px solid #79b0ec; }
+      .header-top-menu .header-controls .hover-menu.theme-purple {
+        border-top: 4px solid #b4a1dd; }
+      .header-top-menu .header-controls .hover-menu.theme-brown {
+        border-top: 4px solid #a8553a; }
+      .header-top-menu .header-controls .hover-menu.theme-bay {
+        border-top: 4px solid #68a0a5; }
+      .header-top-menu .header-controls .hover-menu:before {
+        content: "";
+        position: absolute;
+        top: -12px;
+        right: 2.8rem;
+        transform: rotate(45deg);
+        width: 0;
+        height: 0;
+        z-index: -1; }
+      .header-top-menu .header-controls .hover-menu.theme-default:before {
+        border: 8px solid #ea7661; }
+      .header-top-menu .header-controls .hover-menu.theme-green:before {
+        border: 8px solid #2eb398; }
+      .header-top-menu .header-controls .hover-menu.theme-blue:before {
+        border: 8px solid #79b0ec; }
+      .header-top-menu .header-controls .hover-menu.theme-purple:before {
+        border: 8px solid #b4a1dd; }
+      .header-top-menu .header-controls .hover-menu.theme-brown:before {
+        border: 8px solid #a8553a; }
+      .header-top-menu .header-controls .hover-menu.theme-bay:before {
+        border: 8px solid #68a0a5; }
+      .header-top-menu .header-controls .hover-menu-title {
+        margin: 0.5rem 2rem 0; }
+      .header-top-menu .header-controls .hover-menu-list {
+        margin: 0.5rem 0; }
+      .header-top-menu .header-controls .hover-menu-lang {
+        display: flex;
+        align-items: center;
+        width: 25rem;
+        margin: 0.5rem 0;
+        padding: 0.5rem 0 0.5rem 2rem;
+        cursor: pointer; }
+        .header-top-menu .header-controls .hover-menu-lang.active {
+          color: #fff; }
+          .header-top-menu .header-controls .hover-menu-lang.active .theme-default {
+            background: #ea7661; }
+          .header-top-menu .header-controls .hover-menu-lang.active .theme-green {
+            background: #2eb398; }
+          .header-top-menu .header-controls .hover-menu-lang.active .theme-blue {
+            background: #79b0ec; }
+          .header-top-menu .header-controls .hover-menu-lang.active .theme-purple {
+            background: #b4a1dd; }
+          .header-top-menu .header-controls .hover-menu-lang.active .theme-brown {
+            background: #a8553a; }
+          .header-top-menu .header-controls .hover-menu-lang.active .theme-bay {
+            background: #68a0a5; }
+        .header-top-menu .header-controls .hover-menu-lang:not(.active):hover {
+          background: rgba(237, 237, 237, 0.5);
+          color: black; }
+        .header-top-menu .header-controls .hover-menu-lang-title {
+          margin: 0 2rem;
+          text-transform: capitalize; }
   .header-top-menu .theme-btn {
     border: none;
     border-radius: 50%;

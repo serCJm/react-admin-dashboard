@@ -1,5 +1,5 @@
 import React from "react";
-import { ThemeContext } from "./Header/theme-context.js";
+import { ThemeContext } from "../Header/theme-context.js";
 
 const ListMenuOptionsItem = props => {
   let styleClass = props.classNames.li;

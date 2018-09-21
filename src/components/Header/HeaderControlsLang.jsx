@@ -41,7 +41,10 @@ class HeaderControlsLang extends Component {
   };
 
   handleChooseLocaleClick = (id, e) => {
-    this.setState({ current: id });
+    this.setState(prevState => ({
+      current: id,
+      showMenu: !prevState.showMenu
+    }));
   };
 
   handleLangMenuClick = () => {

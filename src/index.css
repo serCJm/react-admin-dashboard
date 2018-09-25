@@ -47,9 +47,12 @@ p {
 .header-top-menu .bubble1, .header-top-menu .bubble2 {
   font-size: 1.5rem; }
 .header-top-menu .hover-menu-title {
-  font-size: 1rem; }
+  font-size: 1.3rem; }
 .header-top-menu .hover-menu-lang-title {
   font-weight: 200; }
+.header-top-menu .hover-menu-dimension, .header-top-menu .hover-menu-layout {
+  font-size: 1.5rem;
+  font-weight: normal; }
 
 .theme-default {
   background: #ea7661; }
@@ -137,6 +140,9 @@ p {
       padding-right: 2rem; }
     .header-top-menu .header-controls-icon {
       position: relative;
+      display: flex;
+      align-items: center;
+      height: 100%;
       cursor: pointer; }
     .header-top-menu .header-controls-icon:hover > svg {
       color: #fff; }
@@ -145,8 +151,8 @@ p {
       justify-content: center;
       align-items: center;
       position: absolute;
-      top: -12px;
-      left: 20px;
+      top: 10px;
+      left: 18px;
       border-radius: 50%;
       color: #89949b;
       width: 1.5rem;
@@ -174,6 +180,8 @@ p {
         border-top: 4px solid #a8553a; }
       .header-top-menu .header-controls .hover-menu.theme-bay {
         border-top: 4px solid #68a0a5; }
+      .header-top-menu .header-controls .hover-menu.settings-menu {
+        right: -2rem; }
       .header-top-menu .header-controls .hover-menu:before {
         content: "";
         position: absolute;
@@ -196,36 +204,52 @@ p {
       .header-top-menu .header-controls .hover-menu.theme-bay:before {
         border: 8px solid #68a0a5; }
       .header-top-menu .header-controls .hover-menu-title {
-        margin: 0.5rem 2rem 0; }
+        padding: 0.5rem 2rem 0;
+        margin-bottom: 0; }
+        .header-top-menu .header-controls .hover-menu-title:not(:first-of-type) {
+          margin-top: 0;
+          background: #f9fafb; }
       .header-top-menu .header-controls .hover-menu-list {
         margin: 0.5rem 0; }
-      .header-top-menu .header-controls .hover-menu-lang {
+      .header-top-menu .header-controls .hover-menu-lang, .header-top-menu .header-controls .hover-menu-dimension {
         display: flex;
         align-items: center;
         width: 25rem;
-        margin: 0.5rem 0;
-        padding: 0.5rem 0 0.5rem 2rem;
+        padding: 1rem 0 1rem 2rem;
+        margin: 0;
+        text-transform: capitalize;
         cursor: pointer; }
-        .header-top-menu .header-controls .hover-menu-lang.active {
+        .header-top-menu .header-controls .hover-menu-lang.active, .header-top-menu .header-controls .hover-menu-dimension.active {
           color: #fff; }
-          .header-top-menu .header-controls .hover-menu-lang.active .theme-default {
+          .header-top-menu .header-controls .hover-menu-lang.active .theme-default, .header-top-menu .header-controls .hover-menu-dimension.active .theme-default {
             background: #ea7661; }
-          .header-top-menu .header-controls .hover-menu-lang.active .theme-green {
+          .header-top-menu .header-controls .hover-menu-lang.active .theme-green, .header-top-menu .header-controls .hover-menu-dimension.active .theme-green {
             background: #2eb398; }
-          .header-top-menu .header-controls .hover-menu-lang.active .theme-blue {
+          .header-top-menu .header-controls .hover-menu-lang.active .theme-blue, .header-top-menu .header-controls .hover-menu-dimension.active .theme-blue {
             background: #79b0ec; }
-          .header-top-menu .header-controls .hover-menu-lang.active .theme-purple {
+          .header-top-menu .header-controls .hover-menu-lang.active .theme-purple, .header-top-menu .header-controls .hover-menu-dimension.active .theme-purple {
             background: #b4a1dd; }
-          .header-top-menu .header-controls .hover-menu-lang.active .theme-brown {
+          .header-top-menu .header-controls .hover-menu-lang.active .theme-brown, .header-top-menu .header-controls .hover-menu-dimension.active .theme-brown {
             background: #a8553a; }
-          .header-top-menu .header-controls .hover-menu-lang.active .theme-bay {
+          .header-top-menu .header-controls .hover-menu-lang.active .theme-bay, .header-top-menu .header-controls .hover-menu-dimension.active .theme-bay {
             background: #68a0a5; }
-        .header-top-menu .header-controls .hover-menu-lang:not(.active):hover {
+        .header-top-menu .header-controls .hover-menu-lang:not(.active):hover, .header-top-menu .header-controls .hover-menu-dimension:not(.active):hover {
           background: rgba(237, 237, 237, 0.5);
           color: black; }
-        .header-top-menu .header-controls .hover-menu-lang-title {
+        .header-top-menu .header-controls .hover-menu-lang-title, .header-top-menu .header-controls .hover-menu-dimension-title {
           margin: 0 2rem;
           text-transform: capitalize; }
+      .header-top-menu .header-controls .hover-menu-dimension {
+        width: 30rem;
+        padding-bottom: 1rem; }
+      .header-top-menu .header-controls .hover-menu-layout {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 1rem 2rem;
+        text-transform: capitalize; }
+        .header-top-menu .header-controls .hover-menu-layout input[type="radio"] {
+          margin-right: 1rem; }
   .header-top-menu .theme-btn {
     border: none;
     border-radius: 50%;

@@ -51,14 +51,17 @@
             padding-right: 2rem
         &-icon
             position: relative
+            display: flex
+            align-items: center
+            height: 100%
             cursor: pointer
         &-icon:hover > svg
             color: $white
         .bubble1, .bubble2
             @include flexCenter
             position: absolute
-            top: -12px
-            left: 20px
+            top: 10px
+            left: 18px
             border-radius: 50%
             color: $greyFont
             width: 1.5rem
@@ -75,6 +78,8 @@
             border: 1px solid rgb(237, 237, 237)
             border-radius: 0 0 5px 5px
             @include themes-lighten-border-top(0)
+            &.settings-menu
+                right: -2rem
             &:before
                 content: ''
                 position: absolute
@@ -86,15 +91,20 @@
                 z-index: -1
             @include themes-lighten-border-before(8px, 0)
             &-title
-                margin: .5rem 2rem 0
+                padding: .5rem 2rem 0
+                margin-bottom: 0
+                &:not(:first-of-type)
+                    margin-top: 0
+                    background: rgb(249, 250, 251)
             &-list
                 margin: .5rem 0
-            &-lang
+            &-lang, &-dimension
                 display: flex
                 align-items: center
                 width: 25rem
-                margin: .5rem 0
-                padding: .5rem 0 .5rem 2rem
+                padding: 1rem 0 1rem 2rem
+                margin: 0
+                text-transform: capitalize
                 cursor: pointer
                 &.active
                     color: $white
@@ -105,6 +115,17 @@
                 &-title
                     margin: 0 2rem
                     text-transform: capitalize
+            &-dimension
+                width: 30rem
+                padding-bottom: 1rem
+            &-layout
+                display: flex
+                justify-content: space-between
+                align-items: center
+                margin: 1rem 2rem
+                text-transform: capitalize
+                input[type="radio"]
+                    margin-right: 1rem
                 
     .theme-btn
         border: none

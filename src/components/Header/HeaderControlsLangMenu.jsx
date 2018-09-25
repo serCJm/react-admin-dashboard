@@ -8,7 +8,7 @@ const HeaderControlsLangMenu = ({
   current
 }) => {
   return (
-    <HeaderHoverMenu heading="Choose A Locale">
+    <HeaderHoverMenu heading="Choose A Locale" positionClass="''">
       <ThemeContext>
         {({ theme }) => (
           <ul className="hover-menu-list">

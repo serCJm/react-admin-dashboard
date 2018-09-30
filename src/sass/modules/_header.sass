@@ -132,6 +132,7 @@
             &-notifications
                 width: 30rem
                 margin-bottom: 0
+                margin-top: 0
                 &-item
                     display: flex
                     border-bottom: 1px solid rgb(245, 245, 245)
@@ -145,7 +146,6 @@
                     vertical-align: middle
                 &-alert
                     background: rgb(217, 83, 79)
-                    
                     text-align: center
                     color: $white
                     vertical-align: middle
@@ -176,6 +176,20 @@
                 right: -1.8rem
                 &:before
                     right: 2rem
+            &-rss-type
+                display: block
+                width: 1.5rem
+                height: 5rem
+                line-height: 5rem
+                text-align: center
+            &-rss-action
+                margin: .2rem 0
+            &-rss-commits-container
+                @include flexCenter
+                height: 140px
+            &-rss-commits
+                fill: $green
+
                         
                     
                 

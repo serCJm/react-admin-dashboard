@@ -70,6 +70,14 @@ p {
   text-transform: uppercase;
   text-align: center;
   color: #89949b; }
+.header-top-menu .hover-menu-rss-type {
+  font-size: 1.3rem; }
+.header-top-menu .hover-menu-rss-action {
+  color: #97a1a7;
+  text-transform: lowercase;
+  font-weight: bold; }
+.header-top-menu .hover-menu-rss-link {
+  color: #5a90e7; }
 
 .theme-default {
   background: #ea7661; }
@@ -271,7 +279,8 @@ p {
         right: 2.15rem; }
       .header-top-menu .header-controls .hover-menu-notifications {
         width: 30rem;
-        margin-bottom: 0; }
+        margin-bottom: 0;
+        margin-top: 0; }
         .header-top-menu .header-controls .hover-menu-notifications-item {
           display: flex;
           border-bottom: 1px solid whitesmoke;
@@ -315,6 +324,21 @@ p {
         right: -1.8rem; }
         .header-top-menu .header-controls .hover-menu.rss-menu:before {
           right: 2rem; }
+      .header-top-menu .header-controls .hover-menu-rss-type {
+        display: block;
+        width: 1.5rem;
+        height: 5rem;
+        line-height: 5rem;
+        text-align: center; }
+      .header-top-menu .header-controls .hover-menu-rss-action {
+        margin: 0.2rem 0; }
+      .header-top-menu .header-controls .hover-menu-rss-commits-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 140px; }
+      .header-top-menu .header-controls .hover-menu-rss-commits {
+        fill: #2eb398; }
   .header-top-menu .theme-btn {
     border: none;
     border-radius: 50%;

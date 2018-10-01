@@ -3,7 +3,7 @@ import React from "react";
 
 const LineWithCircle = props => {
   return (
-    <g>
+    <g pointerEvents="none">
       <line
         x1={props.tooltip.xGraph}
         x2={props.tooltip.xGraph}

@@ -339,6 +339,14 @@ p {
         height: 140px; }
       .header-top-menu .header-controls .hover-menu-rss-commits {
         fill: #2eb398; }
+        .header-top-menu .header-controls .hover-menu-rss-commits-tooltip {
+          display: block;
+          position: fixed;
+          padding: 0 0.3rem;
+          background: #fff;
+          color: #89949b;
+          border: 1px solid #2eb398;
+          border-radisu: 5px; }
   .header-top-menu .theme-btn {
     border: none;
     border-radius: 50%;

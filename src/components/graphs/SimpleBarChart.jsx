@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import * as d3 from "d3";
-import RectInfoBox from "./tooltips/RectInfoBox";
+import TooltipBox from "./tooltips/TooltipBox";
+import LineWithCircle from "./tooltips/LineWithCircle";
 
 class SimpleBarChart extends Component {
   state = {
@@ -14,7 +15,15 @@ class SimpleBarChart extends Component {
       .rangeRound([+this.props.height, +this.props.margin.top]),
 
     tooltip: {
-      show: false
+      show: false,
+      xGraph: null,
+      yGraph: null,
+      y1: +this.props.height,
+      y2: 0,
+      mouseXAbs: null,
+      mouseYAbs: null,
+      text1: null,
+      text2: null
     }
   };
 
@@ -22,6 +31,10 @@ class SimpleBarChart extends Component {
     if (!nextProps.data) return null;
     const { data } = nextProps;
     const { xScale, yScale } = prevState;
+
+    if (nextProps.paddingInner) {
+      xScale.paddingInner(0.5);
+    }
 
     xScale.domain(data.map((d, i) => i.toString()));
     yScale.domain([0, d3.max(data, d => Math.abs(d))]);
@@ -43,16 +56,22 @@ class SimpleBarChart extends Component {
 
   handleMouseHover = e => {
     const rect = e.target;
-    this.setState(prevState => {
-      return {
-        tooltip: {
-          show: !prevState.tooltip.show,
-          x1: +rect.getAttribute("x") - 3,
-          mouseY: +rect.getAttribute("y") + 22,
-          yValue: Number(+rect.getAttribute("data-value")).toFixed(1)
-        }
-      };
-    });
+
+    const { xScale, yScale } = { ...this.state };
+
+    const xValue = Number(+rect.getAttribute("data-key"));
+    const yValue = this.props.data[xValue].toFixed(1);
+
+    const barHalf = Number(+rect.getAttribute("width")) / 2;
+
+    const tooltip = { ...this.state.tooltip };
+    tooltip.show = true;
+    tooltip.xGraph = xScale(xValue) + barHalf;
+    tooltip.yGraph = yScale(yValue);
+    tooltip.mouseXAbs = e.clientX;
+    tooltip.mouseYAbs = e.clientY;
+    tooltip.text1 = yValue;
+    this.setState({ tooltip: tooltip });
   };
 
   handleMouseLeave = () => {
@@ -62,28 +81,45 @@ class SimpleBarChart extends Component {
   };
 
   render() {
-    let tooltip = null;
+    let tooltipBox = null;
     if (this.state.tooltip.show) {
-      tooltip = <RectInfoBox tooltip={this.state.tooltip} />;
+      tooltipBox = (
+        <TooltipBox
+          position={{
+            left: this.state.tooltip.mouseXAbs + 15,
+            top: this.state.tooltip.mouseYAbs - 15
+          }}
+          text1={this.state.tooltip.text1}
+          text2={this.state.tooltip.text2}
+          tooltipClass={this.props.tooltipClass}
+        />
+      );
+    }
+    let tooltipLine = null;
+    if (this.state.tooltip.show && this.props.lineWithCircle) {
+      tooltipLine = <LineWithCircle tooltip={this.state.tooltip} />;
     }
     return (
-      <svg width={this.props.width} height={this.props.height}>
-        {this.state.bars.map((d, i) => (
-          <rect
-            key={i}
-            x={d.x}
-            y={d.y}
-            height={d.height}
-            width={d.width}
-            className={d.className}
-            data-key={d.dataKey}
-            data-value={d.dataValue}
-            onMouseEnter={this.handleMouseHover}
-            onMouseLeave={this.handleMouseLeave}
-          />
-        ))}
-        {tooltip}
-      </svg>
+      <React.Fragment>
+        <svg width={this.props.width} height={this.props.height}>
+          {this.state.bars.map((d, i) => (
+            <rect
+              key={i}
+              x={d.x}
+              y={d.y}
+              height={d.height}
+              width={d.width}
+              className={d.className}
+              data-key={d.dataKey}
+              data-value={d.dataValue}
+              onMouseEnter={this.handleMouseHover}
+              onMouseLeave={this.handleMouseLeave}
+            />
+          ))}
+          {tooltipLine}
+        </svg>
+        {tooltipBox}
+      </React.Fragment>
     );
   }
 }

@@ -44,7 +44,7 @@ const data = [
 ];
 
 const dataCommits = [];
-for (let i = 0; i < 31; i++) {
+for (let i = 0; i < 14; i++) {
   const newNumber = Math.round(Math.random() * 100);
   dataCommits.push(newNumber);
 }
@@ -65,7 +65,10 @@ const HeaderControlsBell = () => {
             width="300"
             height="90"
             margin={{ top: 10, right: 0 }}
+            paddingInner="yes"
+            lineWithCircle="yes"
             classNames={{ bar1: null, bar2: "hover-menu-rss-commits" }}
+            tooltipClass="hover-menu-rss-commits-tooltip"
           />
         </div>
       </div>

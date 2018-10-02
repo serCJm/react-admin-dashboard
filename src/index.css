@@ -475,7 +475,9 @@ input, textarea {
     position: relative;
     cursor: pointer;
     border-left: 4px solid transparent;
-    background: #273135; }
+    background: #273135;
+    text-decoration: none;
+    color: inherit; }
     .home .menu-item.active {
       background: #070809; }
       .home .menu-item.active.theme-default {

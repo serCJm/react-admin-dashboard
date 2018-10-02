@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { ThemeContext } from "../Header/theme-context.js";
+import { Link } from "react-router-dom";
 
 class SideMenuHomeItem extends Component {
   constructor(props) {
@@ -62,7 +63,8 @@ class SideMenuHomeItem extends Component {
       <li>
         <ThemeContext>
           {({ theme }) => (
-            <a
+            <Link
+              to={id === "dashboard" ? "/" : `/${id}`}
               onMouseEnter={this.handleHover}
               onMouseLeave={this.handleHover}
               className={`${
@@ -82,7 +84,7 @@ class SideMenuHomeItem extends Component {
                   {submenu.length}
                 </span>
               ) : null}
-            </a>
+            </Link>
           )}
         </ThemeContext>
         {submenu && this.state.showSubmenu ? (

@@ -1,19 +1,30 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
 import { ThemeContext } from "./theme-context";
+import { AuthContext } from "./auth-context";
 
 const HeaderLogoutBtn = () => {
   return (
-    <ThemeContext.Consumer>
-      {({ theme }) => (
-        <button className={`menu-btn ${theme}`}>
-          <span className="menu-btn-icon">
-            <FontAwesomeIcon icon={faSignOutAlt} />
-          </span>
-        </button>
+    <AuthContext.Consumer>
+      {({ handleAuthentication }) => (
+        <ThemeContext.Consumer>
+          {({ theme }) => (
+            <button
+              className={`menu-btn ${theme}`}
+              onClick={handleAuthentication}
+            >
+              <Link to="/logout">
+                <span className="menu-btn-icon">
+                  <FontAwesomeIcon icon={faSignOutAlt} />
+                </span>
+              </Link>
+            </button>
+          )}
+        </ThemeContext.Consumer>
       )}
-    </ThemeContext.Consumer>
+    </AuthContext.Consumer>
   );
 };
 

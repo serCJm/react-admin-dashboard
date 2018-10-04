@@ -79,6 +79,11 @@ p {
 .header-top-menu .hover-menu-rss-link {
   color: #5a90e7; }
 
+.lock-time {
+  font-size: 7rem; }
+.lock-form {
+  font-size: 1.8rem; }
+
 .theme-default {
   background: #ea7661; }
 
@@ -938,5 +943,46 @@ input, textarea {
   .tooltip-box .text {
     padding: 0;
     margin: 0; }
+
+.lock {
+  min-width: 100vw;
+  min-height: 100vh;
+  background: #43525a; }
+  .lock-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 50vh;
+    width: 100%;
+    color: #fff; }
+  .lock-time {
+    margin-bottom: 0; }
+  .lock-date {
+    flex: 1; }
+  .lock-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; }
+    .lock-form-label, .lock-form-pass {
+      width: 20rem;
+      height: 4rem;
+      background: #fff;
+      color: black;
+      text-align: center; }
+    .lock-form-label {
+      line-height: 4rem;
+      margin-right: -5px; }
+    .lock-form-img {
+      border-radius: 140px;
+      border: 10px solid #fff;
+      background: #fff; }
+    .lock-form-pass {
+      margin-left: -5px;
+      text-transform: capitalize;
+      border: none; }
+    .lock-form-btn {
+      display: none; }
 
 /*# sourceMappingURL=index.css.map */

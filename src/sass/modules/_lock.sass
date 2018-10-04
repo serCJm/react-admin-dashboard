@@ -1,0 +1,40 @@
+.lock
+    min-width: 100vw
+    min-height: 100vh
+    background: rgb(67, 82, 90)
+    &-container
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: center
+        min-height: 50vh
+        width: 100%
+        color: $white
+    &-time
+        margin-bottom: 0
+    &-date
+        flex: 1
+    &-form
+        @include flexCenter
+        flex-wrap: wrap
+        &-label, &-pass
+            width: 20rem
+            height: 4rem
+            background: $white
+            color: black
+            text-align: center
+        &-label
+            line-height: 4rem
+            margin-right: -5px
+        &-img
+            border-radius: 140px
+            border: 10px solid $white
+            background: $white
+        &-pass
+            margin-left: -5px
+            text-transform: capitalize
+            border: none
+        &-btn
+            display: none
+
+    

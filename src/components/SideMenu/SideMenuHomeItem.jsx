@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { ThemeContext } from "../Header/theme-context.js";
+import { AuthContext } from "../Header/auth-context";
 import { Link } from "react-router-dom";
 
 class SideMenuHomeItem extends Component {
@@ -33,6 +34,10 @@ class SideMenuHomeItem extends Component {
     this.props.handleActivePage(this.props.id);
   }
 
+  handleChangeAuthentication = (e, handleChangeAuthentication) => {
+    handleChangeAuthentication();
+  };
+
   render() {
     const {
       id,
@@ -59,34 +64,54 @@ class SideMenuHomeItem extends Component {
       listItemStyle += " " + classNames.subParent;
     }
 
+    let menuAction = this.handleActivePage;
+    if (id === "lock") {
+      menuAction = this.handleChangeAuthentication;
+    } else if (submenu) {
+      menuAction = this.handleSubmenuClick;
+    }
+
     return (
       <li>
-        <ThemeContext>
-          {({ theme }) => (
-            <Link
-              to={id === "dashboard" ? "/" : `/${id}`}
-              onMouseEnter={this.handleHover}
-              onMouseLeave={this.handleHover}
-              className={`${
-                this.state.closeSubmenu
-                  ? listItemStyle + " animate-close"
-                  : listItemStyle
-              } ${theme}
+        <AuthContext.Consumer>
+          {({ handleAuthentication }) => (
+            <ThemeContext>
+              {({ theme }) => (
+                <Link
+                  to={id === "dashboard" ? "/" : `/${id}`}
+                  onMouseEnter={this.handleHover}
+                  onMouseLeave={this.handleHover}
+                  className={`${
+                    this.state.closeSubmenu
+                      ? listItemStyle + " animate-close"
+                      : listItemStyle
+                  } ${theme}
               `}
-              onClick={
-                submenu ? this.handleSubmenuClick : this.handleActivePage
-              }
-            >
-              <span className={classNames.menuIcon}>{icon}</span>
-              <span className={classNames.text}>{text}</span>
-              {submenu ? (
-                <span className={classNames.subMenuCount} style={countstyle}>
-                  {submenu.length}
-                </span>
-              ) : null}
-            </Link>
+                  onClick={
+                    menuAction === this.handleChangeAuthentication
+                      ? e =>
+                          this.handleChangeAuthentication(
+                            e,
+                            handleAuthentication
+                          )
+                      : menuAction
+                  }
+                >
+                  <span className={classNames.menuIcon}>{icon}</span>
+                  <span className={classNames.text}>{text}</span>
+                  {submenu ? (
+                    <span
+                      className={classNames.subMenuCount}
+                      style={countstyle}
+                    >
+                      {submenu.length}
+                    </span>
+                  ) : null}
+                </Link>
+              )}
+            </ThemeContext>
           )}
-        </ThemeContext>
+        </AuthContext.Consumer>
         {submenu && this.state.showSubmenu ? (
           <ul className={classNames.subMenu + " animate-open"}>{submenu}</ul>
         ) : null}

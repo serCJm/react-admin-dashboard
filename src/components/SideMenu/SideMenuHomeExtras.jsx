@@ -25,7 +25,7 @@ class SideMenuHomeExtras extends Component {
           submenu: null
         },
         {
-          id: "lock-page",
+          id: "lock",
           icon: <FontAwesomeIcon icon={faUserLock} />,
           text: "Lock Page",
           submenu: null

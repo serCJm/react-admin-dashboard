@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Header from "./layout/Header";
 import Dashboard from "./layout/Pages/Dashboard.jsx";
-import Logout from "./layout/Pages/Logout.jsx";
+import Lock from "./layout/Pages/Lock";
 import { BrowserRouter, Route } from "react-router-dom";
 import { AuthContext } from "./components/Header/auth-context";
 
@@ -36,7 +36,7 @@ class App extends Component {
         </React.Fragment>
       );
     } else {
-      content = <Route path="/logout" component={Logout} />;
+      content = <Route path="/lock" component={Lock} />;
     }
     return (
       <BrowserRouter>

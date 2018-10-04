@@ -3,6 +3,8 @@ import imageAvatar from "../images/avatar.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCoffee } from "@fortawesome/free-solid-svg-icons";
 import { ThemeContext } from "./Header/theme-context";
+import { AuthContext } from "./Header/auth-context";
+import { Link } from "react-router-dom";
 
 function Avatar() {
   return (
@@ -21,9 +23,15 @@ function Avatar() {
               <div className="avatar-progress-bar fill" />
             </div>
           </div>
-          <span className={`avatar-lock ${theme}`}>
-            <FontAwesomeIcon icon={faCoffee} />
-          </span>
+          <AuthContext.Consumer>
+            {({ handleAuthentication }) => (
+              <Link to="/lock" onClick={handleAuthentication}>
+                <span className={`avatar-lock ${theme}`}>
+                  <FontAwesomeIcon icon={faCoffee} />
+                </span>
+              </Link>
+            )}
+          </AuthContext.Consumer>
         </div>
       )}
     </ThemeContext.Consumer>

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Header from "./layout/Header";
-import Dashboard from "./layout/Pages/Dashboard.jsx";
+import Pages from "./layout/Pages/Pages";
 import Lock from "./layout/Pages/Lock";
 import { BrowserRouter, Route } from "react-router-dom";
 import { AuthContext } from "./components/Header/auth-context";
@@ -30,9 +30,7 @@ class App extends Component {
             sideMenu={this.state.sideMenu}
             toggleSideMenu={this.toggleSideMenu}
           />
-          <main>
-            <Route exact path="/" component={Dashboard} />
-          </main>
+          <Pages sideMenu={this.state.sideMenu} />
         </React.Fragment>
       );
     } else {

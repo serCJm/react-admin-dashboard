@@ -23,7 +23,7 @@ class Lock extends Component {
   handleSubmit = (e, handleAuthentication) => {
     e.preventDefault();
     handleAuthentication();
-    this.props.history.push("/dashboard");
+    this.props.history.push("/");
   };
 
   render() {

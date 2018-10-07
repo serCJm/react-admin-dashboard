@@ -42,12 +42,21 @@ class PageElementWrapper extends Component {
               <span className="page-element-controls-item">
                 <FontAwesomeIcon icon={faSyncAlt} />
               </span>
-              <span
-                className="page-element-controls-item"
-                onClick={this.handleMinimize}
-              >
-                -
-              </span>
+              {this.state.minimize ? (
+                <span
+                  className="page-element-controls-item"
+                  onClick={this.handleMinimize}
+                >
+                  &#43;
+                </span>
+              ) : (
+                <span
+                  className="page-element-controls-item"
+                  onClick={this.handleMinimize}
+                >
+                  &#8722;
+                </span>
+              )}
               <span
                 className="page-element-controls-item"
                 onClick={this.handleClose}

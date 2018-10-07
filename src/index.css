@@ -87,6 +87,9 @@ p {
 .lock-form {
   font-size: 1.8rem; }
 
+.pages .page-element-controls-item:not(:first-child) {
+  font-size: 2rem; }
+
 .theme-default {
   background: #ea7661; }
 
@@ -993,12 +996,46 @@ input, textarea {
   top: 6rem;
   bottom: 0;
   left: 0;
+  right: 0;
   min-height: 100%;
-  padding: 1rem;
+  padding: 2.5rem 2rem 1rem;
   background: #e9f0f5;
   overflow-y: auto;
   transition: all 0.5s; }
   .pages.sidemenu-open {
     left: 19rem; }
+  .pages .page-element-container {
+    position: relative; }
+  .pages .page-element {
+    padding-top: 1rem;
+    background: #fff;
+    border-radius: 10px; }
+    .pages .page-element.minimize {
+      height: 2rem;
+      overflow: hidden; }
+    .pages .page-element-controls {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      right: 1rem;
+      background: #fff;
+      width: 7rem;
+      height: 2rem;
+      border-radius: 5px 5px 0 0;
+      padding: 0 0.3rem;
+      color: #89949b;
+      z-index: -1;
+      transition: all 0.5s; }
+      .pages .page-element-controls.show {
+        top: -2rem;
+        transition: all 0.5s; }
+      .pages .page-element-controls-item:nth-child(2) {
+        padding-bottom: 0.1rem; }
+      .pages .page-element-controls-item {
+        cursor: pointer; }
+      .pages .page-element-controls-item:hover {
+        color: #282d30; }
 
 /*# sourceMappingURL=index.css.map */

@@ -38,7 +38,7 @@ class Lock extends Component {
               <h2 className="lock-date">{this.state.time.toDateString()}</h2>
               <form
                 className="lock-form"
-                action="/dashboard"
+                action="/"
                 onSubmit={e => this.handleSubmit(e, handleAuthentication)}
               >
                 <label className="lock-form-label" htmlFor="lockScreen">

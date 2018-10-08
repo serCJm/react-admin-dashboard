@@ -11,16 +11,15 @@ const HeaderLogoutBtn = () => {
       {({ handleAuthentication }) => (
         <ThemeContext.Consumer>
           {({ theme }) => (
-            <button
+            <Link
               className={`menu-btn ${theme}`}
               onClick={handleAuthentication}
+              to="/lock"
             >
-              <Link to="/lock">
-                <span className="menu-btn-icon">
-                  <FontAwesomeIcon icon={faSignOutAlt} />
-                </span>
-              </Link>
-            </button>
+              <span className="menu-btn-icon">
+                <FontAwesomeIcon icon={faSignOutAlt} />
+              </span>
+            </Link>
           )}
         </ThemeContext.Consumer>
       )}

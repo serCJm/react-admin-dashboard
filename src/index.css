@@ -1038,4 +1038,12 @@ input, textarea {
       .pages .page-element-controls-item:hover {
         color: #282d30; }
 
+.dashboard .area {
+  clip-path: url(#clip); }
+.dashboard .x-axis path, .dashboard .x-axis line, .dashboard .y-axis path, .dashboard .y-axis line {
+  stroke: #cad8e5; }
+.dashboard .x-axis text, .dashboard .y-axis text {
+  fill: #78758a;
+  font-size: 1rem; }
+
 /*# sourceMappingURL=index.css.map */

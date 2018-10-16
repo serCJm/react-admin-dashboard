@@ -89,6 +89,8 @@ p {
 
 .pages .page-element-controls-item:not(:first-child) {
   font-size: 2rem; }
+.pages .dashboard .toggle-menu-btn {
+  font-size: 1.3rem; }
 
 .theme-default {
   background: #ea7661; }
@@ -357,7 +359,7 @@ p {
           background: #fff;
           color: #89949b;
           border: 1px solid #2eb398;
-          border-radisu: 5px; }
+          border-radius: 5px; }
   .header-top-menu .theme-btn {
     border: none;
     border-radius: 50%;
@@ -1038,12 +1040,75 @@ input, textarea {
       .pages .page-element-controls-item:hover {
         color: #282d30; }
 
-.dashboard .area {
-  clip-path: url(#clip); }
-.dashboard .x-axis path, .dashboard .x-axis line, .dashboard .y-axis path, .dashboard .y-axis line {
-  stroke: #cad8e5; }
-.dashboard .x-axis text, .dashboard .y-axis text {
-  fill: #78758a;
-  font-size: 1rem; }
+.dashboard-overview {
+  color: #6666ff;
+  text-align: center; }
+  .dashboard-overview .interactive-show {
+    display: block; }
+    .dashboard-overview .interactive-show .area {
+      clip-path: url(#clip); }
+    .dashboard-overview .interactive-show .x-axis path, .dashboard-overview .interactive-show .x-axis line, .dashboard-overview .interactive-show .y-axis path, .dashboard-overview .interactive-show .y-axis line {
+      stroke: #cad8e5; }
+    .dashboard-overview .interactive-show .x-axis text, .dashboard-overview .interactive-show .y-axis text {
+      fill: #78758a;
+      font-size: 1rem; }
+    .dashboard-overview .interactive-show .rect-tooltip {
+      display: block;
+      position: fixed;
+      padding: 0 1rem;
+      background: #fff;
+      color: #89949b;
+      text-align: center;
+      border: 3px solid #6666ff;
+      border-radius: 5px; }
+  .dashboard-overview .interactive-hide {
+    display: none; }
+  .dashboard-overview .intChartToggle {
+    cursor: pointer;
+    width: 10rem;
+    margin: 1rem auto;
+    position: relative; }
+    .dashboard-overview .intChartToggle:before {
+      position: absolute;
+      bottom: 4px;
+      left: 0;
+      content: "";
+      width: 1rem;
+      height: 1rem;
+      background: #6666ff; }
+    .dashboard-overview .intChartToggle.hide {
+      color: #ccccff; }
+      .dashboard-overview .intChartToggle.hide:before {
+        background: #ccccff; }
+  .dashboard-overview .time-label {
+    margin-top: 0; }
+  .dashboard-overview .dashboard-oberview-extra {
+    display: flex; }
+  .dashboard-overview .dashboard-overview-toggles {
+    flex: 100%; }
+    .dashboard-overview .dashboard-overview-toggles .toggle-menu {
+      width: 100%;
+      height: 3rem;
+      background: #ea7882;
+      display: flex; }
+      .dashboard-overview .dashboard-overview-toggles .toggle-menu .toggle-menu-btn {
+        flex: 33%;
+        background: none;
+        color: #fff;
+        cursor: pointer;
+        position: relative; }
+        .dashboard-overview .dashboard-overview-toggles .toggle-menu .toggle-menu-btn.active {
+          cursor: default; }
+          .dashboard-overview .dashboard-overview-toggles .toggle-menu .toggle-menu-btn.active:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-bottom: 5px solid #fff;
+            transform: translate(-50%, 0); }
 
 /*# sourceMappingURL=index.css.map */

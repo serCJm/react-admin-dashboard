@@ -93,6 +93,10 @@ p {
   font-size: 1.3rem; }
 .pages .dashboard .dashboard-overview-toggles .social-toggles {
   font-size: 1.3rem; }
+.pages .dashboard .dashboard-overview-toggles .note .note-title {
+  font-size: 2rem; }
+.pages .dashboard .dashboard-overview-toggles .note .note-text {
+  font-size: 1.4rem; }
 
 .theme-default {
   background: #ea7661; }
@@ -1229,5 +1233,19 @@ input, textarea {
         cursor: pointer; }
         .dashboard-overview .dashboard-overview-toggles .social-toggles .insta-connect:hover {
           background: #6aa3d5; }
+    .dashboard-overview .dashboard-overview-toggles .note {
+      width: 80%;
+      margin: 0 auto;
+      color: #3b4649; }
+      .dashboard-overview .dashboard-overview-toggles .note-title {
+        margin: 2rem auto;
+        text-transform: uppercase; }
+      .dashboard-overview .dashboard-overview-toggles .note-hr {
+        background-color: #f3f3f3;
+        height: 1px;
+        border: 0; }
+      .dashboard-overview .dashboard-overview-toggles .note-text {
+        color: #888792;
+        padding: 2rem 0; }
 
 /*# sourceMappingURL=index.css.map */

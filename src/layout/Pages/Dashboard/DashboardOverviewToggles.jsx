@@ -3,6 +3,7 @@ import ToggleMenu from "./ToggleMenu";
 import StackedBarChartNegative from "../../../components/graphs/StackedBarChartNegative";
 import ContainerDimensions from "react-container-dimensions";
 import SocialToggles from "./SocialToggles";
+import Note from "./Note";
 
 const data = [];
 for (let i = 2010; i < 2016; i++) {
@@ -46,6 +47,8 @@ class DashboardOverviewToggles extends Component {
       );
     } else if (this.state.active === "social") {
       toggleItem = <SocialToggles />;
+    } else {
+      toggleItem = <Note />;
     }
     return (
       <div className="dashboard-overview-toggles">

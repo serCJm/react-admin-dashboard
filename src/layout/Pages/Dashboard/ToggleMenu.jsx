@@ -4,18 +4,29 @@ import { faSignal } from "@fortawesome/free-solid-svg-icons";
 import { faToggleOff } from "@fortawesome/free-solid-svg-icons";
 import { faSave } from "@fortawesome/free-solid-svg-icons";
 
-const ToggleMenu = () => {
+const content = [
+  { id: "demographics", icon: <FontAwesomeIcon icon={faSignal} /> },
+  { id: "social", icon: <FontAwesomeIcon icon={faToggleOff} /> },
+  { id: "note", icon: <FontAwesomeIcon icon={faSave} /> }
+];
+
+const ToggleMenu = props => {
   return (
     <div className="toggle-menu">
-      <button className="toggle-menu-btn active">
-        <FontAwesomeIcon icon={faSignal} />
-      </button>
-      <button className="toggle-menu-btn">
-        <FontAwesomeIcon icon={faToggleOff} />
-      </button>
-      <button className="toggle-menu-btn">
-        <FontAwesomeIcon icon={faSave} />
-      </button>
+      {content.map(item => (
+        <button
+          key={item.id}
+          id={item.id}
+          className={
+            props.active === item.id
+              ? "toggle-menu-btn active"
+              : "toggle-menu-btn"
+          }
+          onClick={props.handleActive}
+        >
+          {item.icon}
+        </button>
+      ))}
     </div>
   );
 };

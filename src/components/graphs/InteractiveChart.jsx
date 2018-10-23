@@ -146,7 +146,7 @@ class InteractiveChart extends Component {
 
     const { xScale, yScale } = { ...this.state };
 
-    const xValue = xScale.invert(Math.floor(cursporpt.x) - margin.left);
+    const xValue = xScale.invert(Math.round(cursporpt.x) - margin.left);
 
     const bisectDate = d3.bisector(d => d.date).left;
     const i = bisectDate(this.props.data, xValue, 1);

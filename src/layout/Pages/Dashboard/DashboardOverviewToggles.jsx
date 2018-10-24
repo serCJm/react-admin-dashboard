@@ -27,18 +27,20 @@ class DashboardOverviewToggles extends Component {
     let toggleItem = null;
     if (this.state.active === "demographics") {
       toggleItem = (
-        <div className="demographics">
+        <div>
           <h2>Demographics</h2>
           <h3>Visitors</h3>
-          <ContainerDimensions>
-            {({ width }) => (
-              <StackedBarChartNegative
-                data={data}
-                width={width}
-                classNames={["male", "female"]}
-              />
-            )}
-          </ContainerDimensions>
+          <div className="demographics">
+            <ContainerDimensions>
+              {({ width }) => (
+                <StackedBarChartNegative
+                  data={data}
+                  width={width}
+                  classNames={["male", "female"]}
+                />
+              )}
+            </ContainerDimensions>
+          </div>
           <div className="male-female-visitors">
             <p className="male">Male Visitors</p>
             <p className="female">Female Visitors</p>

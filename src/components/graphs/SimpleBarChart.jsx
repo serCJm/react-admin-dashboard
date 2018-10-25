@@ -97,7 +97,15 @@ class SimpleBarChart extends Component {
     }
     let tooltipLine = null;
     if (this.state.tooltip.show && this.props.lineWithCircle) {
-      tooltipLine = <LineWithCircle tooltip={this.state.tooltip} />;
+      tooltipLine = (
+        <LineWithCircle
+          tooltip={this.state.tooltip}
+          lineColor={this.props.lineColor ? this.props.lineColor : null}
+          circleStroke={
+            this.props.circleStroke ? this.props.circleStroke : null
+          }
+        />
+      );
     }
     return (
       <React.Fragment>

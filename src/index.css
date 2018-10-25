@@ -97,6 +97,10 @@ p {
   font-size: 2rem; }
 .pages .dashboard .dashboard-overview-toggles .note .note-text {
   font-size: 1.4rem; }
+.pages .dashboard .dashboard-overview-revenue .amount {
+  font-size: 2.5rem; }
+.pages .dashboard .dashboard-overview-revenue .revenue-graph .daily-load-text {
+  font-size: 2.5rem; }
 
 .theme-default {
   background: #ea7661; }
@@ -1017,7 +1021,8 @@ input, textarea {
   .pages .page-element {
     padding-top: 1rem;
     background: #fff;
-    border-radius: 10px; }
+    border-radius: 15px;
+    overflow: hidden; }
     .pages .page-element.minimize {
       height: 2rem;
       overflow: hidden; }
@@ -1247,5 +1252,41 @@ input, textarea {
       .dashboard-overview .dashboard-overview-toggles .note-text {
         color: #888792;
         padding: 2rem 0; }
+  .dashboard-overview .dashboard-overview-revenue {
+    background: #7cd4ba;
+    color: #fff; }
+    .dashboard-overview .dashboard-overview-revenue .title {
+      margin: 0 auto 2rem;
+      padding-top: 2rem; }
+    .dashboard-overview .dashboard-overview-revenue .hr {
+      width: 90%;
+      background-color: #62cdad;
+      height: 2px;
+      border: 0; }
+    .dashboard-overview .dashboard-overview-revenue .amount {
+      color: #56c9a6;
+      padding-bottom: 2rem;
+      margin: 0; }
+    .dashboard-overview .dashboard-overview-revenue .revenue-graph-container {
+      background: #55c9a5;
+      padding-bottom: 2rem; }
+      .dashboard-overview .dashboard-overview-revenue .revenue-graph-container .revenue-graph {
+        width: 90%;
+        margin: 0 auto; }
+        .dashboard-overview .dashboard-overview-revenue .revenue-graph-container .revenue-graph .daily-load {
+          display: flex;
+          justify-content: space-between; }
+          .dashboard-overview .dashboard-overview-revenue .revenue-graph-container .revenue-graph .daily-load-text {
+            color: #76d4b8; }
+        .dashboard-overview .dashboard-overview-revenue .revenue-graph-container .revenue-graph .revenue-graph-bars {
+          fill: #76d4b8; }
+        .dashboard-overview .dashboard-overview-revenue .revenue-graph-container .revenue-graph .revenue-graph-tooltip {
+          display: block;
+          position: fixed;
+          padding: 0 0.3rem;
+          background: #fff;
+          color: #89949b;
+          border: 1px solid #2eb398;
+          border-radius: 5px; }
 
 /*# sourceMappingURL=index.css.map */

@@ -22,5 +22,5 @@ yarn-error.log*
 
 # vs code workplace
 admin-dashboard.code-workplace
-
+# sass chache file
 /src/sass/.sass-cache

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ContainerDimensions from "react-container-dimensions";
 import InteractiveChart from "../../../components/graphs/InteractiveChart";
 import DashboardOverviewToggles from "./DashboardOverviewToggles";
+import DashboardOverviewRevenue from "./DashboardOverviewRevenue";
 import { timeMonths } from "d3";
 
 const dates = timeMonths(new Date("2009-01-01"), new Date("2015-12-31"));
@@ -54,8 +55,8 @@ class DashboardOverview extends Component {
         </h2>
         <div className="dashboard-oberview-extra">
           <DashboardOverviewToggles />
-          {/* <DashboardOverviewRevenue></DashboardOverviewRevenue> */}
         </div>
+        <DashboardOverviewRevenue />
       </div>
     );
   }

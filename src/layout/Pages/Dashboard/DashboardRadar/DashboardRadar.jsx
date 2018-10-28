@@ -1,12 +1,11 @@
 import React from "react";
-import PageElementWrapper from "../../PageElementWrapper";
-
+import DashboardRadarGraph from "./DashboardRadarGraph";
 const DashboardRadar = () => {
   return (
-    <React.Fragment>
-      <div>Graph</div>
+    <div className="dashboard-radar">
+      <DashboardRadarGraph />
       <div>DataTable</div>
-    </React.Fragment>
+    </div>
   );
 };
 

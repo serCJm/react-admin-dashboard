@@ -1,10 +1,11 @@
 import React from "react";
 import DashboardRadarGraph from "./DashboardRadarGraph";
+import DashboardRadarTable from "./DashboardRadarTable";
 const DashboardRadar = () => {
   return (
     <div className="dashboard-radar">
       <DashboardRadarGraph />
-      <div>DataTable</div>
+      <DashboardRadarTable />
     </div>
   );
 };

@@ -284,9 +284,9 @@
                     border: 1px solid $green
                     border-radius: 5px
 .dashboard-radar
-    display: flex
-    justify-content: center
-    flex-wrap: wrap
+    display: block
+    // justify-content: center
+    // flex-wrap: wrap
     .radar-chart
         flex: 100%
         display: flex
@@ -318,6 +318,32 @@
             & span 
                 font-weight: 500
                 color: $white
+    .radar-table
+        width: 100%
+        padding: 0 2rem
+        color: rgb(153, 167, 178)
+        .radar-table-row
+            display: flex
+            justify-content: space-between
+            align-items: center
+            &:nth-child(odd)
+                background: rgb(249, 249, 249)
+                border-top: 2px solid rgb(233, 233, 233)
+                border-bottom: 2px solid rgb(233, 233, 233)
+            & h3
+                width: 8rem
+            & p
+                color: $white
+                padding: .5rem
+            .bounce-rate
+                background: rgb(234, 120, 130)
+            .new-visits
+                background: rgb(52, 179, 152)
+            .transactions
+                background: rgb(121, 176, 236)
+            .conversions
+                background: rgb(250, 196, 151)
+            
 
                 
                 

@@ -108,7 +108,14 @@ class AreaLineChart extends Component {
             onMouseMove={this.handleMouseHover}
             onMouseLeave={this.handleMouseLeave}
           >
-            <path d={this.state.area} fill="rgba(0, 0, 255, .4)" />
+            <path
+              d={this.state.area}
+              fill={
+                this.props.areaColor
+                  ? this.props.areaColor
+                  : "rgba(0, 0, 255, .4)"
+              }
+            />
             <SimpleLine
               width={this.props.width}
               height={this.props.height}

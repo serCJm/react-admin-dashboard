@@ -101,6 +101,8 @@ p {
   font-size: 2.5rem; }
 .pages .dashboard .dashboard-overview-revenue .revenue-graph .daily-load-text {
   font-size: 2.5rem; }
+.pages .dashboard .dashboard-summary .dashboard-summary-menu-icon {
+  font-size: 1.5rem; }
 
 .theme-default {
   background: #ea7661; }
@@ -1040,11 +1042,11 @@ input, textarea {
       padding: 0 0.3rem;
       color: #89949b;
       z-index: -1;
-      transition: top 0.5s, z-index 0.3s; }
+      transition: top 0.5s, z-index 0.1s; }
       .pages .page-element-controls.show {
         top: -2rem;
         z-index: 5;
-        transition: top 0.5s, z-index 1s; }
+        transition: top 0.4s, z-index 3s; }
       .pages .page-element-controls-item:nth-child(2) {
         padding-bottom: 0.1rem; }
       .pages .page-element-controls-item {
@@ -1405,5 +1407,14 @@ input, textarea {
         background: #79b0ec; }
       .dashboard-radar .radar-table .radar-table-row .conversions {
         background: #fac497; }
+
+.dashboard-summary-menu {
+  display: flex;
+  height: 5rem; }
+  .dashboard-summary-menu-icon {
+    flex: 33%;
+    background: #fbd3b1;
+    color: #f0b07f;
+    cursor: pointer; }
 
 /*# sourceMappingURL=index.css.map */

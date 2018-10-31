@@ -15,7 +15,6 @@
         position: relative
         margin-top: 2.5rem
     .page-element
-        padding-top: 2rem
         background: $white
         border-radius: 15px
         overflow: hidden
@@ -35,12 +34,12 @@
             border-radius: 5px 5px 0 0
             padding: 0 .3rem
             color: $greyFont
-            z-index: 0
-            transition: top .5s
+            z-index: -1
+            transition: top .5s, z-index .3s
             &.show
                 top: -2rem
-                transition: top .5s
-                
+                z-index: 5
+                transition: top .5s, z-index 1s
             &-item:nth-child(2)
                 padding-bottom: .1rem
             &-item

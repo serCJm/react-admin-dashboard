@@ -1020,7 +1020,6 @@ input, textarea {
     position: relative;
     margin-top: 2.5rem; }
   .pages .page-element {
-    padding-top: 2rem;
     background: #fff;
     border-radius: 15px;
     overflow: hidden; }
@@ -1040,11 +1039,12 @@ input, textarea {
       border-radius: 5px 5px 0 0;
       padding: 0 0.3rem;
       color: #89949b;
-      z-index: 0;
-      transition: top 0.5s; }
+      z-index: -1;
+      transition: top 0.5s, z-index 0.3s; }
       .pages .page-element-controls.show {
         top: -2rem;
-        transition: top 0.5s; }
+        z-index: 5;
+        transition: top 0.5s, z-index 1s; }
       .pages .page-element-controls-item:nth-child(2) {
         padding-bottom: 0.1rem; }
       .pages .page-element-controls-item {
@@ -1351,7 +1351,8 @@ input, textarea {
   .dashboard-radar .radar-chart {
     flex: 100%;
     display: flex;
-    justify-content: center; }
+    justify-content: center;
+    margin-top: 2rem; }
     .dashboard-radar .radar-chart .toolTip {
       pointer-events: none;
       position: fixed;

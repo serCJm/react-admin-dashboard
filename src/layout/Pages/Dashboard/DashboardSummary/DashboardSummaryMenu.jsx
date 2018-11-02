@@ -4,16 +4,31 @@ import { faChartBar } from "@fortawesome/free-solid-svg-icons";
 import { faUserAlt } from "@fortawesome/free-solid-svg-icons";
 import { faChartPie } from "@fortawesome/free-solid-svg-icons";
 
-const DashboardSummaryMenu = () => {
+const DashboardSummaryMenu = ({ handleMenuClick, active }) => {
+  const buttonClass = "dashboard-summary-menu-icon";
   return (
     <div className="dashboard-summary-menu">
-      <button className="dashboard-summary-menu-icon">
+      <button
+        id="sales-graph"
+        className={
+          active === "sales-graph" ? buttonClass + " active" : buttonClass
+        }
+        onClick={handleMenuClick}
+      >
         <FontAwesomeIcon icon={faChartBar} />
       </button>
-      <button className="dashboard-summary-menu-icon">
+      <button
+        id="users"
+        className={active === "users" ? buttonClass + " active" : buttonClass}
+        onClick={handleMenuClick}
+      >
         <FontAwesomeIcon icon={faUserAlt} />
       </button>
-      <button className="dashboard-summary-menu-icon">
+      <button
+        id="tickets"
+        className={active === "tickets" ? buttonClass + " active" : buttonClass}
+        onClick={handleMenuClick}
+      >
         <FontAwesomeIcon icon={faChartPie} />
       </button>
     </div>

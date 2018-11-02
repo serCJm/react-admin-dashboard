@@ -18,8 +18,8 @@ const DashboardSummaryMenu = ({ handleMenuClick, active }) => {
         <FontAwesomeIcon icon={faChartBar} />
       </button>
       <button
-        id="users"
-        className={active === "users" ? buttonClass + " active" : buttonClass}
+        id="friends"
+        className={active === "friends" ? buttonClass + " active" : buttonClass}
         onClick={handleMenuClick}
       >
         <FontAwesomeIcon icon={faUserAlt} />

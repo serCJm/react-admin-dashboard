@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import DashboardSummaryMenu from "./DashboardSummaryMenu";
 import SalesComparison from "./SalesComparison/SalesComparison";
+import Friends from "./Friends/Friends";
 
 class DashboardSummary extends Component {
   state = {
@@ -10,8 +11,12 @@ class DashboardSummary extends Component {
   handleMenuClick = e => {
     this.setState({ current: e.currentTarget.id });
   };
+
   render() {
     let dashboardSummaryItem = <SalesComparison />;
+    if (this.state.current === "friends") {
+      dashboardSummaryItem = <Friends />;
+    }
     return (
       <div className="dashboard-summary">
         <DashboardSummaryMenu

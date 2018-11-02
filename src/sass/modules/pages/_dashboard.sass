@@ -352,6 +352,48 @@
             background: rgb(251, 211, 177)
             color: rgb(240, 176, 127)
             cursor: pointer
+            &.active
+                background: $white
+    .sales-comparison
+        color: rgb(238, 174, 127)
+        text-align: center
+        .android
+            fill: rgb(238, 174, 127)
+        .apple
+            fill: rgb(251, 217, 188)
+        .rect-tooltip
+            display: block
+            position: fixed
+            padding: 0 1rem
+            background: $white
+            text-align: center
+            border: 3px solid rgb(238, 174, 127)
+            border-radius: 5px
+            font-weight: bold
+        .total-orders-table
+            background: rgb(251, 217, 188)
+            color: rgb(238, 174, 127)
+            &-row
+                display: flex
+                justify-content: space-around
+                align-items: center
+                &:not(:last-child)
+                    border-bottom: 2px solid rgb(243, 204, 171)
+                .total-orders-header
+                    width: 9rem
+                .total-orders-graph
+                    fill: $white
+                .total-orders-tooltip
+                    display: block
+                    position: fixed
+                    padding: 0
+                    background: $white
+                    text-align: center
+                    border-radius: 5px
+                    font-weight: bold
+                .total-order-percent
+                    width: 3rem
+
             
 
                 

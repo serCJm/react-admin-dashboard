@@ -103,6 +103,8 @@ p {
   font-size: 2.5rem; }
 .pages .dashboard .dashboard-summary .dashboard-summary-menu-icon {
   font-size: 1.5rem; }
+.pages .dashboard .dashboard-summary .sales-comparison .total-orders-table h3, .pages .dashboard .dashboard-summary .sales-comparison .total-orders-table p {
+  font-size: 1.6rem; }
 
 .theme-default {
   background: #ea7661; }
@@ -1416,5 +1418,46 @@ input, textarea {
     background: #fbd3b1;
     color: #f0b07f;
     cursor: pointer; }
+    .dashboard-summary-menu-icon.active {
+      background: #fff; }
+.dashboard-summary .sales-comparison {
+  color: #eeae7f;
+  text-align: center; }
+  .dashboard-summary .sales-comparison .android {
+    fill: #eeae7f; }
+  .dashboard-summary .sales-comparison .apple {
+    fill: #fbd9bc; }
+  .dashboard-summary .sales-comparison .rect-tooltip {
+    display: block;
+    position: fixed;
+    padding: 0 1rem;
+    background: #fff;
+    text-align: center;
+    border: 3px solid #eeae7f;
+    border-radius: 5px;
+    font-weight: bold; }
+  .dashboard-summary .sales-comparison .total-orders-table {
+    background: #fbd9bc;
+    color: #eeae7f; }
+    .dashboard-summary .sales-comparison .total-orders-table-row {
+      display: flex;
+      justify-content: space-around;
+      align-items: center; }
+      .dashboard-summary .sales-comparison .total-orders-table-row:not(:last-child) {
+        border-bottom: 2px solid #f3ccab; }
+      .dashboard-summary .sales-comparison .total-orders-table-row .total-orders-header {
+        width: 9rem; }
+      .dashboard-summary .sales-comparison .total-orders-table-row .total-orders-graph {
+        fill: #fff; }
+      .dashboard-summary .sales-comparison .total-orders-table-row .total-orders-tooltip {
+        display: block;
+        position: fixed;
+        padding: 0;
+        background: #fff;
+        text-align: center;
+        border-radius: 5px;
+        font-weight: bold; }
+      .dashboard-summary .sales-comparison .total-orders-table-row .total-order-percent {
+        width: 3rem; }
 
 /*# sourceMappingURL=index.css.map */

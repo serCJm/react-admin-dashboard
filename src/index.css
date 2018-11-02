@@ -105,6 +105,10 @@ p {
   font-size: 1.5rem; }
 .pages .dashboard .dashboard-summary .sales-comparison .total-orders-table h3, .pages .dashboard .dashboard-summary .sales-comparison .total-orders-table p {
   font-size: 1.6rem; }
+.pages .dashboard .dashboard-summary .friends {
+  font-size: 1.4rem; }
+  .pages .dashboard .dashboard-summary .friends-search-checkbox, .pages .dashboard .dashboard-summary .friends-row-name {
+    font-size: 1.4rem; }
 
 .theme-default {
   background: #ea7661; }
@@ -1459,5 +1463,81 @@ input, textarea {
         font-weight: bold; }
       .dashboard-summary .sales-comparison .total-orders-table-row .total-order-percent {
         width: 3rem; }
+.dashboard-summary .friends {
+  width: 90%;
+  margin: 0 auto; }
+  .dashboard-summary .friends-search {
+    border: none;
+    margin-top: 2rem;
+    height: 3rem;
+    padding: 0; }
+    .dashboard-summary .friends-search-field {
+      width: 85%;
+      height: 100%;
+      border: 2px solid #facba4;
+      color: black;
+      padding-left: 1rem; }
+      .dashboard-summary .friends-search-field:focus {
+        border: 2px solid #f7903c; }
+    .dashboard-summary .friends-search-btn {
+      width: 15%;
+      height: 100%;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+      border: 2px solid #facba4;
+      border-left: none;
+      background: #facba4;
+      color: #fff; }
+      .dashboard-summary .friends-search-btn:hover {
+        background: #fce0ca;
+        border: 2px solid #fce0ca;
+        border-left: none; }
+    .dashboard-summary .friends-search-checkbox {
+      height: 1.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .dashboard-summary .friends-search-checkbox input {
+        height: 1.4rem;
+        width: 1.4rem;
+        margin-right: 1rem; }
+  .dashboard-summary .friends-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+    color: #89949b; }
+    .dashboard-summary .friends-row:not(:last-child) {
+      border-bottom: 2px solid #eeeeee; }
+    .dashboard-summary .friends-row-img {
+      flex: 0 0 45px;
+      border-radius: 50%;
+      margin-left: 1rem; }
+    .dashboard-summary .friends-row-name {
+      flex: 50%;
+      margin-left: 4rem; }
+    .dashboard-summary .friends-row-btn {
+      margin-right: 1rem;
+      border-radius: 30px;
+      text-transform: uppercase;
+      height: 3rem;
+      line-height: 3rem;
+      text-align: center;
+      vertical-align: middle;
+      cursor: pointer; }
+      .dashboard-summary .friends-row-btn.invite {
+        width: 8rem;
+        background: none;
+        border: 2px solid #e9e9e9;
+        color: #89949b; }
+        .dashboard-summary .friends-row-btn.invite:hover {
+          background: #fce0ca;
+          border: 2px solid #fce0ca;
+          color: #fff; }
+      .dashboard-summary .friends-row-btn.invited {
+        width: 10rem;
+        background: #f7903c;
+        border: 2px solid #fd6d00;
+        color: #fff; }
 
 /*# sourceMappingURL=index.css.map */

@@ -2,6 +2,7 @@ import React from "react";
 import ContainerDimensions from "react-container-dimensions";
 import DonutChart from "../../../../../components/graphs/DonutChart";
 import AgentsList from "./AgentsList";
+import AgentsPerformance from "./AgentsPerformance";
 
 const data = [
   { name: "Abraham Lincoln", value: Math.floor(Math.random() * 100) },
@@ -21,7 +22,7 @@ const Tickets = () => {
       </ContainerDimensions>
 
       <AgentsList content={data} />
-      {/* <AgentsPerformance /> */}
+      <AgentsPerformance content={data} />
     </div>
   );
 };

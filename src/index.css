@@ -1569,7 +1569,8 @@ input, textarea {
   .dashboard-summary .tickets .tickets-performance-row {
     display: flex;
     justify-content: space-between;
-    align-items: center; }
+    align-items: center;
+    border-top: 1px solid #edeeed; }
     .dashboard-summary .tickets .tickets-performance-row .tickets-performance-graph-container {
       width: 20rem;
       height: 2.5rem;
@@ -1590,5 +1591,10 @@ input, textarea {
       padding: 0.2rem 0.5rem;
       background: #777777;
       color: #fff; }
+
+.calendar-time .calendar {
+  margin: 2rem auto 0;
+  border: none;
+  width: 90%; }
 
 /*# sourceMappingURL=index.css.map */

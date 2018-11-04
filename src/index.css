@@ -111,6 +111,8 @@ p {
     font-size: 1.4rem; }
 .pages .dashboard .dashboard-summary .tickets h3, .pages .dashboard .dashboard-summary .tickets p {
   font-size: 1.4rem; }
+.pages .dashboard .dashboard-summary .tickets .tickets-performance {
+  font-size: 1.4rem; }
 
 .theme-default {
   background: #ea7661; }
@@ -1545,7 +1547,7 @@ input, textarea {
   color: #efaf7c;
   text-align: center; }
   .dashboard-summary .tickets-agents {
-    width: 90%;
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -1564,5 +1566,29 @@ input, textarea {
         width: 1rem;
         height: 1rem;
         background: #ed930b; }
+  .dashboard-summary .tickets .tickets-performance-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .dashboard-summary .tickets .tickets-performance-row .tickets-performance-graph-container {
+      width: 20rem;
+      height: 2.5rem;
+      margin-left: 2rem;
+      background: whitesmoke;
+      border: 1px solid #e9e9e9;
+      border-radius: 5px;
+      line-height: 2.5rem;
+      vertical-align: middle; }
+      .dashboard-summary .tickets .tickets-performance-row .tickets-performance-graph-container .tickets-performance-graph {
+        background: #f78250;
+        border-radius: 5px;
+        height: 2.5rem;
+        overflow: hidden;
+        color: #fff; }
+    .dashboard-summary .tickets .tickets-performance-row .tickets-performance-value {
+      margin-right: 2rem;
+      padding: 0.2rem 0.5rem;
+      background: #777777;
+      color: #fff; }
 
 /*# sourceMappingURL=index.css.map */

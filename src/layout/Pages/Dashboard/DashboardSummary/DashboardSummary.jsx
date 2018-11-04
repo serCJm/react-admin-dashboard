@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import DashboardSummaryMenu from "./DashboardSummaryMenu";
 import SalesComparison from "./SalesComparison/SalesComparison";
 import Friends from "./Friends/Friends";
+import Tickets from "./Tickets/Tickets";
 
 class DashboardSummary extends Component {
   state = {
@@ -16,6 +17,8 @@ class DashboardSummary extends Component {
     let dashboardSummaryItem = <SalesComparison />;
     if (this.state.current === "friends") {
       dashboardSummaryItem = <Friends />;
+    } else if (this.state.current === "tickets") {
+      dashboardSummaryItem = <Tickets />;
     }
     return (
       <div className="dashboard-summary">

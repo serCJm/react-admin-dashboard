@@ -12,7 +12,7 @@ const data = [
 
 const Tickets = () => {
   return (
-    <div>
+    <div className="tickets">
       <h3>Tickets Cleared</h3>
       <p>by agents</p>
       <ContainerDimensions>

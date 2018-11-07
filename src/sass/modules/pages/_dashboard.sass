@@ -524,6 +524,40 @@
         margin: 2rem auto 0
         border: none
         width: 90%
+    .time-icon-container
+        width: 90%
+        height: 5rem
+        margin: 2rem auto 
+        display: flex
+        justify-content: center
+        align-items: center
+        background: rgb(245, 245, 245)
+        .time-icon
+            width: 5rem
+            height: 4rem
+            margin: 0 auto
+            text-align: center
+            line-height: 4rem
+            vertical-align: middle
+            color: rgb(52, 179, 153)
+            &:hover
+                background: rgb(237, 238, 237)  
+                color: darken(rgb(52, 179, 153), 10%)
+    .time-picker-container
+        display: flex
+        justify-content: center
+        align-items: center
+        overflow-y: hidden
+        max-height: 40rem
+        transition: max-height 0.3s linear
+        &.hide
+            max-height: 0
+            
+        
+            
+            
+            
+
 
             
 

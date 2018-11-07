@@ -113,6 +113,10 @@ p {
   font-size: 1.4rem; }
 .pages .dashboard .dashboard-summary .tickets .tickets-performance {
   font-size: 1.4rem; }
+.pages .dashboard .calendar-time .time-icon {
+  font-size: 2.5rem; }
+.pages .dashboard .calendar-time .time-picker-custom {
+  font-size: 2rem; }
 
 .theme-default {
   background: #ea7661; }
@@ -1055,7 +1059,7 @@ input, textarea {
       transition: top 0.5s, z-index 0.1s; }
       .pages .page-element-controls.show {
         top: -2rem;
-        z-index: 5;
+        z-index: 50;
         transition: top 0.4s, z-index 3s; }
       .pages .page-element-controls-item:nth-child(2) {
         padding-bottom: 0.1rem; }
@@ -1596,5 +1600,33 @@ input, textarea {
   margin: 2rem auto 0;
   border: none;
   width: 90%; }
+.calendar-time .time-icon-container {
+  width: 90%;
+  height: 5rem;
+  margin: 2rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: whitesmoke; }
+  .calendar-time .time-icon-container .time-icon {
+    width: 5rem;
+    height: 4rem;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 4rem;
+    vertical-align: middle;
+    color: #34b399; }
+    .calendar-time .time-icon-container .time-icon:hover {
+      background: #edeeed;
+      color: #298b77; }
+.calendar-time .time-picker-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: hidden;
+  max-height: 40rem;
+  transition: max-height 0.3s linear; }
+  .calendar-time .time-picker-container.hide {
+    max-height: 0; }
 
 /*# sourceMappingURL=index.css.map */

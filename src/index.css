@@ -117,6 +117,14 @@ p {
   font-size: 2.5rem; }
 .pages .dashboard .calendar-time .time-picker-custom {
   font-size: 2rem; }
+.pages .dashboard .weather-icon {
+  font-size: 7rem; }
+.pages .dashboard .weather-temp p {
+  font-size: 2rem; }
+.pages .dashboard .weather-status {
+  font-size: 1.5rem; }
+.pages .dashboard .weather-stats {
+  font-size: 1.3rem; }
 
 .theme-default {
   background: #ea7661; }
@@ -1628,5 +1636,22 @@ input, textarea {
   transition: max-height 0.3s linear; }
   .calendar-time .time-picker-container.hide {
     max-height: 0; }
+.calendar-time .weather {
+  background: #d67f6b;
+  color: #fff;
+  text-align: center; }
+  .calendar-time .weather-icon {
+    margin: 0 auto;
+    padding: 2rem 2rem 0; }
+  .calendar-time .weather-temp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem; }
+    .calendar-time .weather-temp p {
+      margin: 0; }
+  .calendar-time .weather-stats {
+    margin-bottom: 0;
+    padding-bottom: 1rem; }
 
 /*# sourceMappingURL=index.css.map */

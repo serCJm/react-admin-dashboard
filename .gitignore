@@ -24,3 +24,5 @@ yarn-error.log*
 admin-dashboard.code-workplace
 # sass chache file
 /src/sass/.sass-cache
+#env vars
+.env

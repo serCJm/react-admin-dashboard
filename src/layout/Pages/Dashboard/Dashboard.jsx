@@ -4,6 +4,7 @@ import DashboardOverview from "./DashboardOverview/DashboardOverview";
 import DashboardRadar from "./DashboardRadar/DashboardRadar";
 import DashboardSummary from "./DashboardSummary/DashboardSummary";
 import DashboardCalendarTime from "./DashboardCalendarTime/DashboardCalendarTime";
+import Navigation from "./Navigation/Navigation";
 
 const Dashboard = () => {
   return (
@@ -19,6 +20,9 @@ const Dashboard = () => {
       </PageElementWrapper>
       <PageElementWrapper>
         <DashboardCalendarTime />
+      </PageElementWrapper>
+      <PageElementWrapper>
+        <Navigation />
       </PageElementWrapper>
     </React.Fragment>
   );

@@ -1654,4 +1654,17 @@ input, textarea {
     margin-bottom: 0;
     padding-bottom: 1rem; }
 
+.navigation {
+  height: 30rem;
+  padding: 2rem; }
+  .navigation-directions {
+    display: flex;
+    justify-content: center;
+    height: 30rem;
+    overflow: scroll; }
+
+.MicrosoftMap.dirSDK .directionsPanel {
+  width: 90% !important;
+  margin: 0 auto; }
+
 /*# sourceMappingURL=index.css.map */

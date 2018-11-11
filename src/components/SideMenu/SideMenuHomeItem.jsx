@@ -76,39 +76,72 @@ class SideMenuHomeItem extends Component {
         <AuthContext.Consumer>
           {({ handleAuthentication }) => (
             <ThemeContext>
-              {({ theme }) => (
-                <Link
-                  to={id === "dashboard" ? "/" : `/${id}`}
-                  onMouseEnter={this.handleHover}
-                  onMouseLeave={this.handleHover}
-                  className={`${
-                    this.state.closeSubmenu
-                      ? listItemStyle + " animate-close"
-                      : listItemStyle
-                  } ${theme}
+              {({ theme }) =>
+                id === "mailbox" ? (
+                  <button
+                    onMouseEnter={this.handleHover}
+                    onMouseLeave={this.handleHover}
+                    className={`${
+                      this.state.closeSubmenu
+                        ? listItemStyle + " animate-close"
+                        : listItemStyle
+                    } ${theme}
+            `}
+                    onClick={
+                      menuAction === this.handleChangeAuthentication
+                        ? e =>
+                            this.handleChangeAuthentication(
+                              e,
+                              handleAuthentication
+                            )
+                        : menuAction
+                    }
+                  >
+                    <span className={classNames.menuIcon}>{icon}</span>
+                    <span className={classNames.text}>{text}</span>
+                    {submenu ? (
+                      <span
+                        className={classNames.subMenuCount}
+                        style={countstyle}
+                      >
+                        {submenu.length}
+                      </span>
+                    ) : null}
+                  </button>
+                ) : (
+                  <Link
+                    to={id === "dashboard" ? "/" : `/${id}`}
+                    onMouseEnter={this.handleHover}
+                    onMouseLeave={this.handleHover}
+                    className={`${
+                      this.state.closeSubmenu
+                        ? listItemStyle + " animate-close"
+                        : listItemStyle
+                    } ${theme}
               `}
-                  onClick={
-                    menuAction === this.handleChangeAuthentication
-                      ? e =>
-                          this.handleChangeAuthentication(
-                            e,
-                            handleAuthentication
-                          )
-                      : menuAction
-                  }
-                >
-                  <span className={classNames.menuIcon}>{icon}</span>
-                  <span className={classNames.text}>{text}</span>
-                  {submenu ? (
-                    <span
-                      className={classNames.subMenuCount}
-                      style={countstyle}
-                    >
-                      {submenu.length}
-                    </span>
-                  ) : null}
-                </Link>
-              )}
+                    onClick={
+                      menuAction === this.handleChangeAuthentication
+                        ? e =>
+                            this.handleChangeAuthentication(
+                              e,
+                              handleAuthentication
+                            )
+                        : menuAction
+                    }
+                  >
+                    <span className={classNames.menuIcon}>{icon}</span>
+                    <span className={classNames.text}>{text}</span>
+                    {submenu ? (
+                      <span
+                        className={classNames.subMenuCount}
+                        style={countstyle}
+                      >
+                        {submenu.length}
+                      </span>
+                    ) : null}
+                  </Link>
+                )
+              }
             </ThemeContext>
           )}
         </AuthContext.Consumer>

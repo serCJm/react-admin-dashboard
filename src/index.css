@@ -152,7 +152,7 @@ p {
   justify-content: space-between;
   transition: all 0.5s; }
   .header-top-menu.sidemenu-open {
-    margin-left: 19rem; }
+    margin-left: 26rem; }
   .header-top-menu .menu-btn {
     display: flex;
     justify-content: center;
@@ -604,8 +604,8 @@ input, textarea {
   background: #555; }
 
 .side-menu {
-  position: absolute;
-  top: 0;
+  position: fixed;
+  bottom: 0;
   left: 0;
   height: 100%;
   overflow-y: scroll;
@@ -613,7 +613,7 @@ input, textarea {
   width: 0;
   transition: all 0.5s; }
   .side-menu.open {
-    width: 19rem; }
+    width: 26rem; }
   .side-menu .avatar {
     height: 6rem;
     display: flex;
@@ -675,7 +675,7 @@ input, textarea {
     cursor: pointer; }
     .side-menu .menuOptions .menuOption {
       height: 100%;
-      width: 3.8rem;
+      width: 5.2rem;
       display: flex;
       justify-content: center;
       align-items: center; }
@@ -1028,21 +1028,20 @@ input, textarea {
       display: none; }
 
 .pages {
-  position: fixed;
-  top: 6rem;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  min-height: 100%;
   padding: 0 2rem 12rem;
   background: #e9f0f5;
+  min-height: 100vw;
   overflow-y: auto;
   transition: all 0.5s; }
   .pages.sidemenu-open {
-    left: 19rem; }
+    margin-left: 26rem; }
   .pages .page-element-container {
     position: relative;
-    margin-top: 2.5rem; }
+    margin-top: 2.5rem;
+    z-index: 10; }
+    @media screen and (min-width: 800px) {
+      .pages .page-element-container {
+        margin-top: 1rem; } }
   .pages .page-element {
     background: #fff;
     border-radius: 15px;
@@ -1064,11 +1063,11 @@ input, textarea {
       padding: 0 0.3rem;
       color: #89949b;
       z-index: -1;
-      transition: top 0.5s, z-index 0.1s; }
+      transform: translateY(0);
+      transition: transform 0.5s; }
       .pages .page-element-controls.show {
-        top: -2rem;
-        z-index: 50;
-        transition: top 0.4s, z-index 3s; }
+        transform: translateY(-100%);
+        transition: transform 0.5s; }
       .pages .page-element-controls-item:nth-child(2) {
         padding-bottom: 0.1rem; }
       .pages .page-element-controls-item {
@@ -1654,17 +1653,45 @@ input, textarea {
     margin-bottom: 0;
     padding-bottom: 1rem; }
 
-.navigation {
+.navigation-container {
   height: 30rem;
+  max-height: 30rem;
   padding: 2rem; }
-  .navigation-directions {
-    display: flex;
-    justify-content: center;
-    height: 30rem;
-    overflow: scroll; }
+
+.navigation-directions {
+  display: flex;
+  justify-content: center;
+  height: 30rem;
+  max-height: 30rem;
+  overflow-y: auto;
+  position: relative; }
 
 .MicrosoftMap.dirSDK .directionsPanel {
-  width: 90% !important;
   margin: 0 auto; }
+
+@media screen and (min-width: 800px) {
+  .dashboard {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-gap: 20px;
+    max-width: 100%; } }
+@media screen and (min-width: 800px) {
+  .dashboard .page-element-container.dashboard-overview {
+    grid-column: 1/6; } }
+@media screen and (min-width: 800px) {
+  .dashboard .page-element-container.dashboard-radar {
+    grid-column: 1/3;
+    grid-row: 2/3; } }
+@media screen and (min-width: 800px) {
+  .dashboard .page-element-container.dashboard-summary {
+    grid-column: 1/3;
+    grid-row: 3/5; } }
+@media screen and (min-width: 800px) {
+  .dashboard .page-element-container.calendar-time {
+    grid-column: 3/6;
+    grid-row: 2/4; } }
+@media screen and (min-width: 800px) {
+  .dashboard .page-element-container.navigation {
+    grid-column: 3/6; } }
 
 /*# sourceMappingURL=index.css.map */

@@ -569,18 +569,44 @@
         &-stats
             margin-bottom: 0
             padding-bottom: 1rem
-.navigation
+.navigation-container
     height: 30rem
+    max-height: 30rem
     padding: 2rem
-    &-directions
-        display: flex
-        justify-content: center
-        height: 30rem
-        overflow: scroll
+.navigation-directions
+    display: flex
+    justify-content: center
+    height: 30rem
+    max-height: 30rem
+    overflow-y: auto
+    position: relative
 .MicrosoftMap.dirSDK .directionsPanel
-    width: 90%!important
     margin: 0 auto
-   
+.dashboard
+    @media #{$large-screen}
+        display: grid
+        grid-template-columns: repeat(5, minmax(0, 1fr))
+        // grid-template-rows: auto 100px 100px 100px auto
+        grid-gap: 20px 
+        max-width: 100%
+    .page-element-container.dashboard-overview
+        @media #{$large-screen}
+            grid-column: 1 / 6
+    .page-element-container.dashboard-radar
+        @media #{$large-screen}
+            grid-column: 1/3
+            grid-row: 2/3
+    .page-element-container.dashboard-summary
+        @media #{$large-screen}
+            grid-column: 1/3
+            grid-row: 3/5
+    .page-element-container.calendar-time
+        @media #{$large-screen}
+            grid-column: 3/6
+            grid-row: 2/4
+    .page-element-container.navigation
+        @media #{$large-screen}
+            grid-column: 3/6
 
         
             

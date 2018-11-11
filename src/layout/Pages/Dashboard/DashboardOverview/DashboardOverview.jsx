@@ -43,7 +43,7 @@ class DashboardOverview extends Component {
               <InteractiveChart
                 data={data}
                 width={width}
-                height={500}
+                height={300}
                 tooltipClass="rect-tooltip"
               />
             )}

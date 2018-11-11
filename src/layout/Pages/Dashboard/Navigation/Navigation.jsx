@@ -9,10 +9,10 @@ class Navigation extends Component {
       requestOptions: { routeMode: "driving", maxRoutes: 2 },
       wayPoints: [
         {
-          address: "Seattle, Washington"
+          address: ""
         },
         {
-          address: "Silicon Valley, California"
+          address: ""
         }
       ]
     }
@@ -20,10 +20,10 @@ class Navigation extends Component {
   render() {
     return (
       <React.Fragment>
-        <div className="navigation">
+        <div className="navigation-container">
           <ReactBingmaps
             bingmapKey={process.env.REACT_APP_BING_KEY}
-            center={[13.0827, 80.2707]}
+            center={[37.37, -122.04]}
             directions={this.state.directions}
           />
         </div>

@@ -32,7 +32,7 @@ class PageElementWrapper extends Component {
     }
     return (
       <div
-        className="page-element-container"
+        className={`page-element-container ${this.props.classId}`}
         onMouseOver={this.handleHover}
         onMouseOut={this.handleHover}
       >

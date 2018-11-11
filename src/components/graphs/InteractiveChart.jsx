@@ -6,9 +6,9 @@ import LineWithCircle from "./tooltips/LineWithCircle";
 // component based on // based on https://bl.ocks.org/mbostock/34f08d5e11952a80609169b7917d4172
 
 const margin = { top: 20, right: 20, bottom: 110, left: 40 },
-  margin2 = { top: 430, right: 10, bottom: 20, left: 40 },
-  height = 500 - margin.top - margin.bottom,
-  height2 = 500 - margin2.top - margin2.bottom;
+  margin2 = { top: 230, right: 10, bottom: 20, left: 40 },
+  height = 300 - margin.top - margin.bottom,
+  height2 = 300 - margin2.top - margin2.bottom;
 
 class InteractiveChart extends Component {
   // move into component to make it dynamic using ContainerDimensions on parent

@@ -9,19 +9,19 @@ import Navigation from "./Navigation/Navigation";
 const Dashboard = () => {
   return (
     <React.Fragment>
-      <PageElementWrapper>
+      <PageElementWrapper classId="dashboard-overview">
         <DashboardOverview />
       </PageElementWrapper>
-      <PageElementWrapper>
+      <PageElementWrapper classId="dashboard-radar">
         <DashboardRadar />
       </PageElementWrapper>
-      <PageElementWrapper>
+      <PageElementWrapper classId="dashboard-summary">
         <DashboardSummary />
       </PageElementWrapper>
-      <PageElementWrapper>
+      <PageElementWrapper classId="calendar-time">
         <DashboardCalendarTime />
       </PageElementWrapper>
-      <PageElementWrapper>
+      <PageElementWrapper classId="navigation">
         <Navigation />
       </PageElementWrapper>
     </React.Fragment>

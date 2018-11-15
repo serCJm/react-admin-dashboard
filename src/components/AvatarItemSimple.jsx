@@ -8,7 +8,7 @@ const AvatarItemSimple = props => {
         alt={`avatar ${props.name}`}
         width={36}
         height={36}
-        className={`avatar-img ${props.style}`}
+        className={`avatar-img ${props.styleClass}`}
       />
       <p className="avatar-name">{props.name}</p>
     </div>

@@ -1,0 +1,103 @@
+.inbox
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    .instrument-panel
+        grid-column: 1/5
+        display: flex
+        justify-content: space-between
+        align-items: center
+        height: 7rem
+        margin: 0
+        padding: 0 2rem
+        border-bottom: 1px solid rgb(238, 238, 238)
+        .instrument-controls
+            flex: 0 0 18rem
+            display: flex
+            justify-content: space-between
+            align-items: center
+            @media #{$large-screen}
+                flex: 0 0 34rem
+            .btn
+                width: 5rem
+                height: 3rem
+                background: $white
+                border: 2px solid rgb(238, 238, 238)
+                color: rgb(137, 148, 155)
+                cursor: pointer
+                &:not(:first-child)
+                    border-left: none
+                &.edit
+                    border-radius: 20px
+                    color: $white
+                    background: rgb(121, 176, 236)
+                    &:hover
+                        background: rgb(166, 202, 242)
+                &.action
+                    display: none
+                    @media #{$large-screen}
+                        display: inline-block
+                &.action:first-child, &.trash:first-child
+                    border-top-left-radius: 20px
+                    border-bottom-left-radius: 20px
+                &.action:last-child, &.trash:last-child
+                    border-top-right-radius: 20px
+                    border-bottom-right-radius: 20px
+                &.action:hover
+                    background: rgb(46, 179, 152)
+                    color: $white 
+                &.trash:hover
+                    background: rgb(217, 83, 79)
+                    color: $white
+        .avatar-container
+            flex: 0 0 11rem
+            display: flex
+            justify-content: space-between
+            align-items: center
+            color: darken(rgb(238, 238, 238), 45%)
+            .inbox-avatar
+                border-radius: 50%
+                width: 50px
+                height: 50px
+    .sidemenu
+        grid-column: 1/2
+        
+        color: rgb(137, 148, 155)
+        border-right: 1px solid rgb(238, 238, 238)
+        .sidemenu-title
+            padding-left: 2rem
+            text-transform: uppercase
+        .sidemenu-item
+            padding-left: 2rem
+            height: 4rem
+            display: flex
+            justify-content: space-between
+            align-items: center
+            &.active
+                background: rgb(121, 176, 236)
+                color: $white
+                & .submenu-item-count
+                    background: $white
+                    width: 2.2rem
+                    text-align: center
+                    color: rgb(121, 176, 236)   
+            &:hover:not(.active)
+                background: rgb(245, 245, 245)
+            .submenu-item-icon
+                display: inline-block
+                width: 3rem
+                text-align: center
+                margin-right: 1rem
+            .submenu-item-count
+                margin-right: 2rem
+                background: rgb(234, 120, 130)
+                width: 2.2rem
+                text-align: center
+                color: $white
+        .sidemenu-hr
+            margin-bottom: 2rem
+            width: 80%
+            height: 1px
+            border: none
+            background: rgb(238, 238, 238)
+            
+            

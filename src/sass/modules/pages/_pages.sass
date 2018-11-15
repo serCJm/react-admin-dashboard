@@ -1,9 +1,11 @@
 .pages
     padding: 0 2rem 12rem
     background: $lightBlue
-    min-height: 100vw
+    min-height: 100%
     overflow-y: auto
     transition: all .5s
+    @media #{$large-screen}
+        padding-top: 2rem
     &.sidemenu-open
         margin-left: $sidemenuWidth
     .page-element-container

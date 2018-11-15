@@ -1804,6 +1804,17 @@ input, textarea {
         width: 2.2rem;
         text-align: center;
         color: #fff; }
+      .inbox .sidemenu .sidemenu-item .submenu-item-tag {
+        display: inline-block;
+        width: 1.2rem;
+        height: 1.2rem;
+        text-align: center;
+        margin-right: 1rem;
+        border-radius: 50%; }
+        .inbox .sidemenu .sidemenu-item .submenu-item-tag.tag-style1 {
+          background: #55c9a6; }
+        .inbox .sidemenu .sidemenu-item .submenu-item-tag.tag-style2 {
+          background: #ea7882; }
     .inbox .sidemenu .sidemenu-hr {
       margin-bottom: 2rem;
       width: 80%;

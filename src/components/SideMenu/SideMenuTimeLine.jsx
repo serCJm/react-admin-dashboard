@@ -35,7 +35,7 @@ const SideMenuTimeLine = ({ data }) => {
       <AvatarItemSimple
         name={data.name}
         avatar={data.avatar}
-        style={data.style}
+        styleClass={data.style}
       />
       <div className="timeline-content">{content}</div>
     </React.Fragment>

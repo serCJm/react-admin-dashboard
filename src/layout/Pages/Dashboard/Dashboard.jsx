@@ -8,7 +8,7 @@ import Navigation from "./Navigation/Navigation";
 
 const Dashboard = () => {
   return (
-    <React.Fragment>
+    <div className="dashboard">
       <PageElementWrapper classId="dashboard-overview">
         <DashboardOverview />
       </PageElementWrapper>
@@ -24,7 +24,7 @@ const Dashboard = () => {
       <PageElementWrapper classId="navigation">
         <Navigation />
       </PageElementWrapper>
-    </React.Fragment>
+    </div>
   );
 };
 

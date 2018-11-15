@@ -1,5 +1,6 @@
 import React from "react";
 import InboxMenuItems from "./InboxMenuItems";
+import InboxMenuTagItems from "./InboxMenuTagItems";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInbox } from "@fortawesome/free-solid-svg-icons";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
@@ -57,6 +58,19 @@ const othersContents = [
   }
 ];
 
+const tagsContents = [
+  {
+    title: "#sometag",
+    active: false,
+    colorClalss: "tag-style1"
+  },
+  {
+    title: "#anothertag",
+    active: false,
+    colorClalss: "tag-style2"
+  }
+];
+
 const InboxMenu = () => {
   return (
     <div className="sidemenu">
@@ -67,7 +81,7 @@ const InboxMenu = () => {
       <InboxMenuItems contents={othersContents} />
       <hr className="sidemenu-hr" />
       <h2 className="sidemenu-title">tags</h2>
-      <InboxMenuTagItems />
+      <InboxMenuTagItems contents={tagsContents} />
     </div>
   );
 };

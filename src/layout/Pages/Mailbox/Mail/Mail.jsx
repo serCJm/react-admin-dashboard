@@ -3,6 +3,7 @@ import PageElementWrapper from "../../PageElementWrapper";
 import InstrumentPanel from "../Inbox/InstrumentPanel/InstrumentPanel";
 import MailHeader from "./MailHeader/MailHeader";
 import MailBody from "./MailBody/MailBody";
+import MailAttachments from "./MailAttachments/MailAttachments";
 
 const Mail = () => {
   return (
@@ -11,6 +12,7 @@ const Mail = () => {
         <InstrumentPanel />
         <MailHeader />
         <MailBody />
+        <MailAttachments />
       </div>
     </PageElementWrapper>
   );

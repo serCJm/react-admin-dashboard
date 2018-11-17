@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Dashboard from "./Dashboard/Dashboard";
 import Inbox from "./Mailbox/Inbox/Inbox";
+import Mail from "./Mailbox/Mail/Mail";
 import { Route } from "react-router-dom";
 
 class Pages extends Component {
@@ -31,6 +32,7 @@ class Pages extends Component {
       <main className={mainClass}>
         <Route exact path="/" component={Dashboard} />
         <Route exact path="/inbox" component={Inbox} />
+        <Route exact path="/mail" component={Mail} />
       </main>
     );
   }

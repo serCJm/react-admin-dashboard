@@ -1841,11 +1841,10 @@ input, textarea {
       justify-content: space-between;
       align-items: center;
       color: #89949b;
-      cursor: pointer; }
+      cursor: pointer;
+      border-bottom: 1px solid #eeeeee; }
       .inbox .inbox-mail .inbox-mail-item:hover {
         background: rgba(255, 255, 102, 0.2); }
-      .inbox .inbox-mail .inbox-mail-item:not(:last-child) {
-        border-bottom: 1px solid #eeeeee; }
       .inbox .inbox-mail .inbox-mail-item .inbox-mail-main {
         display: flex;
         align-items: center;

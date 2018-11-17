@@ -1960,7 +1960,7 @@ input, textarea {
         background: #d9534f;
         color: #fff; }
   .mail .instrument-panel .avatar-container {
-    flex: 0 0 11rem;
+    flex: 0 0 9rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1969,5 +1969,35 @@ input, textarea {
       border-radius: 50%;
       width: 50px;
       height: 50px; }
+.mail .mail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 7rem;
+  color: #89949b;
+  border-bottom: 1px solid #eeeeee; }
+  .mail .mail-header-info {
+    display: flex;
+    align-items: center; }
+    .mail .mail-header-info h3, .mail .mail-header-info p {
+      margin: 0; }
+    .mail .mail-header-info h3 {
+      color: #43525a; }
+    .mail .mail-header-info p {
+      font-size: 1.3rem; }
+    .mail .mail-header-info .mail-header-avatar {
+      margin: 0 2rem;
+      border-radius: 50%; }
+  .mail .mail-header-date {
+    margin: 0 2rem;
+    text-align: center; }
+    .mail .mail-header-date p {
+      font-size: 1.3rem;
+      margin: 0 0 0.3rem; }
+    .mail .mail-header-date-tag {
+      padding: 0.5rem 2rem;
+      background: #79b0ec;
+      color: #fff;
+      border-radius: 20px; }
 
 /*# sourceMappingURL=index.css.map */

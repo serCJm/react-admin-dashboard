@@ -1999,5 +1999,19 @@ input, textarea {
       background: #79b0ec;
       color: #fff;
       border-radius: 20px; }
+.mail .mail-body {
+  padding: 2rem;
+  color: #89949b;
+  font-size: 1.4rem;
+  border-bottom: 1px solid #eeeeee; }
+  .mail .mail-body p {
+    font-size: 1.4rem; }
+  .mail .mail-body .mail-body-list {
+    list-style-type: disc;
+    margin-left: 6rem; }
+  .mail .mail-body .mail-body-quote {
+    border-left: 5px solid #eeeeee;
+    padding: 2rem 1rem 2rem 3rem;
+    font-size: 1.5rem; }
 
 /*# sourceMappingURL=index.css.map */

@@ -1713,6 +1713,8 @@ input, textarea {
 .inbox {
   display: grid;
   grid-template-columns: repeat(4, 1fr); }
+  .inbox a {
+    text-decoration: none; }
   .inbox .instrument-panel {
     grid-column: 1/5;
     display: flex;
@@ -2018,6 +2020,7 @@ input, textarea {
   color: #89949b;
   font-size: 1.4rem; }
   .mail .mail-attachments p {
+    margin: 0 0 1rem;
     font-size: 1.5rem; }
   .mail .mail-attachments .mail-attachments-item {
     display: flex;

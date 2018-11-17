@@ -1911,4 +1911,63 @@ input, textarea {
         text-align: right;
         font-size: 1.5rem; }
 
+.mail .instrument-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 7rem;
+  margin: 0;
+  padding: 0 2rem;
+  border-bottom: 1px solid #eeeeee; }
+  .mail .instrument-panel .instrument-controls {
+    flex: 0 0 18rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    @media screen and (min-width: 800px) {
+      .mail .instrument-panel .instrument-controls {
+        flex: 0 0 34rem; } }
+    .mail .instrument-panel .instrument-controls .btn {
+      width: 5rem;
+      height: 3rem;
+      background: #fff;
+      border: 2px solid #eeeeee;
+      color: #89949b;
+      cursor: pointer; }
+      .mail .instrument-panel .instrument-controls .btn:not(:first-child) {
+        border-left: none; }
+      .mail .instrument-panel .instrument-controls .btn.edit {
+        border-radius: 20px;
+        color: #fff;
+        background: #79b0ec; }
+        .mail .instrument-panel .instrument-controls .btn.edit:hover {
+          background: #a6caf2; }
+      .mail .instrument-panel .instrument-controls .btn.action {
+        display: none; }
+        @media screen and (min-width: 800px) {
+          .mail .instrument-panel .instrument-controls .btn.action {
+            display: inline-block; } }
+      .mail .instrument-panel .instrument-controls .btn.action:first-child, .mail .instrument-panel .instrument-controls .btn.trash:first-child {
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px; }
+      .mail .instrument-panel .instrument-controls .btn.action:last-child, .mail .instrument-panel .instrument-controls .btn.trash:last-child {
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px; }
+      .mail .instrument-panel .instrument-controls .btn.action:hover {
+        background: #2eb398;
+        color: #fff; }
+      .mail .instrument-panel .instrument-controls .btn.trash:hover {
+        background: #d9534f;
+        color: #fff; }
+  .mail .instrument-panel .avatar-container {
+    flex: 0 0 11rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #7b7b7b; }
+    .mail .instrument-panel .avatar-container .inbox-avatar {
+      border-radius: 50%;
+      width: 50px;
+      height: 50px; }
+
 /*# sourceMappingURL=index.css.map */

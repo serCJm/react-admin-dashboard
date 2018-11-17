@@ -2013,5 +2013,23 @@ input, textarea {
     border-left: 5px solid #eeeeee;
     padding: 2rem 1rem 2rem 3rem;
     font-size: 1.5rem; }
+.mail .mail-attachments {
+  padding: 3rem 2rem;
+  color: #89949b;
+  font-size: 1.4rem; }
+  .mail .mail-attachments p {
+    font-size: 1.5rem; }
+  .mail .mail-attachments .mail-attachments-item {
+    display: flex;
+    justify-content: space-between; }
+  .mail .mail-attachments .mail-attachments-link {
+    background: none;
+    boder: none;
+    padding: 0;
+    margin: 0;
+    color: #2eb398;
+    cursor: pointer; }
+    .mail .mail-attachments .mail-attachments-link:hover {
+      color: #248a76; }
 
 /*# sourceMappingURL=index.css.map */

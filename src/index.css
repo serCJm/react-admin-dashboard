@@ -2031,5 +2031,19 @@ input, textarea {
     cursor: pointer; }
     .mail .mail-attachments .mail-attachments-link:hover {
       color: #248a76; }
+.mail .mail-reply-box {
+  width: 100%;
+  text-align: center; }
+  .mail .mail-reply-box .mail-reply-text {
+    width: 90%;
+    height: 5rem;
+    outline: none;
+    resize: none;
+    margin-bottom: 2rem;
+    padding: 1rem 2rem;
+    font-size: 1.3rem;
+    border: 1px solid #89949b; }
+    .mail .mail-reply-box .mail-reply-text:focus {
+      border: 1px solid #89949b; }
 
 /*# sourceMappingURL=index.css.map */

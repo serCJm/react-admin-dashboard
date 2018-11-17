@@ -2,6 +2,7 @@ import React from "react";
 import PageElementWrapper from "../../PageElementWrapper";
 import InstrumentPanel from "./InstrumentPanel/InstrumentPanel";
 import InboxMenu from "./InboxMenu/InboxMenu";
+import InboxMail from "./InboxMail/InboxMail";
 
 const Inbox = () => {
   return (
@@ -9,7 +10,7 @@ const Inbox = () => {
       <div className="inbox">
         <InstrumentPanel />
         <InboxMenu />
-        {/* <InboxMail></InboxMail> */}
+        <InboxMail />
       </div>
     </PageElementWrapper>
   );

@@ -134,6 +134,8 @@ p {
   font-weight: 600; }
 .pages .inbox .sidemenu-item {
   font-size: 1.6rem; }
+.pages .inbox .inbox-mail .inbox-mail-text {
+  font-size: 1.3rem; }
 
 .theme-default {
   background: #ea7661; }
@@ -1771,15 +1773,19 @@ input, textarea {
         width: 50px;
         height: 50px; }
   .inbox .sidemenu {
+    display: none;
     grid-column: 1/2;
     color: #89949b;
     border-right: 1px solid #eeeeee; }
+    @media screen and (min-width: 800px) {
+      .inbox .sidemenu {
+        display: block; } }
     .inbox .sidemenu .sidemenu-title {
       padding-left: 2rem;
       text-transform: uppercase; }
     .inbox .sidemenu .sidemenu-item {
       padding-left: 2rem;
-      height: 4rem;
+      height: 4.5rem;
       display: flex;
       justify-content: space-between;
       align-items: center; }
@@ -1821,5 +1827,88 @@ input, textarea {
       height: 1px;
       border: none;
       background: #eeeeee; }
+  .inbox .inbox-mail {
+    grid-column: 1/5;
+    margin: 0; }
+    @media screen and (min-width: 800px) {
+      .inbox .inbox-mail {
+        grid-column: 2/5; } }
+    .inbox .inbox-mail .inbox-mail-item {
+      height: 6rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #89949b;
+      cursor: pointer; }
+      .inbox .inbox-mail .inbox-mail-item:hover {
+        background: rgba(255, 255, 102, 0.2); }
+      .inbox .inbox-mail .inbox-mail-item:not(:last-child) {
+        border-bottom: 1px solid #eeeeee; }
+      .inbox .inbox-mail .inbox-mail-item .inbox-mail-main {
+        display: flex;
+        align-items: center;
+        margin-left: 2rem; }
+        .inbox .inbox-mail .inbox-mail-item .inbox-mail-main h3 {
+          color: #43525a;
+          margin: 0; }
+      .inbox .inbox-mail .inbox-mail-item .inbox-mail-avatar {
+        border-radius: 50%;
+        margin-right: 1.5rem;
+        padding: 0.2rem; }
+        .inbox .inbox-mail .inbox-mail-item .inbox-mail-avatar.label-style1 {
+          border: 2px solid #55c9a6; }
+        .inbox .inbox-mail .inbox-mail-item .inbox-mail-avatar.label-style2 {
+          border: 2px solid #ffc497; }
+        .inbox .inbox-mail .inbox-mail-item .inbox-mail-avatar.label-style3 {
+          border: 2px solid #79b0ec; }
+        .inbox .inbox-mail .inbox-mail-item .inbox-mail-avatar.label-style4 {
+          border: 2px solid #ea7882; }
+        .inbox .inbox-mail .inbox-mail-item .inbox-mail-avatar.label-style5 {
+          border: 2px solid #b4a1dd; }
+        .inbox .inbox-mail .inbox-mail-item .inbox-mail-avatar.label-style6 {
+          border: 2px solid #a8553a; }
+        .inbox .inbox-mail .inbox-mail-item .inbox-mail-avatar.label-style7 {
+          border: 2px solid #e299b7; }
+        .inbox .inbox-mail .inbox-mail-item .inbox-mail-avatar.label-style8 {
+          border: 2px solid #68a0a5; }
+        .inbox .inbox-mail .inbox-mail-item .inbox-mail-avatar.label-style9 {
+          border: 2px solid #ee682f; }
+        .inbox .inbox-mail .inbox-mail-item .inbox-mail-avatar.label-style10 {
+          border: 2px solid #fadd7f; }
+      .inbox .inbox-mail .inbox-mail-item .inbox-mail-text {
+        margin: 0;
+        margin-top: 0.5rem; }
+        .inbox .inbox-mail .inbox-mail-item .inbox-mail-text .inbox-mail-label {
+          padding: 0.1rem 1rem;
+          margin-right: 0.5rem;
+          color: #fff;
+          border-radius: 10px;
+          font-weight: 600; }
+          .inbox .inbox-mail .inbox-mail-item .inbox-mail-text .inbox-mail-label.label-style1 {
+            background: #55c9a6; }
+          .inbox .inbox-mail .inbox-mail-item .inbox-mail-text .inbox-mail-label.label-style2 {
+            background: #ffc497; }
+          .inbox .inbox-mail .inbox-mail-item .inbox-mail-text .inbox-mail-label.label-style3 {
+            background: #79b0ec; }
+          .inbox .inbox-mail .inbox-mail-item .inbox-mail-text .inbox-mail-label.label-style4 {
+            background: #ea7882; }
+          .inbox .inbox-mail .inbox-mail-item .inbox-mail-text .inbox-mail-label.label-style5 {
+            background: #b4a1dd; }
+          .inbox .inbox-mail .inbox-mail-item .inbox-mail-text .inbox-mail-label.label-style6 {
+            background: #a8553a; }
+          .inbox .inbox-mail .inbox-mail-item .inbox-mail-text .inbox-mail-label.label-style7 {
+            background: #e299b7; }
+          .inbox .inbox-mail .inbox-mail-item .inbox-mail-text .inbox-mail-label.label-style8 {
+            background: #68a0a5; }
+          .inbox .inbox-mail .inbox-mail-item .inbox-mail-text .inbox-mail-label.label-style9 {
+            background: #ee682f; }
+          .inbox .inbox-mail .inbox-mail-item .inbox-mail-text .inbox-mail-label.label-style10 {
+            background: #fadd7f; }
+      .inbox .inbox-mail .inbox-mail-item .inbox-mail-date {
+        flex: 0 0 9rem; }
+      .inbox .inbox-mail .inbox-mail-item .inbox-mail-date p {
+        margin: 0 2rem;
+        text-align: right;
+        font-size: 1.5rem; }
 
 /*# sourceMappingURL=index.css.map */

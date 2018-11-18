@@ -20,7 +20,7 @@ h4 {
   font-size: 1.125rem; }
 
 p {
-  font-size: 1rem; }
+  font-size: 1.2rem; }
 
 .avatar-lock {
   font-size: 1.3rem; }
@@ -2096,5 +2096,33 @@ input, textarea {
       border-radius: 50%;
       width: 50px;
       height: 50px; }
+.compose .compose-send-form {
+  margin-top: 1rem;
+  padding-bottom: 2rem;
+  font-size: 1.5rem;
+  color: #7b7b7b; }
+  .compose .compose-send-form .compose-send-item {
+    width: 95%;
+    margin: 0 auto;
+    border: none;
+    height: 5rem; }
+    .compose .compose-send-form .compose-send-item .compose-send-label {
+      display: inline-block;
+      width: 4rem;
+      text-align: right;
+      margin-right: 2rem; }
+    .compose .compose-send-form .compose-send-item .compose-send-input {
+      width: 100%;
+      height: 100%;
+      border: 2px solid #eeeeee;
+      padding-left: 1rem;
+      color: black;
+      line-height: 100%;
+      vertical-align: middle; }
+      .compose .compose-send-form .compose-send-item .compose-send-input:focus {
+        border: 2px solid #eeeeee; }
+      @media screen and (min-width: 800px) {
+        .compose .compose-send-form .compose-send-item .compose-send-input {
+          width: 85%; } }
 
 /*# sourceMappingURL=index.css.map */

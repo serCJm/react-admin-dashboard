@@ -217,6 +217,10 @@ p {
       font-size: 1.7rem;
       cursor: pointer;
       z-index: 20; }
+      .header-top-menu .header-controls-item a {
+        color: #89949b; }
+        .header-top-menu .header-controls-item a:hover {
+          color: #fff; }
     .header-top-menu .header-controls-icon:not(:last-child) {
       padding-right: 2rem; }
     .header-top-menu .header-controls-icon {

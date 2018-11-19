@@ -8,6 +8,7 @@ import galImg6 from "../../../images/gallery/johanna-buguet-1160991-unsplash.jpg
 import galImg7 from "../../../images/gallery/sakkarin-kaewsukho-1160157-unsplash.jpg";
 import galImg8 from "../../../images/gallery/tamas-munkacsi-1160612-unsplash.jpg";
 import galImg9 from "../../../images/gallery/yu-mp-1159664-unsplash.jpg";
+import GalleryItem from "./GalleryItem";
 
 class Gallery extends Component {
   state = {
@@ -78,7 +79,11 @@ class Gallery extends Component {
     ]
   };
   render() {
-    return <React.Fragment />;
+    return (
+      <React.Fragment>
+        <GalleryItem contents={this.state.contents} />
+      </React.Fragment>
+    );
   }
 }
 

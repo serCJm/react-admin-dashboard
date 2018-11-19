@@ -3,6 +3,7 @@ import Dashboard from "./Dashboard/Dashboard";
 import Inbox from "./Mailbox/Inbox/Inbox";
 import Mail from "./Mailbox/Mail/Mail";
 import Compose from "./Mailbox/Compose/Compose";
+import Gallery from "./Gallery/Gallery";
 import { Route } from "react-router-dom";
 
 class Pages extends Component {
@@ -35,6 +36,7 @@ class Pages extends Component {
         <Route exact path="/inbox" component={Inbox} />
         <Route exact path="/mail" component={Mail} />
         <Route exact path="/compose" component={Compose} />
+        <Route exact path="/gallery" component={Gallery} />
       </main>
     );
   }

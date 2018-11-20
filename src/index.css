@@ -2131,4 +2131,43 @@ input, textarea {
           .compose .compose-send-form .compose-send-item .compose-send-input {
             width: 85%; } }
 
+.gallery {
+  display: grid;
+  grid-auto-rows: min-content;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem; }
+  @media screen and (min-width: 800px) {
+    .gallery {
+      grid-template-columns: repeat(3, 1fr); } }
+  .gallery .gallery-item {
+    text-align: center;
+    margin-bottom: 1rem;
+    text-transform: uppercase; }
+    .gallery .gallery-item .gallery-img {
+      padding: 1rem;
+      width: 100%;
+      max-height: 25rem; }
+    .gallery .gallery-item .gallery-title {
+      color: #43525a; }
+    .gallery .gallery-item .gallery-date {
+      color: #b8c3c8; }
+    .gallery .gallery-item .gallery-btn {
+      width: 6rem;
+      height: 2.5rem;
+      background: #fff;
+      border: 2px solid #eeeeee;
+      border-radius: 20px;
+      color: #89949b;
+      font-size: 1.2rem;
+      transition: all 0.5s;
+      cursor: pointer; }
+      .gallery .gallery-item .gallery-btn:hover {
+        background: #ea7882;
+        color: #fff; }
+      .gallery .gallery-item .gallery-btn-icon {
+        padding-right: 0.5rem; }
+      .gallery .gallery-item .gallery-btn.liked {
+        background: #de2938;
+        color: #fff; }
+
 /*# sourceMappingURL=index.css.map */

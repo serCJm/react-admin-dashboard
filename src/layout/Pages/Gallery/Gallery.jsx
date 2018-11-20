@@ -78,11 +78,37 @@ class Gallery extends Component {
       }
     ]
   };
+
+  handleLikeButton = name => {
+    for (let i = 0; i < this.state.contents.length; i++) {
+      const tempObject = { ...this.state.contents[i] };
+      if (tempObject.name === name && !tempObject.liked) {
+        tempObject.likes += 1;
+        tempObject.liked = true;
+        const tempContents = [...this.state.contents];
+        tempContents[i] = tempObject;
+        this.setState({ contents: tempContents });
+      } else if (
+        tempObject.name === name &&
+        tempObject.liked &&
+        tempObject.likes > 0
+      ) {
+        tempObject.likes -= 1;
+        tempObject.liked = false;
+        const tempContents = [...this.state.contents];
+        tempContents[i] = tempObject;
+        this.setState({ contents: tempContents });
+      }
+    }
+  };
   render() {
     return (
-      <React.Fragment>
-        <GalleryItem contents={this.state.contents} />
-      </React.Fragment>
+      <div className="gallery">
+        <GalleryItem
+          contents={this.state.contents}
+          handleLikeButton={this.handleLikeButton}
+        />
+      </div>
     );
   }
 }

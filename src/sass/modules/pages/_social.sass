@@ -1,0 +1,86 @@
+.social
+    .social-header
+        width: calc(100% + 4rem)
+        margin-left: -2rem
+        height: 30rem
+        padding-top: 3rem
+        background: url("./images/brett-ritchie-550788-unsplash.jpg") no-repeat fixed center
+        background-size: cover
+        color: $white
+        display: flex
+        justify-content: center
+        align-items: center
+        color: $white
+        @media #{$large-screen}
+            margin-top: -2rem
+            justify-content: space-between
+        .header-location
+            display: none
+            margin-left: 7rem
+            @media #{$large-screen}
+                display: block
+            .header-title
+                margin: 0
+                font-size: 3rem
+            & p
+                opacity: .8
+            .header-likes-btn
+                margin-top: 4rem
+                background: transparent
+                color: $white
+                font-size: 1.5rem
+                display: flex
+                align-items: center
+                &-icon
+                    width: 4rem
+                    height: 4rem
+                    margin-right: 2rem
+                    border: 2px solid $white
+                    border-radius: 50%
+                    padding: 1.4rem
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    &:hover, &.liked
+                        background: rgb(238, 104, 47)
+                        border: 2px solid rgb(238, 104, 47)
+        .header-avatar
+            height: calc(100% + 3rem)
+            width: 100%
+            margin-top: -3rem
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.5) 100%)
+            @media #{$large-screen}
+                width: 25rem
+            .avatar
+                border-radius: 50%
+            .job-title
+                margin-top: 0
+                opacity: .8
+            .social-hr
+                width: 100%
+                height: 1px
+                background: rgb(63, 63, 59)
+                border: none
+            .follow-btn
+                width: 10rem
+                height: 2.4rem
+                margin-top: 2rem
+                background: none
+                border: 2px solid $white
+                border-radius: 25px
+                color: $white
+                font-size: 1.2rem
+                font-weight: 600
+                text-transform: uppercase
+                &:hover
+                    background: rgb(0, 59, 255)
+                    border: 2px solid rgb(0, 59, 255)
+                
+                
+
+
+        

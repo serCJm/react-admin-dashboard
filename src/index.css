@@ -2253,5 +2253,36 @@ input, textarea {
       .social .social-header .header-avatar .follow-btn:hover {
         background: #003bff;
         border: 2px solid #003bff; }
+.social .social-thoughts textarea {
+  display: block;
+  border: none;
+  width: 95%;
+  padding: 1rem 2rem;
+  color: black;
+  font-size: 1.5rem; }
+.social .social-thoughts-attachments {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+  background: #eaedf1;
+  padding: 0 3rem; }
+.social .social-thoughts-icons {
+  display: flex;
+  justify-content: space-between;
+  width: 10rem;
+  color: #89949b;
+  font-size: 1.7rem; }
+  .social .social-thoughts-icons > * {
+    cursor: pointer; }
+.social .social-thoughts-btn {
+  padding: 0.5rem 1rem;
+  background: #2eb398;
+  border-radius: 25px;
+  color: white;
+  font-size: 1.5rem; }
+  .social .social-thoughts-btn:hover {
+    background: #45cfb3; }
 
 /*# sourceMappingURL=index.css.map */

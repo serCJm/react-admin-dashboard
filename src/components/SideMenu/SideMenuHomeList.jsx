@@ -52,6 +52,6 @@ function SideMenuHomeList(props) {
     );
   });
 
-  return <ul>{listItems}</ul>;
+  return <ul className="pages-home-list">{listItems}</ul>;
 }
 export default SideMenuHomeList;

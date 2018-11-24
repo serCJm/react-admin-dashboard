@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faBell } from "@fortawesome/free-solid-svg-icons";
@@ -73,11 +73,11 @@ class HeaderControlsNotifications extends Component {
     }
     return (
       <div className="header-controls-item">
-        <Link className="header-controls-icon" to="/inbox">
+        <NavLink className="header-controls-icon" to="/inbox">
           <span>
             <FontAwesomeIcon icon={faEnvelope} />
           </span>
-        </Link>
+        </NavLink>
         <span
           className="header-controls-icon"
           ref={node => {

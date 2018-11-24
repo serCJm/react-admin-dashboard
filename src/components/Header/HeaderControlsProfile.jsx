@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { faCogs } from "@fortawesome/free-solid-svg-icons";
 import HeaderControlsSettingsMenu from "./HeaderControlsSettingsMenu";
+import { NavLink } from "react-router-dom";
 
 class HeaderControlsProfile extends Component {
   state = {
@@ -50,9 +51,11 @@ class HeaderControlsProfile extends Component {
     }
     return (
       <div className="header-controls-item">
-        <span className="header-controls-icon">
-          <FontAwesomeIcon icon={faUser} />
-        </span>
+        <NavLink className="header-controls-icon" to="/social">
+          <span>
+            <FontAwesomeIcon icon={faUser} />
+          </span>
+        </NavLink>
         <span
           className="header-controls-icon"
           ref={node => {

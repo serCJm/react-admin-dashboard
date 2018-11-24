@@ -9,7 +9,7 @@ const SocialThoughts = () => {
   return (
     <PageElementWrapper>
       <div className="social-thoughts">
-        <textarea className="mail-reply-text" placeholder="Where's my mind?" />
+        <textarea className="text-box" placeholder="Where's my mind?" />
         <div className="social-thoughts-attachments">
           <div className="social-thoughts-icons">
             <span className="icon">

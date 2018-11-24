@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { ThemeContext } from "../Header/theme-context.js";
 import { AuthContext } from "../Header/auth-context";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 class SideMenuHomeItem extends Component {
   constructor(props) {
@@ -39,22 +39,12 @@ class SideMenuHomeItem extends Component {
   };
 
   render() {
-    const {
-      id,
-      icon,
-      text,
-      submenu,
-      classNames,
-      countstyle,
-      currentMenu
-    } = this.props;
+    const { id, icon, text, submenu, classNames, countstyle } = this.props;
 
     let listItemStyle = classNames.menuItem;
 
     // check if item id matches current tab to apply active class
-    if (currentMenu === id) {
-      listItemStyle += " " + classNames.active;
-    } else if (this.state.isHoverOn) {
+    if (this.state.isHoverOn) {
       listItemStyle += " " + classNames.hover;
     }
 
@@ -77,7 +67,7 @@ class SideMenuHomeItem extends Component {
           {({ handleAuthentication }) => (
             <ThemeContext>
               {({ theme }) =>
-                id === "mailbox" ? (
+                id === "mailbox" || id === "blog" ? (
                   <button
                     onMouseEnter={this.handleHover}
                     onMouseLeave={this.handleHover}
@@ -109,7 +99,8 @@ class SideMenuHomeItem extends Component {
                     ) : null}
                   </button>
                 ) : (
-                  <Link
+                  <NavLink
+                    exact={true}
                     to={id === "dashboard" ? "/" : `/${id}`}
                     onMouseEnter={this.handleHover}
                     onMouseLeave={this.handleHover}
@@ -139,7 +130,7 @@ class SideMenuHomeItem extends Component {
                         {submenu.length}
                       </span>
                     ) : null}
-                  </Link>
+                  </NavLink>
                 )
               }
             </ThemeContext>

@@ -2170,6 +2170,9 @@ input, textarea {
         background: #de2938;
         color: #fff; }
 
+.social .text {
+  margin: 0;
+  font-size: 1.4rem; }
 .social .social-header {
   width: calc(100% + 4rem);
   margin-left: -2rem;
@@ -2253,7 +2256,7 @@ input, textarea {
       .social .social-header .header-avatar .follow-btn:hover {
         background: #003bff;
         border: 2px solid #003bff; }
-.social .social-thoughts textarea {
+.social .social-thoughts .mail-reply-text {
   display: block;
   border: none;
   width: 95%;
@@ -2266,15 +2269,15 @@ input, textarea {
   justify-content: space-between;
   align-items: center;
   height: 5rem;
-  background: #eaedf1;
+  background: #adb9c8;
   padding: 0 3rem; }
 .social .social-thoughts-icons {
   display: flex;
   justify-content: space-between;
   width: 10rem;
-  color: #89949b;
+  color: #fff;
   font-size: 1.7rem; }
-  .social .social-thoughts-icons > * {
+  .social .social-thoughts-icons .icon {
     cursor: pointer; }
 .social .social-thoughts-btn {
   padding: 0.5rem 1rem;
@@ -2284,5 +2287,47 @@ input, textarea {
   font-size: 1.5rem; }
   .social .social-thoughts-btn:hover {
     background: #45cfb3; }
+.social .social-shared-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  height: 7rem;
+  color: #89949b; }
+  .social .social-shared-header-avatar-container {
+    display: flex;
+    align-items: center; }
+  .social .social-shared-header-avatar {
+    border-radius: 50%;
+    margin-right: 1rem; }
+  .social .social-shared-header-name .header {
+    margin: 0;
+    color: #43525a; }
+  .social .social-shared-header-place {
+    text-align: right;
+    font-weight: 600; }
+.social .social-daily-plan {
+  margin-left: 2rem;
+  color: #89949b; }
+  .social .social-daily-plan .header {
+    color: #2eb398; }
+.social .social-daily-map {
+  height: 30rem;
+  width: 100%; }
+.social .social-shared-likes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+  padding: 0 2rem;
+  background: #eaedf1;
+  color: #89949b;
+  font-size: 1.4rem; }
+  .social .social-shared-likes .like-btn {
+    background: none;
+    color: #89949b;
+    cursor: pointer; }
+    .social .social-shared-likes .like-btn:hover {
+      color: #2eb398; }
 
 /*# sourceMappingURL=index.css.map */

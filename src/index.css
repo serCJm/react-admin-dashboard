@@ -221,6 +221,8 @@ p {
         color: #89949b; }
         .header-top-menu .header-controls-item a:hover {
           color: #fff; }
+        .header-top-menu .header-controls-item a.active {
+          color: #fff; }
     .header-top-menu .header-controls-icon:not(:last-child) {
       padding-right: 2rem; }
     .header-top-menu .header-controls-icon {
@@ -523,7 +525,10 @@ input, textarea {
     margin-bottom: 1rem;
     text-indent: 1rem;
     line-height: 1.5rem; }
+  .home .pages-home-list {
+    margin-bottom: 15px; }
   .home .home-hr {
+    display: block;
     width: 80%;
     margin: 0 auto;
     height: 1px;
@@ -581,7 +586,7 @@ input, textarea {
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-right: 1.5rem;
+      margin-right: 1rem;
       width: 2rem;
       height: 1.5rem;
       border-radius: 5px; }

@@ -12,9 +12,15 @@ const SocialThoughts = () => {
         <textarea className="mail-reply-text" placeholder="Where's my mind?" />
         <div className="social-thoughts-attachments">
           <div className="social-thoughts-icons">
-            <FontAwesomeIcon icon={faMapMarkerAlt} />
-            <FontAwesomeIcon icon={faCameraRetro} />
-            <FontAwesomeIcon icon={faCalendarAlt} />
+            <span className="icon">
+              <FontAwesomeIcon icon={faMapMarkerAlt} />
+            </span>
+            <span className="icon">
+              <FontAwesomeIcon icon={faCameraRetro} />
+            </span>
+            <span className="icon">
+              <FontAwesomeIcon icon={faCalendarAlt} />
+            </span>
           </div>
           <button className="social-thoughts-btn">SEND</button>
         </div>

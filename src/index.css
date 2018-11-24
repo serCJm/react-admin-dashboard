@@ -2256,13 +2256,14 @@ input, textarea {
       .social .social-header .header-avatar .follow-btn:hover {
         background: #003bff;
         border: 2px solid #003bff; }
-.social .social-thoughts .mail-reply-text {
+.social .text-box {
   display: block;
   border: none;
   width: 95%;
   padding: 1rem 2rem;
   color: black;
-  font-size: 1.5rem; }
+  font-size: 1.5rem;
+  resize: none; }
 .social .social-thoughts-attachments {
   margin-top: 2rem;
   display: flex;
@@ -2312,6 +2313,7 @@ input, textarea {
   .social .social-daily-plan .header {
     color: #2eb398; }
 .social .social-daily-map {
+  margin-top: 2rem;
   height: 30rem;
   width: 100%; }
 .social .social-shared-likes {

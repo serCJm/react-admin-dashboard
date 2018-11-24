@@ -2,6 +2,7 @@ import React from "react";
 import PageElementWrapper from "../../PageElementWrapper";
 import SocialSharedHeader from "../SharedComponents/SocialSharedHeader";
 import SocialSharedLikes from "../SharedComponents/SocialSharedLikes";
+import SocialSharedComments from "../SharedComponents/SocialSharedComments";
 import avatar1 from "../../../../images/avatar1.jpg";
 import { ReactBingmaps } from "react-bingmaps";
 
@@ -13,6 +14,8 @@ const socialHeaderContents = {
   place: "Mars, Solar System",
   time: "3 hours ago"
 };
+
+const comments = [];
 
 const SocialDayPlan = () => {
   return (
@@ -36,7 +39,7 @@ const SocialDayPlan = () => {
         />
       </div>
       <SocialSharedLikes likes="500" />
-      {/* <SocialSharedComments /> */}
+      <SocialSharedComments comments={comments} />
     </PageElementWrapper>
   );
 };

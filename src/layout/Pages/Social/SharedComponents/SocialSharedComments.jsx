@@ -2,18 +2,26 @@ import React from "react";
 
 const SocialSharedComments = ({ comments }) => {
   return (
-    <div>
+    <div className="shared-comments">
       <ul>
-        {comments.map(comment => (
-          <li>
-            <div>
-              <img src={comment.avatar} alt={comment.name} />
+        {comments.map((comment, i) => (
+          <li className="shared-comments-item" key={i + comment.name}>
+            <div className="shared-comments-user-container">
+              <img
+                className="avatar"
+                src={comment.avatar}
+                alt={comment.name}
+                width={40}
+                height={40}
+              />
               <div>
-                <p>{comment.name}</p>
-                <p>{comment.comment}</p>
+                <p className="header">{comment.name}</p>
+                <p className="text">{comment.comment}</p>
               </div>
             </div>
-            <p>{comment.time}</p>
+            <p>
+              <strong>{comment.time}</strong>
+            </p>
           </li>
         ))}
       </ul>

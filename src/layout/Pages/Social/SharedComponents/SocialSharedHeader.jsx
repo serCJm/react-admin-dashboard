@@ -8,7 +8,7 @@ const SocialSharedHeader = ({ contents }) => {
   let icon = null;
   if (contents.type === "event") {
     icon = <FontAwesomeIcon icon={faCalendarAlt} />;
-  } else if (contents.type === "place") {
+  } else if (contents.type === "attachment") {
     icon = <FontAwesomeIcon icon={faAnchor} />;
   } else {
     icon = <FontAwesomeIcon icon={faVideo} />;

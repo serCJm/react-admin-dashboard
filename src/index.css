@@ -2313,7 +2313,7 @@ input, textarea {
     text-align: right;
     font-weight: 600; }
 .social .social-daily-plan {
-  margin-left: 2rem;
+  margin: 2rem;
   color: #89949b; }
   .social .social-daily-plan .header {
     color: #2eb398; }
@@ -2336,5 +2336,32 @@ input, textarea {
     cursor: pointer; }
     .social .social-shared-likes .like-btn:hover {
       color: #2eb398; }
+.social .social-event {
+  margin: 2rem;
+  color: #89949b; }
+  .social .social-event-image {
+    display: block;
+    width: 100%;
+    height: auto; }
+.social .shared-comments {
+  padding: 1rem; }
+  .social .shared-comments-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    height: 7rem;
+    color: #89949b;
+    border-bottom: 1px solid #eaedf1; }
+  .social .shared-comments-user-container {
+    display: flex;
+    align-items: center; }
+    .social .shared-comments-user-container .avatar {
+      border-radius: 50%;
+      margin-right: 1rem; }
+    .social .shared-comments-user-container .header {
+      margin: 0 0 0.5rem;
+      color: #43525a;
+      font-size: 1.6rem; }
 
 /*# sourceMappingURL=index.css.map */

@@ -7,7 +7,7 @@ import { faCalendarAlt } from "@fortawesome/free-solid-svg-icons";
 
 const SocialThoughts = () => {
   return (
-    <PageElementWrapper>
+    <PageElementWrapper classId="social-thoughts-wrapper">
       <div className="social-thoughts">
         <textarea className="text-box" placeholder="Where's my mind?" />
         <div className="social-thoughts-attachments">

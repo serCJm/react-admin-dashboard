@@ -9,10 +9,12 @@ const Social = () => {
   return (
     <div className="social">
       <SocialHeader />
-      <SocialThoughts />
-      <SocialDayPlan />
-      <SocialEvent />
-      <SocialMusicClip />
+      <div className="social-content">
+        <SocialThoughts />
+        <SocialDayPlan />
+        <SocialEvent />
+        <SocialMusicClip />
+      </div>
     </div>
   );
 };

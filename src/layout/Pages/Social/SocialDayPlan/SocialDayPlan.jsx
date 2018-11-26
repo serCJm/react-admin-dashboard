@@ -19,7 +19,7 @@ const comments = [];
 
 const SocialDayPlan = () => {
   return (
-    <PageElementWrapper>
+    <PageElementWrapper classId="social-daily-plan-wrapper">
       <SocialSharedHeader contents={socialHeaderContents} />
       <div className="social-daily-plan">
         <h1 className="header">Coding challenge at my home</h1>

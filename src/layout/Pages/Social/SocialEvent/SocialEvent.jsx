@@ -41,7 +41,7 @@ const comments = [
 
 const SocialEvent = () => {
   return (
-    <PageElementWrapper>
+    <PageElementWrapper classId="social-event-wrapper">
       <SocialSharedHeader contents={socialHeaderContents} />
       <div className="social-event">
         <p className="text">

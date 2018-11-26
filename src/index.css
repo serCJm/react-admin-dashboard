@@ -2175,6 +2175,12 @@ input, textarea {
         background: #de2938;
         color: #fff; }
 
+@media screen and (min-width: 800px) {
+  .social .social-content {
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px; } }
 .social .text {
   margin: 0;
   font-size: 1.4rem; }
@@ -2283,6 +2289,9 @@ input, textarea {
   color: black;
   font-size: 1.5rem;
   resize: none; }
+@media screen and (min-width: 800px) {
+  .social .social-thoughts-wrapper {
+    grid-row: 1/2; } }
 .social .social-thoughts-attachments {
   margin-top: 2rem;
   display: flex;
@@ -2326,6 +2335,9 @@ input, textarea {
   .social .social-shared-header-place {
     text-align: right;
     font-weight: 600; }
+@media screen and (min-width: 800px) {
+  .social .social-daily-plan-wrapper {
+    grid-row: 1/3; } }
 .social .social-daily-plan {
   margin: 2rem;
   color: #89949b; }
@@ -2348,9 +2360,13 @@ input, textarea {
     cursor: pointer; }
     .social .social-shared-likes .like-btn:hover {
       color: #2eb398; }
+@media screen and (min-width: 800px) {
+  .social .social-event-wrapper {
+    grid-row: 2/4; } }
 .social .social-event {
   margin: 2rem;
-  color: #89949b; }
+  color: #89949b;
+  grid-row: 1/3; }
   .social .social-event-image {
     display: block;
     width: 100%;

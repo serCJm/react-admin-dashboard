@@ -2178,6 +2178,20 @@ input, textarea {
 .social .text {
   margin: 0;
   font-size: 1.4rem; }
+.social .header {
+  color: #2eb398; }
+.social .embed-video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden; }
+.social .embed-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
 .social .social-header {
   width: calc(100% + 4rem);
   margin-left: -2rem;
@@ -2315,8 +2329,6 @@ input, textarea {
 .social .social-daily-plan {
   margin: 2rem;
   color: #89949b; }
-  .social .social-daily-plan .header {
-    color: #2eb398; }
 .social .social-daily-map {
   margin-top: 2rem;
   height: 30rem;

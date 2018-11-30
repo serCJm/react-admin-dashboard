@@ -1710,14 +1710,15 @@ input, textarea {
 @media screen and (min-width: 800px) {
   .dashboard .page-element-container.dashboard-summary {
     grid-column: 1/3;
-    grid-row: 3/5; } }
+    grid-row: 3/4; } }
 @media screen and (min-width: 800px) {
   .dashboard .page-element-container.calendar-time {
     grid-column: 3/6;
     grid-row: 2/4; } }
 @media screen and (min-width: 800px) {
   .dashboard .page-element-container.navigation {
-    grid-column: 3/6; } }
+    grid-column: 3/6;
+    grid-row: 3/4; } }
 
 .inbox {
   display: grid;
@@ -2391,5 +2392,81 @@ input, textarea {
       margin: 0 0 0.5rem;
       color: #43525a;
       font-size: 1.6rem; }
+
+@media screen and (min-width: 800px) {
+  .posts {
+    display: grid;
+    grid-template-columns: repeat(2, 1ft); } }
+.posts .page-element-container {
+  margin-top: 2.3rem; }
+.posts .post-text-content {
+  padding: 0 2rem;
+  border-bottom: 1px solid #eeeeee; }
+.posts .h1-header {
+  margin-bottom: 0;
+  color: #3b4648;
+  font-size: 1.8rem; }
+.posts .text {
+  color: #89949b;
+  font-size: 1.4rem; }
+.posts .container--between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+.posts .info-text {
+  color: #b8c3c8; }
+  .posts .info-text .read-time:hover {
+    color: #3b4648; }
+  .posts .info-text .text--green:hover {
+    color: #248a76; }
+.posts .text--green {
+  color: #2eb398;
+  cursor: pointer; }
+.posts .post-metrics {
+  padding: 0 2rem;
+  color: #89949b; }
+  .posts .post-metrics .share-icons {
+    width: 14rem;
+    font-size: 1.4rem; }
+.posts .tag {
+  text-transform: uppercase;
+  font-size: 1.5rem; }
+.posts .likes {
+  color: #e299b7; }
+.posts .pagination {
+  margin: 5rem auto 0; }
+.posts .posts-additional {
+  display: none; }
+  @media screen and (min-width: 800px) {
+    .posts .posts-additional {
+      display: block; } }
+
+.pagination {
+  display: flex; }
+  .pagination .page-item, .pagination .page-item-nav {
+    border: thin solid #dddddd;
+    border-left: none; }
+    .pagination .page-item:first-child, .pagination .page-item-nav:first-child {
+      border-left: thin solid #dddddd; }
+  .pagination .page-item.active .theme-default {
+    background: #ea7661; }
+  .pagination .page-item.active .theme-green {
+    background: #2eb398; }
+  .pagination .page-item.active .theme-blue {
+    background: #79b0ec; }
+  .pagination .page-item.active .theme-purple {
+    background: #b4a1dd; }
+  .pagination .page-item.active .theme-brown {
+    background: #a8553a; }
+  .pagination .page-item.active .theme-bay {
+    background: #68a0a5; }
+  .pagination .page-item.active .btn {
+    color: #fff; }
+  .pagination .btn {
+    background: #fff;
+    padding: 0.7rem;
+    color: #89949b;
+    font-size: 1.7rem;
+    cursor: pointer; }
 
 /*# sourceMappingURL=index.css.map */

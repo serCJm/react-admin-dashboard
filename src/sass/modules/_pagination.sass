@@ -1,0 +1,17 @@
+.pagination
+    display: flex
+    .page-item, .page-item-nav
+        border: thin solid rgb(221, 221, 221) 
+        border-left: none
+        &:first-child
+            border-left: thin solid rgb(221, 221, 221) 
+    .page-item.active
+        @include themes
+        .btn
+            color: $white
+    .btn
+        background: $white
+        padding: .7rem
+        color: rgb(137, 148, 155)
+        font-size: 1.7rem
+        cursor: pointer

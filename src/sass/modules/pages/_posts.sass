@@ -1,0 +1,51 @@
+.posts
+    @media #{$large-screen}
+        display: grid
+        grid-template-columns: repeat(2, 1ft)
+    .page-element-container
+        margin-top: 2.3rem
+    .post-text-content
+        padding: 0 2rem
+        border-bottom: 1px solid rgb(238, 238, 238)
+    .h1-header
+        margin-bottom: 0
+        color: rgb(59, 70, 72)
+        font-size: 1.8rem
+    .text
+        color: rgb(137, 148, 155)
+        font-size: 1.4rem
+    .container--between
+        display: flex
+        justify-content: space-between
+        align-items: center
+    .info-text
+        color: rgb(184, 195, 200)
+        & .read-time:hover
+            color: rgb(59, 70, 72)
+        .text--green:hover
+            color: rgb(36, 138, 118)
+    .text--green
+        color: rgb(46, 179, 152)
+        cursor: pointer
+    .post-metrics
+        padding: 0 2rem
+        color: rgb(137, 148, 155)
+        .share-icons
+            width: 14rem
+            font-size: 1.4rem
+    .tag
+        text-transform: uppercase
+        font-size: 1.5rem
+    .likes
+        color: rgb(226, 153, 183)
+    .pagination
+        margin: 5rem auto 0
+    .posts-additional
+        display: none
+        @media #{$large-screen}
+            display: block
+        
+        
+        
+
+        

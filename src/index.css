@@ -2396,7 +2396,8 @@ input, textarea {
 @media screen and (min-width: 800px) {
   .posts {
     display: grid;
-    grid-template-columns: repeat(2, 1ft); } }
+    grid-template-columns: 65% 35%;
+    grid-column-gap: 30px; } }
 .posts .page-element-container {
   margin-top: 2.3rem; }
 .posts .post-text-content {
@@ -2439,7 +2440,24 @@ input, textarea {
   display: none; }
   @media screen and (min-width: 800px) {
     .posts .posts-additional {
-      display: block; } }
+      display: block;
+      width: calc(100% - 2rem); } }
+  .posts .posts-additional .avatar-intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 2rem;
+    height: 7rem; }
+    .posts .posts-additional .avatar-intro .avatar-img-container {
+      align-self: stretch;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 2rem;
+      width: 9rem;
+      background: #fadd7f; }
+      .posts .posts-additional .avatar-intro .avatar-img-container .avatar-img {
+        border-radius: 50%; }
 
 .pagination {
   display: flex; }

@@ -1,7 +1,8 @@
 .posts
     @media #{$large-screen}
         display: grid
-        grid-template-columns: repeat(2, 1ft)
+        grid-template-columns: 65% 35%
+        grid-column-gap: 30px
     .page-element-container
         margin-top: 2.3rem
     .post-text-content
@@ -44,6 +45,23 @@
         display: none
         @media #{$large-screen}
             display: block
+            width: calc(100% - 2rem)
+        .avatar-intro
+            display: flex
+            justify-content: space-between
+            align-items: center
+            padding-left: 2rem
+            height: 7rem
+            .avatar-img-container
+                align-self: stretch
+                @include flexCenter
+                margin-left: 2rem
+                width: 9rem
+                background: rgb(250, 221, 127)
+                .avatar-img
+                    border-radius: 50%
+                
+            
         
         
         

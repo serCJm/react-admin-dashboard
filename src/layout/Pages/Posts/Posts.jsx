@@ -1,14 +1,12 @@
 import React from "react";
+import PostsMain from "./PostsMain/PostsMain";
+import PostsAdditional from "./PostsAdditional/PostsAdditional";
 
 const Posts = () => {
   return (
     <div className="posts">
-      <div>
-        <PostsMain />
-      </div>
-      {/* <div>
-        <PostsAdditional />
-      </div> */}
+      <PostsMain />
+      <PostsAdditional />
     </div>
   );
 };

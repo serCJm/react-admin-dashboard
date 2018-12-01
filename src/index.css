@@ -135,6 +135,19 @@ p {
 .pages .inbox .inbox-mail .inbox-mail-text {
   font-size: 1.3rem; }
 
+.fc {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.fsa {
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+
+.br {
+  border-radius: 50%; }
+
 .theme-default {
   background: #ea7661; }
 
@@ -2458,6 +2471,35 @@ input, textarea {
       background: #fadd7f; }
       .posts .posts-additional .avatar-intro .avatar-img-container .avatar-img {
         border-radius: 50%; }
+  .posts .posts-additional .social-shares {
+    height: 7rem;
+    font-size: 1.5rem; }
+    .posts .posts-additional .social-shares .btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 3.5rem;
+      height: 3.5rem;
+      background: #fff;
+      border: 2px solid #eeeeee;
+      color: #89949b; }
+      .posts .posts-additional .social-shares .btn:hover {
+        color: #fff; }
+      .posts .posts-additional .social-shares .btn.btn--fb:hover {
+        background: #76abe9;
+        border-color: #76abe9; }
+      .posts .posts-additional .social-shares .btn.btn--tw:hover {
+        background: #a6caf2;
+        border-color: #a6caf2; }
+      .posts .posts-additional .social-shares .btn.btn--gplus:hover, .posts .posts-additional .social-shares .btn.btn--fl:hover {
+        background: #ea7882;
+        border-color: #ea7882; }
+      .posts .posts-additional .social-shares .btn.btn--dr:hover {
+        background: #e299b7;
+        border-color: #e299b7; }
+      .posts .posts-additional .social-shares .btn.btn--inst:hover {
+        background: #f28a5e;
+        border-color: #f28a5e; }
 
 .pagination {
   display: flex; }

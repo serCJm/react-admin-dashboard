@@ -135,6 +135,10 @@ p {
 .pages .inbox .inbox-mail .inbox-mail-text {
   font-size: 1.3rem; }
 
+.f {
+  display: flex;
+  align-items: center; }
+
 .fc {
   display: flex;
   justify-content: center;
@@ -2500,6 +2504,24 @@ input, textarea {
       .posts .posts-additional .social-shares .btn.btn--inst:hover {
         background: #f28a5e;
         border-color: #f28a5e; }
+.posts .trending-posts {
+  padding: 2rem;
+  color: #89949b;
+  border-bottom: 1px solid #b8c3c8; }
+  .posts .trending-posts .header {
+    padding-bottom: 0.5rem;
+    border-bottom: 2px dotted #89949b;
+    text-transform: uppercase; }
+  .posts .trending-posts .title {
+    margin: 0;
+    color: #2eb398; }
+    .posts .trending-posts .title:hover {
+      color: #1e7664; }
+  .posts .trending-posts .time {
+    opacity: 0.8;
+    font-style: italic; }
+  .posts .trending-posts .name {
+    color: #7cd5ba; }
 
 .pagination {
   display: flex; }

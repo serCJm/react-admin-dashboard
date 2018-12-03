@@ -90,7 +90,7 @@
     .trending-posts
         padding: 2rem
         color: rgb(137, 148, 155)
-        border-bottom: 1px solid rgb(184, 195, 200)
+        border-bottom: 1px solid rgb(241, 240, 238)
         .header
             padding-bottom: .5rem
             border-bottom: 2px dotted rgb(137, 148, 155)
@@ -105,6 +105,20 @@
             font-style: italic
         .name
             color: rgb(124, 213, 186)
+    .trending-tags
+        padding: 1rem 3rem
+        .tag
+            display: inline-block
+            background: rgb(241, 240, 238)
+            color: rgb(137, 148, 155)
+            margin: 0 .5rem 1rem
+            padding: .5rem .5rem .5rem 1.5rem
+            text-transform: lowercase
+            clip-path: polygon(1.5rem 0%, 100% 0, 100% 100%, 1.5rem 100%, 0% 50%)
+            cursor: pointer
+            &:hover
+                background: rgb(46, 179, 152)
+                color: $white
                
                 
 

@@ -2507,7 +2507,7 @@ input, textarea {
 .posts .trending-posts {
   padding: 2rem;
   color: #89949b;
-  border-bottom: 1px solid #b8c3c8; }
+  border-bottom: 1px solid #f1f0ee; }
   .posts .trending-posts .header {
     padding-bottom: 0.5rem;
     border-bottom: 2px dotted #89949b;
@@ -2522,6 +2522,20 @@ input, textarea {
     font-style: italic; }
   .posts .trending-posts .name {
     color: #7cd5ba; }
+.posts .trending-tags {
+  padding: 1rem 3rem; }
+  .posts .trending-tags .tag {
+    display: inline-block;
+    background: #f1f0ee;
+    color: #89949b;
+    margin: 0 0.5rem 1rem;
+    padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+    text-transform: lowercase;
+    clip-path: polygon(1.5rem 0%, 100% 0, 100% 100%, 1.5rem 100%, 0% 50%);
+    cursor: pointer; }
+    .posts .trending-tags .tag:hover {
+      background: #2eb398;
+      color: #fff; }
 
 .pagination {
   display: flex; }

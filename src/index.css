@@ -144,6 +144,12 @@ p {
   justify-content: center;
   align-items: center; }
 
+.fcc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
 .fsa {
   display: flex;
   justify-content: space-around;
@@ -151,6 +157,9 @@ p {
 
 .br {
   border-radius: 50%; }
+
+.m2 {
+  margin: 2rem; }
 
 .theme-default {
   background: #ea7661; }
@@ -2508,10 +2517,6 @@ input, textarea {
   padding: 2rem;
   color: #89949b;
   border-bottom: 1px solid #f1f0ee; }
-  .posts .trending-posts .header {
-    padding-bottom: 0.5rem;
-    border-bottom: 2px dotted #89949b;
-    text-transform: uppercase; }
   .posts .trending-posts .title {
     margin: 0;
     color: #2eb398; }
@@ -2522,6 +2527,10 @@ input, textarea {
     font-style: italic; }
   .posts .trending-posts .name {
     color: #7cd5ba; }
+.posts .header {
+  padding-bottom: 0.5rem;
+  border-bottom: 2px dotted #89949b;
+  text-transform: uppercase; }
 .posts .trending-tags {
   padding: 1rem 3rem; }
   .posts .trending-tags .tag {
@@ -2536,6 +2545,37 @@ input, textarea {
     .posts .trending-tags .tag:hover {
       background: #2eb398;
       color: #fff; }
+.posts .our-writers {
+  padding: 2rem;
+  color: #89949b;
+  border-bottom: 1px solid #f1f0ee; }
+  .posts .our-writers .writer-name {
+    margin-left: 1rem;
+    color: #43525a; }
+.posts .subscribe {
+  height: 5rem; }
+  .posts .subscribe-input {
+    width: 55%;
+    height: 2rem;
+    padding: 0.5rem;
+    border: 2px solid #ddd;
+    border-right: none;
+    font-size: 1.2rem;
+    color: #000; }
+    .posts .subscribe-input:focus {
+      border-color: #2eb398; }
+  .posts .subscribe-btn {
+    width: 40%;
+    height: 2rem;
+    background: #2eb398;
+    color: #fff;
+    font-size: 1.3rem;
+    padding: 0 1rem;
+    text-transform: uppercase;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px; }
+    .posts .subscribe-btn:hover {
+      background: #45cfb3; }
 
 .pagination {
   display: flex; }
@@ -2564,5 +2604,35 @@ input, textarea {
     color: #89949b;
     font-size: 1.7rem;
     cursor: pointer; }
+
+.single-post-header {
+  height: 25rem;
+  background: url("./images/single-post-heading-bg.jpg") center/cover no-repeat;
+  box-shadow: inset 0 0 0 100vmax rgba(0, 0, 0, 0.4); }
+  .single-post-header .heading {
+    text-transform: capitalize;
+    color: #fff;
+    font-size: 3rem; }
+  .single-post-header .heading-text {
+    width: 70%; }
+  .single-post-header .icons {
+    width: 18rem;
+    color: #fff;
+    font-size: 1.5rem; }
+    .single-post-header .icons .icon {
+      width: 4rem;
+      height: 4rem; }
+      .single-post-header .icons .icon.fb:hover {
+        background: #4a90e2; }
+      .single-post-header .icons .icon.tw:hover {
+        background: #79b0ec; }
+      .single-post-header .icons .icon.gplus:hover {
+        background: #ea7882; }
+      .single-post-header .icons .icon.insta:hover {
+        background: #ee682f; }
+
+.text {
+  color: #89949b;
+  font-size: 1.3rem; }
 
 /*# sourceMappingURL=index.css.map */

@@ -55,7 +55,7 @@ class SideMenuHomeItem extends Component {
     }
 
     let menuAction = this.handleActivePage;
-    if (id === "lock") {
+    if (id === "lock" || id === "login") {
       menuAction = this.handleChangeAuthentication;
     } else if (submenu) {
       menuAction = this.handleSubmenuClick;

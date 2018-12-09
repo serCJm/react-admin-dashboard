@@ -155,11 +155,43 @@ p {
   justify-content: space-around;
   align-items: center; }
 
-.br {
-  border-radius: 50%; }
+.fsb {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.m05 {
+  margin: 0.5rem; }
+
+.m1 {
+  margin: 1; }
 
 .m2 {
   margin: 2rem; }
+
+.mt0 {
+  margin-top: 0; }
+
+.mb0 {
+  margin-bottom: 0; }
+
+.mtb05 {
+  margin: 0.5rem 0; }
+
+.mtb1 {
+  margin: 1rem 0; }
+
+.p2 {
+  padding: 2rem; }
+
+.p3 {
+  padding: 3rem; }
+
+.br {
+  border-radius: 50%; }
+
+.pntr {
+  cursor: pointer; }
 
 .theme-default {
   background: #ea7661; }
@@ -2631,8 +2663,41 @@ input, textarea {
       .single-post-header .icons .icon.insta:hover {
         background: #ee682f; }
 
+.single-post-body .heading1 {
+  font-size: 3.5rem; }
+.single-post-body .heading2 {
+  font-size: 2.5rem; }
+.single-post-body .readtime:hover {
+  color: #3f3f3b; }
+.single-post-body .quote {
+  border-left: 5px solid #eeeeee;
+  padding: 2rem 1rem 2rem 3rem;
+  font-size: 1.5rem; }
+.single-post-body .embed-video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden; }
+.single-post-body .embed-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
 .text {
   color: #89949b;
   font-size: 1.3rem; }
+  .text--green {
+    color: #2eb398; }
+  .text--black {
+    color: #3f3f3b; }
+  .text--small {
+    opacity: 0.9;
+    font-size: 1rem; }
+  .text--emph {
+    font-weight: bold;
+    font-style: italic; }
 
 /*# sourceMappingURL=index.css.map */

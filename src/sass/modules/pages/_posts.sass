@@ -91,10 +91,6 @@
         padding: 2rem
         color: rgb(137, 148, 155)
         border-bottom: 1px solid rgb(241, 240, 238)
-        .header
-            padding-bottom: .5rem
-            border-bottom: 2px dotted rgb(137, 148, 155)
-            text-transform: uppercase
         .title
             margin: 0
             color: rgb(46, 179, 152)
@@ -105,6 +101,10 @@
             font-style: italic
         .name
             color: rgb(124, 213, 186)
+    .header
+        padding-bottom: .5rem
+        border-bottom: 2px dotted rgb(137, 148, 155)
+        text-transform: uppercase
     .trending-tags
         padding: 1rem 3rem
         .tag
@@ -119,7 +119,40 @@
             &:hover
                 background: rgb(46, 179, 152)
                 color: $white
-               
+    .our-writers
+        padding: 2rem
+        color: rgb(137, 148, 155)
+        border-bottom: 1px solid rgb(241, 240, 238) 
+        .writer-name
+            margin-left: 1rem
+            color: rgb(67, 82, 90)
+    .subscribe
+        height: 5rem
+        &-input
+            width: 55%
+            height: 2rem
+            padding: .5rem
+            border: 2px solid #ddd
+            border-right: none
+            font-size: 1.2rem
+            color: #000
+            &:focus
+                border-color: rgb(46, 179, 152)
+        &-btn
+            width: 40%
+            height: 2rem
+            background: rgb(46, 179, 152)
+            color: $white
+            font-size: 1.3rem
+            padding: 0 1rem
+            text-transform: uppercase
+            border-top-right-radius: 30px
+            border-bottom-right-radius: 30px
+            &:hover
+                background: rgb(69, 207, 179)
+
+
+
                 
 
                 

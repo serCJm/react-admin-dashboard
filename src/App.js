@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Header from "./layout/Header";
 import Pages from "./layout/Pages/Pages";
 import Lock from "./layout/Pages/Lock";
+import Login from "./layout/Pages/Login";
 import { BrowserRouter, Route } from "react-router-dom";
 import { AuthContext } from "./components/Header/auth-context";
 
@@ -34,7 +35,12 @@ class App extends Component {
         </React.Fragment>
       );
     } else {
-      content = <Route path="/lock" component={Lock} />;
+      content = (
+        <React.Fragment>
+          <Route path="/lock" component={Lock} />
+          <Route path="/login" component={Login} />
+        </React.Fragment>
+      );
     }
     return (
       <BrowserRouter>

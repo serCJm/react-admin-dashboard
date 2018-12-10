@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import Header from "./layout/Header";
-import Pages from "./layout/Pages/Pages";
 import Lock from "./layout/Pages/Lock";
 import Login from "./layout/Pages/Login";
-import { BrowserRouter, Route } from "react-router-dom";
+import Signup from "./layout/Pages/Signup";
+import Main from "./Main";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { AuthContext } from "./components/Header/auth-context";
 
 class App extends Component {
@@ -27,18 +27,21 @@ class App extends Component {
     if (this.state.authenticated) {
       content = (
         <React.Fragment>
-          <Header
-            sideMenu={this.state.sideMenu}
-            toggleSideMenu={this.toggleSideMenu}
-          />
-          <Pages sideMenu={this.state.sideMenu} />
+          <Switch>
+            <Route exact path="/lock" component={Lock} />
+            <Route exact path="/login" component={Login} />
+            <Route exact path="/signup" component={Signup} />
+            <Route path="/" component={Main} />
+          </Switch>
         </React.Fragment>
       );
     } else {
       content = (
         <React.Fragment>
-          <Route path="/lock" component={Lock} />
-          <Route path="/login" component={Login} />
+          <Switch>
+            <Route exact path="/lock" component={Lock} />
+            <Route path="/" component={Login} />
+          </Switch>
         </React.Fragment>
       );
     }

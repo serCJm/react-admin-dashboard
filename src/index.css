@@ -2755,9 +2755,11 @@ input, textarea {
     height: 5rem;
     margin: 0;
     font-size: 1.5rem;
-    border: 2px solid #dddddd; }
+    border: 2px solid #dddddd;
+    color: #89949b; }
     .login-container .form__input:focus, .login-container .form__input:active {
-      border: 2px solid #79b0ec; }
+      border: 2px solid #79b0ec;
+      color: black; }
   .login-container .form__icon {
     height: 5rem;
     width: 4rem;

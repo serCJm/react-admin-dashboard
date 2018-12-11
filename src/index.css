@@ -200,7 +200,7 @@ p {
   padding: 3rem; }
 
 .mtb1 {
-  padding: 1rem 0; }
+  margin: 1rem 0; }
 
 .w80 {
   width: 80%; }
@@ -2812,5 +2812,26 @@ input, textarea {
     border-radius: 25px; }
     .login-container .btn__signup--twitter:hover, .signup-container .btn__signup--twitter:hover {
       background: #a6caf2; }
+
+.invoice {
+  color: #89949b; }
+  .invoice .text--black {
+    color: #3f3f3b; }
+  .invoice .text--green {
+    color: #2eb398; }
+  .invoice .text--red {
+    color: #e76049; }
+  .invoice .header {
+    align-items: flex-start;
+    border-bottom: thin solid #89949b; }
+    .invoice .header .heading {
+      font-size: 3rem; }
+    .invoice .header .header__right {
+      text-align: right; }
+    .invoice .header .email {
+      text-decoration: none; }
+    .invoice .header .address {
+      line-height: 2rem;
+      font-size: 1.3rem; }
 
 /*# sourceMappingURL=index.css.map */

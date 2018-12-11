@@ -1,4 +1,4 @@
-.login-container
+.login-container, .signup-container
     width: 100vw
     height: 100vh
     background: $loginBg
@@ -18,7 +18,7 @@
     .social-login
         background: rgb(229, 239, 251)
         .btn--facebook
-            background: rgb(41, 96, 177)
+            background: $facebook
             border-radius: 5px
             color: $white
             font-size: 1.5rem
@@ -53,19 +53,39 @@
     .form__actions
         border: none
         width: 100%
-        .link
-            text-decoration: none
-            color: $facebook
+        .btn
+            height: 4rem
+            background: none
+            border: 2px solid rgb(121, 176, 236)
+            border-radius: 20px
+            color: rgb(121, 176, 236)
+            text-transform: uppercase
             font-size: 1.5rem
         .btn--login
             width: 10rem
-            height: 4rem
-            background: none
-            border: 2px solid $facebook
-            border-radius: 20px
-            color: $facebook
-            text-transform: uppercase
-            font-size: 1.5rem
             &:hover
                 color: $white
-                background: $facebook
+                background: rgb(121, 176, 236)
+        .btn--signup
+            width: 100%
+            &:hover
+                color: $white
+                background: rgb(121, 176, 236)
+    .link
+        text-decoration: none
+        color: $facebook
+        font-size: 1.5rem
+    .btn__signup
+        width: 12rem
+        color: $white
+        font-size: 1.5rem
+    .btn__signup--facebook
+        background: $facebook
+        border-radius: 5px
+        &:hover
+            background: darken($facebook, 10%)
+    .btn__signup--twitter
+        background: $twitter
+        border-radius: 25px
+        &:hover
+            background: lighten($twitter, 10%)

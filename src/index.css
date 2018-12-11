@@ -202,6 +202,9 @@ p {
 .mtb1 {
   padding: 1rem 0; }
 
+.w80 {
+  width: 80%; }
+
 .w100 {
   width: 100%; }
 
@@ -2673,7 +2676,7 @@ input, textarea {
       width: 4rem;
       height: 4rem; }
       .single-post-header .icons .icon.fb:hover {
-        background: #4a90e2; }
+        background: #2960b1; }
       .single-post-header .icons .icon.tw:hover {
         background: #79b0ec; }
       .single-post-header .icons .icon.gplus:hover {
@@ -2718,49 +2721,49 @@ input, textarea {
     font-weight: bold;
     font-style: italic; }
 
-.login-container {
+.login-container, .signup-container {
   width: 100vw;
   height: 100vh;
   background: #43525a; }
-  .login-container .login-form {
+  .login-container .login-form, .signup-container .login-form {
     width: 40rem;
     background: #fff;
     margin-top: 1rem;
     margin-bottom: 15%;
     border-radius: 10px; }
-  .login-container .heading {
+  .login-container .heading, .signup-container .heading {
     height: 7rem;
     color: #fff;
     background: #4a90e2;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     font-size: 2.5rem; }
-  .login-container .social-login {
+  .login-container .social-login, .signup-container .social-login {
     background: #e5effb; }
-    .login-container .social-login .btn--facebook {
+    .login-container .social-login .btn--facebook, .signup-container .social-login .btn--facebook {
       background: #2960b1;
       border-radius: 5px;
       color: #fff;
       font-size: 1.5rem; }
-      .login-container .social-login .btn--facebook:hover {
+      .login-container .social-login .btn--facebook:hover, .signup-container .social-login .btn--facebook:hover {
         background: #4a90e2; }
-    .login-container .social-login .btn--twitter {
+    .login-container .social-login .btn--twitter, .signup-container .social-login .btn--twitter {
       background: transparent;
       color: #79b0ec;
       font-size: 1.3rem; }
-  .login-container .form__account {
+  .login-container .form__account, .signup-container .form__account {
     color: #89949b; }
-  .login-container .form__input {
+  .login-container .form__input, .signup-container .form__input {
     width: calc(100% - 4rem);
     height: 5rem;
     margin: 0;
     font-size: 1.5rem;
     border: 2px solid #dddddd;
     color: #89949b; }
-    .login-container .form__input:focus, .login-container .form__input:active {
+    .login-container .form__input:focus, .login-container .form__input:active, .signup-container .form__input:focus, .signup-container .form__input:active {
       border: 2px solid #79b0ec;
       color: black; }
-  .login-container .form__icon {
+  .login-container .form__icon, .signup-container .form__icon {
     height: 5rem;
     width: 4rem;
     margin: 0;
@@ -2770,24 +2773,44 @@ input, textarea {
     font-size: 1.5rem;
     background: #eeeeee;
     border: 2px solid #eeeeee; }
-  .login-container .form__actions {
+  .login-container .form__actions, .signup-container .form__actions {
     border: none;
     width: 100%; }
-    .login-container .form__actions .link {
-      text-decoration: none;
-      color: #4a90e2;
-      font-size: 1.5rem; }
-    .login-container .form__actions .btn--login {
-      width: 10rem;
+    .login-container .form__actions .btn, .signup-container .form__actions .btn {
       height: 4rem;
       background: none;
-      border: 2px solid #4a90e2;
+      border: 2px solid #79b0ec;
       border-radius: 20px;
-      color: #4a90e2;
+      color: #79b0ec;
       text-transform: uppercase;
       font-size: 1.5rem; }
-      .login-container .form__actions .btn--login:hover {
+    .login-container .form__actions .btn--login, .signup-container .form__actions .btn--login {
+      width: 10rem; }
+      .login-container .form__actions .btn--login:hover, .signup-container .form__actions .btn--login:hover {
         color: #fff;
-        background: #4a90e2; }
+        background: #79b0ec; }
+    .login-container .form__actions .btn--signup, .signup-container .form__actions .btn--signup {
+      width: 100%; }
+      .login-container .form__actions .btn--signup:hover, .signup-container .form__actions .btn--signup:hover {
+        color: #fff;
+        background: #79b0ec; }
+  .login-container .link, .signup-container .link {
+    text-decoration: none;
+    color: #2960b1;
+    font-size: 1.5rem; }
+  .login-container .btn__signup, .signup-container .btn__signup {
+    width: 12rem;
+    color: #fff;
+    font-size: 1.5rem; }
+  .login-container .btn__signup--facebook, .signup-container .btn__signup--facebook {
+    background: #2960b1;
+    border-radius: 5px; }
+    .login-container .btn__signup--facebook:hover, .signup-container .btn__signup--facebook:hover {
+      background: #1f4a88; }
+  .login-container .btn__signup--twitter, .signup-container .btn__signup--twitter {
+    background: #79b0ec;
+    border-radius: 25px; }
+    .login-container .btn__signup--twitter:hover, .signup-container .btn__signup--twitter:hover {
+      background: #a6caf2; }
 
 /*# sourceMappingURL=index.css.map */

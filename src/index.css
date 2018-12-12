@@ -2823,7 +2823,7 @@ input, textarea {
     color: #e76049; }
   .invoice .header {
     align-items: flex-start;
-    border-bottom: thin solid #89949b; }
+    border-bottom: thin solid #dcdfe1; }
     .invoice .header .heading {
       font-size: 3rem; }
     .invoice .header .header__right {
@@ -2833,5 +2833,23 @@ input, textarea {
     .invoice .header .address {
       line-height: 2rem;
       font-size: 1.3rem; }
+  .invoice .table {
+    display: grid;
+    grid-template-columns: 1fr 10fr 3fr 3fr 3fr;
+    border-bottom: thin solid #dcdfe1; }
+    .invoice .table .cell {
+      margin: 0;
+      padding: 1rem; }
+    .invoice .table .header {
+      background: #43525a;
+      color: #fff;
+      font-size: 1.5rem;
+      font-weight: bold; }
+    .invoice .table .cell--odd {
+      background: #f9f9f9; }
+      .invoice .table .cell--odd:not(:first-child) {
+        border-top: thin solid #dddddd; }
+      .invoice .table .cell--odd:not(:last-child) {
+        border-bottom: thin solid #dddddd; }
 
 /*# sourceMappingURL=index.css.map */

@@ -8,7 +8,7 @@
         color: $red
     .header
         align-items: flex-start
-        border-bottom: thin solid $text
+        border-bottom: thin solid lighten($text, 30%)
         .heading
             font-size: 3rem
         .header__right
@@ -18,3 +18,23 @@
         .address
             line-height: 2rem
             font-size: 1.3rem
+    .table
+        display: grid
+        grid-template-columns: 1fr 10fr 3fr 3fr 3fr
+        border-bottom: thin solid lighten($text, 30%)
+        .cell
+            margin: 0
+            padding: 1rem
+        .header
+            background: $charcoal
+            color: $white
+            font-size: 1.5rem
+            font-weight: bold
+        .cell--odd
+            background: rgb(249, 249, 249)
+            &:not(:first-child)
+                border-top: thin solid rgb(221, 221, 221)
+            &:not(:last-child)
+                border-bottom: thin solid rgb(221, 221, 221)
+    
+        

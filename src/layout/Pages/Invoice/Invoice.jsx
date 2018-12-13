@@ -2,6 +2,7 @@ import React from "react";
 import PageElementWrapper from "../PageElementWrapper";
 import InvoiceHeader from "./InvoiceHeader/InvoiceHeader";
 import InvoiceBody from "./InvoiceBody/InvoiceBody";
+import InvoiceFooter from "./InvoiceFooter/InvoiceFooter";
 
 const Invoice = () => {
   return (
@@ -9,7 +10,7 @@ const Invoice = () => {
       <div className="invoice">
         <InvoiceHeader />
         <InvoiceBody />
-        {/* <InvoiceFooter /> */}
+        <InvoiceFooter />
       </div>
     </PageElementWrapper>
   );

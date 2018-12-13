@@ -3,11 +3,11 @@ import React from "react";
 const InvoiceBody = () => {
   return (
     <div className="p2 table">
-      <p className="header cell">#</p>
-      <p className="header cell">Item</p>
-      <p className="header cell">Quantity</p>
-      <p className="header cell">Unit-Price</p>
-      <p className="header cell">Sub-total</p>
+      <p className="table__header cell">#</p>
+      <p className="table__header cell">Item</p>
+      <p className="table__header cell">Quantity</p>
+      <p className="table__header cell">Unit-Price</p>
+      <p className="table__header cell">Sub-total</p>
       <p className="cell cell--odd">1</p>
       <p className="cell cell--odd">Website wireframe</p>
       <p className="cell cell--odd">5 hours</p>
@@ -33,11 +33,11 @@ const InvoiceBody = () => {
       <p className="cell cell--odd">10 hours</p>
       <p className="cell cell--odd">$50</p>
       <p className="cell cell--odd">$500</p>
-      <div className="header cell" />
-      <div className="header cell" />
-      <div className="header cell" />
-      <p className="header cell">Total</p>
-      <p className="header cell">$6,000</p>
+      <div className="table__header cell" />
+      <div className="table__header cell" />
+      <div className="table__header cell" />
+      <p className="table__header cell">Total</p>
+      <p className="table__header cell">$6,000</p>
     </div>
   );
 };

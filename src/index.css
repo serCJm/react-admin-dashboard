@@ -199,8 +199,8 @@ p {
 .p3 {
   padding: 3rem; }
 
-.mtb1 {
-  margin: 1rem 0; }
+.ptb1 {
+  padding: 1rem 0; }
 
 .w80 {
   width: 80%; }
@@ -2840,16 +2840,30 @@ input, textarea {
     .invoice .table .cell {
       margin: 0;
       padding: 1rem; }
-    .invoice .table .header {
+    .invoice .table .table__header {
       background: #43525a;
       color: #fff;
       font-size: 1.5rem;
       font-weight: bold; }
     .invoice .table .cell--odd {
       background: #f9f9f9; }
-      .invoice .table .cell--odd:not(:first-child) {
+      .invoice .table .cell--odd:not(:nth-of-type(-n + 10)) {
         border-top: thin solid #dddddd; }
-      .invoice .table .cell--odd:not(:last-child) {
+      .invoice .table .cell--odd:not(:nth-last-of-type(-n +7)) {
         border-bottom: thin solid #dddddd; }
+  .invoice .footer {
+    align-items: flex-start;
+    border-bottom: thin solid #dcdfe1;
+    padding-bottom: 0; }
+  .invoice .footer__legal {
+    flex: 70%; }
+  .invoice .footer__amount.table {
+    margin-left: 3rem;
+    grid-template-columns: 1fr 7rem;
+    border-bottom: none; }
+    .invoice .footer__amount.table .cell--odd:not(:nth-of-type(-n + 4)) {
+      border-top: thin solid #dddddd; }
+    .invoice .footer__amount.table .cell--odd:not(:nth-last-of-type(-n + 2)) {
+      border-bottom: thin solid #dddddd; }
 
 /*# sourceMappingURL=index.css.map */

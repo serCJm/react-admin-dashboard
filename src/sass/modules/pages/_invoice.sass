@@ -25,16 +25,31 @@
         .cell
             margin: 0
             padding: 1rem
-        .header
+        .table__header
             background: $charcoal
             color: $white
             font-size: 1.5rem
             font-weight: bold
         .cell--odd
             background: rgb(249, 249, 249)
-            &:not(:first-child)
+            &:not(:nth-of-type(-n + 10))
                 border-top: thin solid rgb(221, 221, 221)
-            &:not(:last-child)
+            &:not(:nth-last-of-type(-n +7))
+                border-bottom: thin solid rgb(221, 221, 221)
+    .footer
+        align-items: flex-start
+        border-bottom: thin solid lighten($text, 30%)
+        padding-bottom: 0
+    .footer__legal
+        flex: 70%
+    .footer__amount.table
+        margin-left: 3rem
+        grid-template-columns: 1fr 7rem
+        border-bottom: none
+        .cell--odd
+            &:not(:nth-of-type(-n + 4))
+                border-top: thin solid rgb(221, 221, 221)
+            &:not(:nth-last-of-type(-n + 2))
                 border-bottom: thin solid rgb(221, 221, 221)
     
         

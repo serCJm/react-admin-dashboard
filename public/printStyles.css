@@ -1,0 +1,192 @@
+.f {
+  display: flex;
+  align-items: center;
+}
+
+.fc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fcc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.fsa {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.fsb {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.m0 {
+  margin: 0;
+}
+
+.m05 {
+  margin: 0.5rem;
+}
+
+.m1 {
+  margin: 1;
+}
+
+.m2 {
+  margin: 2rem;
+}
+
+.mt0 {
+  margin-top: 0;
+}
+
+.mr05 {
+  margin-right: 0.5rem;
+}
+
+.mr1 {
+  margin-right: 1rem;
+}
+
+.mb0 {
+  margin-bottom: 0;
+}
+
+.mtb05 {
+  margin: 0.5rem 0;
+}
+
+.mtb1 {
+  margin: 1rem 0;
+}
+
+.p1 {
+  padding: 1rem;
+}
+
+.p2 {
+  padding: 2rem;
+}
+
+.p3 {
+  padding: 3rem;
+}
+
+.ptb1 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.plr2 {
+  padding-left: 3rem;
+  padding-right: 2rem;
+}
+
+.w80 {
+  width: 80%;
+}
+
+.w100 {
+  width: 100%;
+}
+
+.br {
+  border-radius: 50%;
+}
+
+.pntr {
+  cursor: pointer;
+}
+.invoice {
+  color: #89949b;
+}
+.invoice .text--black {
+  color: #3f3f3b;
+}
+.invoice .text--green {
+  color: #2eb398;
+}
+.invoice .text--red {
+  color: #e76049;
+}
+.invoice .header {
+  align-items: flex-start;
+  border-bottom: thin solid #dcdfe1;
+}
+.invoice .header .heading {
+  font-size: 3rem;
+}
+.invoice .header .header__right {
+  text-align: right;
+}
+.invoice .header .email {
+  text-decoration: none;
+}
+.invoice .header .address {
+  line-height: 2rem;
+  font-size: 1.3rem;
+}
+.invoice .table {
+  display: grid;
+  grid-template-columns: 1fr 10fr 3fr 3fr 3fr;
+  border-bottom: thin solid #dcdfe1;
+}
+.invoice .table .cell {
+  margin: 0;
+  padding: 1rem;
+}
+.invoice .table .table__header {
+  background: #43525a;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.invoice .table .cell--odd {
+  background: #f9f9f9;
+}
+.invoice .table .cell--odd:not(:nth-of-type(-n + 10)) {
+  border-top: thin solid #dddddd;
+}
+.invoice .table .cell--odd:not(:nth-last-of-type(-n + 7)) {
+  border-bottom: thin solid #dddddd;
+}
+.invoice .footer {
+  align-items: flex-start;
+  border-bottom: thin solid #dcdfe1;
+  padding-bottom: 0;
+}
+.invoice .footer__legal {
+  flex: 70%;
+}
+.invoice .footer__amount.table {
+  margin-left: 3rem;
+  grid-template-columns: 1fr 7rem;
+  border-bottom: none;
+}
+.invoice .footer__amount.table .cell--odd:not(:nth-of-type(-n + 4)) {
+  border-top: thin solid #dddddd;
+}
+.invoice .footer__amount.table .cell--odd:not(:nth-last-of-type(-n + 2)) {
+  border-bottom: thin solid #dddddd;
+}
+.invoice .btn__print {
+  margin-left: 80%;
+  background: none;
+  border: 3px solid #43525a;
+  border-radius: 25px;
+  text-transform: uppercase;
+  color: #43525a;
+  font-weight: bold;
+}
+.invoice .btn__print:hover {
+  background: #43525a;
+  color: #fff;
+}

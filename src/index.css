@@ -200,7 +200,12 @@ p {
   padding: 3rem; }
 
 .ptb1 {
-  padding: 1rem 0; }
+  padding-top: 1rem;
+  padding-bottom: 1rem; }
+
+.plr2 {
+  padding-left: 3rem;
+  padding-right: 2rem; }
 
 .w80 {
   width: 80%; }
@@ -2865,5 +2870,16 @@ input, textarea {
       border-top: thin solid #dddddd; }
     .invoice .footer__amount.table .cell--odd:not(:nth-last-of-type(-n + 2)) {
       border-bottom: thin solid #dddddd; }
+  .invoice .btn__print {
+    margin-left: 80%;
+    background: none;
+    border: 3px solid #43525a;
+    border-radius: 25px;
+    text-transform: uppercase;
+    color: #43525a;
+    font-weight: bold; }
+    .invoice .btn__print:hover {
+      background: #43525a;
+      color: #fff; }
 
 /*# sourceMappingURL=index.css.map */

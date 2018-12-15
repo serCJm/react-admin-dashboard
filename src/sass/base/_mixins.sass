@@ -22,6 +22,11 @@
     @each $theme, $rgb in $themes
         &.#{$theme}:hover
             background: lighten($rgb, $per)
+@mixin themes-lighten-border-hover ($per, $borderThickness)
+    @each $theme, $rgb in $themes
+        &.#{$theme}:hover
+            background: lighten($rgb, $per)
+            border: $borderThickness solid lighten($rgb, $per)
 
 @mixin themes-darken-hover ($per)
     @each $theme, $rgb in $themes

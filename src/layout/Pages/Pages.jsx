@@ -8,6 +8,7 @@ import Social from "./Social/Social";
 import Posts from "./Posts/Posts";
 import SinglePost from "./Posts/SinglePost";
 import Invoice from "./Invoice/Invoice";
+import Pricing from "./Pricing/Pricing";
 import { Route } from "react-router-dom";
 
 class Pages extends Component {
@@ -45,6 +46,7 @@ class Pages extends Component {
         <Route exact path="/posts" component={Posts} />
         <Route exact path="/singlePost" component={SinglePost} />
         <Route exact path="/invoice" component={Invoice} />
+        <Route exact path="/pricing-tables" component={Pricing} />
       </main>
     );
   }

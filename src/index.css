@@ -190,6 +190,10 @@ p {
 .mtb1 {
   margin: 1rem 0; }
 
+.mtb2 {
+  margin-top: 2rem;
+  margin-bottom: 2rem; }
+
 .p1 {
   padding: 1rem; }
 
@@ -199,12 +203,18 @@ p {
 .p3 {
   padding: 3rem; }
 
+.pt1 {
+  padding-top: 1rem; }
+
+.pt2 {
+  padding-top: 2rem; }
+
 .ptb1 {
   padding-top: 1rem;
   padding-bottom: 1rem; }
 
 .plr2 {
-  padding-left: 3rem;
+  padding-left: 2rem;
   padding-right: 2rem; }
 
 .w80 {
@@ -2881,5 +2891,69 @@ input, textarea {
     .invoice .btn__print:hover {
       background: #43525a;
       color: #fff; }
+
+.pricing {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(7rem, 20rem));
+  justify-content: center;
+  column-gap: 1rem;
+  row-gap: 2rem;
+  margin-top: 1rem; }
+  @media screen and (min-width: 800px) {
+    .pricing {
+      margin-top: 0;
+      grid-gap: 2px; } }
+  .pricing__item {
+    text-align: center;
+    background: #fff; }
+    .pricing__item.pricing--pro {
+      border: thin solid black; }
+    .pricing__item .header {
+      height: 8.5rem;
+      margin-bottom: 5rem;
+      position: relative;
+      background: #d2e0eb;
+      color: #89949b;
+      text-transform: uppercase; }
+      .pricing__item .header .title {
+        font-weight: 200; }
+      .pricing__item .header .price {
+        width: 8rem;
+        height: 8rem;
+        background: #d2e0eb;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        border: 5px solid #fff;
+        color: #6f7b82;
+        font-size: 2rem; }
+      .pricing__item .header.pricing--pro, .pricing__item .header .pricing--pro {
+        background: #e76049;
+        color: #fff; }
+    .pricing__item .text__emph {
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: #6f7b82; }
+    .pricing__item .btn {
+      background: #fff;
+      border: 2px solid #eeeeee;
+      border-radius: 10px;
+      color: #89949b;
+      text-transform: uppercase;
+      font-size: 1.3rem;
+      font-weight: 600;
+      transition: all 0.5s; }
+      .pricing__item .btn:hover {
+        background: #8ba0af;
+        border-color: #8ba0af;
+        color: #fff; }
+      .pricing__item .btn.pricing--pro {
+        background: #e76049;
+        border-color: #e76049;
+        color: #fff; }
+        .pricing__item .btn.pricing--pro:hover {
+          background: #f09b8d;
+          border-color: #f09b8d; }
 
 /*# sourceMappingURL=index.css.map */

@@ -1,0 +1,66 @@
+.pricing
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(7rem, 20rem))
+    justify-content: center
+    column-gap: 1rem
+    row-gap: 2rem
+    margin-top: 1rem
+    @media #{$large-screen}
+        margin-top: 0
+        grid-gap: 2px
+    &__item
+        text-align: center
+        background: $white
+        
+        &.pricing--pro
+            border: thin solid black
+        .header
+            height: 8.5rem
+            margin-bottom: 5rem
+            position: relative
+            background: rgb(210, 224, 235)
+            color: $greyFont
+            text-transform: uppercase
+            .title
+                font-weight: 200
+            .price
+                width: 8rem
+                height: 8rem
+                background: rgb(210, 224, 235)
+                position: absolute
+                bottom: 0
+                left: 50%
+                transform: translate(-50%, 50%)
+                border: 5px solid $white
+                color: darken($greyFont, 10%)
+                font-size: 2rem
+            &.pricing--pro, .pricing--pro
+                background: $red
+                color: $white
+        .text__emph
+            font-weight: bold
+            font-size: 1.5rem
+            color: darken($greyFont, 10%)
+        .btn
+            background: $white
+            border: 2px solid rgb(238, 238, 238)
+            border-radius: 10px
+            color: $greyFont
+            text-transform: uppercase
+            font-size: 1.3rem
+            font-weight: 600
+            transition: all .5s
+            &:hover
+                background: rgb(139, 160, 175)
+                border-color: rgb(139, 160, 175)
+                color: $white
+            &.pricing--pro
+                background: $red
+                border-color: $red
+                color: $white
+                &:hover
+                    background: lighten($red, 15%)
+                    border-color: lighten($red, 15%)
+        
+
+                

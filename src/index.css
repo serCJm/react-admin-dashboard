@@ -2928,8 +2928,19 @@ input, textarea {
         border: 5px solid #fff;
         color: #6f7b82;
         font-size: 2rem; }
+      .pricing__item .header .theme-default {
+        background: #ea7661; }
+      .pricing__item .header .theme-green {
+        background: #2eb398; }
+      .pricing__item .header .theme-blue {
+        background: #79b0ec; }
+      .pricing__item .header .theme-purple {
+        background: #b4a1dd; }
+      .pricing__item .header .theme-brown {
+        background: #a8553a; }
+      .pricing__item .header .theme-bay {
+        background: #68a0a5; }
       .pricing__item .header.pricing--pro, .pricing__item .header .pricing--pro {
-        background: #e76049;
         color: #fff; }
     .pricing__item .text__emph {
       font-weight: bold;
@@ -2949,11 +2960,36 @@ input, textarea {
         border-color: #8ba0af;
         color: #fff; }
       .pricing__item .btn.pricing--pro {
-        background: #e76049;
-        border-color: #e76049;
         color: #fff; }
-        .pricing__item .btn.pricing--pro:hover {
-          background: #f09b8d;
-          border-color: #f09b8d; }
+      .pricing__item .btn.theme-default:hover {
+        background: #f3b1a5;
+        border: 2px solid #f3b1a5; }
+      .pricing__item .btn.theme-green:hover {
+        background: #59d4bb;
+        border: 2px solid #59d4bb; }
+      .pricing__item .btn.theme-blue:hover {
+        background: #bcd8f6;
+        border: 2px solid #bcd8f6; }
+      .pricing__item .btn.theme-purple:hover {
+        background: #e1d9f1;
+        border: 2px solid #e1d9f1; }
+      .pricing__item .btn.theme-brown:hover {
+        background: #ca7e65;
+        border: 2px solid #ca7e65; }
+      .pricing__item .btn.theme-bay:hover {
+        background: #98bec2;
+        border: 2px solid #98bec2; }
+    .pricing__item .theme-default {
+      background: #ea7661; }
+    .pricing__item .theme-green {
+      background: #2eb398; }
+    .pricing__item .theme-blue {
+      background: #79b0ec; }
+    .pricing__item .theme-purple {
+      background: #b4a1dd; }
+    .pricing__item .theme-brown {
+      background: #a8553a; }
+    .pricing__item .theme-bay {
+      background: #68a0a5; }
 
 /*# sourceMappingURL=index.css.map */

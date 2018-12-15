@@ -1,10 +1,16 @@
 import React, { Component } from "react";
 import Header from "./layout/Header";
 import Pages from "./layout/Pages/Pages";
+import { ThemeContext, themes } from "./components/Header/theme-context";
 
 class Main extends Component {
+  handleThemeChange = themeID => {
+    this.setState({ theme: themeID });
+  };
   state = {
-    sideMenu: false
+    sideMenu: false,
+    theme: themes.default,
+    handleThemeChange: this.handleThemeChange
   };
 
   toggleSideMenu = () => {
@@ -15,13 +21,13 @@ class Main extends Component {
 
   render() {
     return (
-      <React.Fragment>
+      <ThemeContext.Provider value={this.state}>
         <Header
           sideMenu={this.state.sideMenu}
           toggleSideMenu={this.toggleSideMenu}
         />
         <Pages sideMenu={this.state.sideMenu} />
-      </React.Fragment>
+      </ThemeContext.Provider>
     );
   }
 }

@@ -2,16 +2,10 @@ import React, { Component } from "react";
 import HeaderTopMenu from "../components/Header/HeaderTopMenu";
 import SideMenu from "../components/SideMenu/SideMenu";
 import HeaderMenuBtn from "../components/Header/HeaderMenuBtn";
-import { ThemeContext, themes } from "../components/Header/theme-context";
 
 class Header extends Component {
-  handleThemeChange = themeID => {
-    this.setState({ theme: themeID });
-  };
   state = {
-    mobile: window.matchMedia("(max-width: 800px)").matches,
-    theme: themes.default,
-    handleThemeChange: this.handleThemeChange
+    mobile: window.matchMedia("(max-width: 800px)").matches
   };
 
   hangleScreenResize = () => {
@@ -34,15 +28,13 @@ class Header extends Component {
     }
     return (
       <header>
-        <ThemeContext.Provider value={this.state}>
-          <HeaderTopMenu
-            logo="Logo"
-            headerMenuBtn={headerMenuBtn}
-            sideMenu={this.props.sideMenu}
-            mobile={this.state.mobile}
-          />
-          <SideMenu sideMenu={this.props.sideMenu} mobile={this.state.mobile} />
-        </ThemeContext.Provider>
+        <HeaderTopMenu
+          logo="Logo"
+          headerMenuBtn={headerMenuBtn}
+          sideMenu={this.props.sideMenu}
+          mobile={this.state.mobile}
+        />
+        <SideMenu sideMenu={this.props.sideMenu} mobile={this.state.mobile} />
       </header>
     );
   }

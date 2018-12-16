@@ -10,6 +10,7 @@ import SinglePost from "./Posts/SinglePost";
 import Invoice from "./Invoice/Invoice";
 import Pricing from "./Pricing/Pricing";
 import { Route } from "react-router-dom";
+import Panels from "./Panels/Panels";
 
 class Pages extends Component {
   state = {
@@ -47,6 +48,7 @@ class Pages extends Component {
         <Route exact path="/singlePost" component={SinglePost} />
         <Route exact path="/invoice" component={Invoice} />
         <Route exact path="/pricing-tables" component={Pricing} />
+        <Route exact path="/panels" component={Panels} />
       </main>
     );
   }

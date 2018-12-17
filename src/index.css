@@ -229,6 +229,9 @@ p {
 .pntr {
   cursor: pointer; }
 
+.oa {
+  overflow: auto; }
+
 .theme-default {
   background: #ea7661; }
 
@@ -2994,5 +2997,26 @@ input, textarea {
 
 .panels .panels__basic {
   color: #89949b; }
+.panels .c--lightRed {
+  background: #ea7882;
+  color: #fff; }
+.panels .c--green {
+  background: #55c9a6;
+  color: #fff; }
+.panels .c--blue {
+  background: #79b0ec;
+  color: #fff; }
+.panels .c--lightBlue {
+  background: #a0c7f2;
+  color: #fff; }
+.panels .c--purple {
+  background: #b4a1dd;
+  color: #fff; }
+.panels .tabs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25px, 1fr)); }
+  .panels .tabs .tabs__icon {
+    text-align: center;
+    font-size: 1.3rem; }
 
 /*# sourceMappingURL=index.css.map */

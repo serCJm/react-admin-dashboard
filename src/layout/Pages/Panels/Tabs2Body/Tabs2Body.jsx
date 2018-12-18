@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import BasicPanel from "../components/BasicPanel/BasicPanel";
-import HeaderFooter from "../components/HeaderFooter/HeaderFooter";
-import PlainTabsStyle1 from "../components/PlainTabsStyle1/PlainTabsStyle1";
+import PlainTabsStyle2 from "../components/PlainTabsStyle2/PlainTabsStyle2";
 
-class BodyHeaderTabsFooter extends Component {
+class Tabs2Body extends Component {
   state = {
     active: "home",
     tagTitle: null
@@ -28,8 +27,20 @@ class BodyHeaderTabsFooter extends Component {
       title = "User";
       text =
         "Nam at lectus urna duis. Maecenas sed enim ut sem viverra aliquet eget sit. Laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt.";
-    } else {
+    } else if (this.state.active === "cog") {
       title = "Cog";
+      text =
+        "Arcu vitae elementum curabitur vitae nunc. Hendrerit dolor magna eget est lorem ipsum dolor sit amet. Pharetra pharetra massa massa ultricies mi quis hendrerit dolor magna. Mollis aliquam ut porttitor leo.";
+    } else if (this.state.active === "home (footer)") {
+      title = "Home (Footer)";
+      text =
+        "Arcu vitae elementum curabitur vitae nunc. Hendrerit dolor magna eget est lorem ipsum dolor sit amet. Pharetra pharetra massa massa ultricies mi quis hendrerit dolor magna. Mollis aliquam ut porttitor leo.";
+    } else if (this.state.active === "user (footer)") {
+      title = "User (Footer)";
+      text =
+        "Arcu vitae elementum curabitur vitae nunc. Hendrerit dolor magna eget est lorem ipsum dolor sit amet. Pharetra pharetra massa massa ultricies mi quis hendrerit dolor magna. Mollis aliquam ut porttitor leo.";
+    } else if (this.state.active === "cog (footer)") {
+      title = "Cog (Footer)";
       text =
         "Arcu vitae elementum curabitur vitae nunc. Hendrerit dolor magna eget est lorem ipsum dolor sit amet. Pharetra pharetra massa massa ultricies mi quis hendrerit dolor magna. Mollis aliquam ut porttitor leo.";
     }
@@ -39,26 +50,15 @@ class BodyHeaderTabsFooter extends Component {
     }
     return (
       <React.Fragment>
-        <HeaderFooter
-          heading="Panel Header + Plain Tabs"
-          styleClass="c--purple"
-        />
-        <PlainTabsStyle1
-          styleClass="c--purple"
-          dropdown
+        <PlainTabsStyle2
+          styleClass="c--lightRed"
           active={this.state.active}
           handleSwitchActive={this.handleSwitchActive}
-          handleSwitchTitle={this.handleSwitchTitle}
         />
         <BasicPanel title={title} text={text} />
-        <HeaderFooter
-          heading="Panel Footer"
-          miniHeading="Mini Heading"
-          styleClass="c--purple"
-        />
       </React.Fragment>
     );
   }
 }
 
-export default BodyHeaderTabsFooter;
+export default Tabs2Body;

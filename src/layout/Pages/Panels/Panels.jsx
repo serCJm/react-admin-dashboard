@@ -5,6 +5,9 @@ import BodyWithFooter from "./BodyWithFooter/BodyWithFooter";
 import BodyWithHeader from "./BodyWithHeader/BodyWithHeader";
 import BodyHeaderFooter from "./BodyHeaderFooter/BodyHeaderFooter";
 import BodyHeaderTabsFooter from "./BodyHeaderTabsFooter/BodyHeaderTabsFooter";
+import HeaderBodyTabsFooter from "./HeaderBodyTabsFooter/HeaderBodyTabsFooter";
+import HeaderTabsBodyTabsFooter from "./HeaderTabsBodyTabsFooter/HeaderTabsBodyTabsFooter";
+import Tabs2Body from "./Tabs2Body/Tabs2Body";
 
 const Panels = () => {
   return (
@@ -23,6 +26,15 @@ const Panels = () => {
       </PageElementWrapper>
       <PageElementWrapper>
         <BodyHeaderTabsFooter />
+      </PageElementWrapper>
+      <PageElementWrapper>
+        <HeaderBodyTabsFooter />
+      </PageElementWrapper>
+      <PageElementWrapper>
+        <HeaderTabsBodyTabsFooter />
+      </PageElementWrapper>
+      <PageElementWrapper>
+        <Tabs2Body />
       </PageElementWrapper>
     </div>
   );

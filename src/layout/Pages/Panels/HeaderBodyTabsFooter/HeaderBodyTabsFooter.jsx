@@ -3,7 +3,7 @@ import BasicPanel from "../components/BasicPanel/BasicPanel";
 import HeaderFooter from "../components/HeaderFooter/HeaderFooter";
 import PlainTabsStyle1 from "../components/PlainTabsStyle1/PlainTabsStyle1";
 
-class BodyHeaderTabsFooter extends Component {
+class HeaderBodyTabsFooter extends Component {
   state = {
     active: "home",
     tagTitle: null
@@ -40,25 +40,26 @@ class BodyHeaderTabsFooter extends Component {
     return (
       <React.Fragment>
         <HeaderFooter
-          heading="Panel Header + Plain Tabs"
-          styleClass="c--purple"
+          heading="Panel Header"
+          miniHeading="Mini Heading"
+          styleClass="c--pink"
         />
+        <BasicPanel title={title} text={text} />
         <PlainTabsStyle1
-          styleClass="c--purple"
+          styleClass="c--pink"
           dropdown
           active={this.state.active}
           handleSwitchActive={this.handleSwitchActive}
           handleSwitchTitle={this.handleSwitchTitle}
+          footer
         />
-        <BasicPanel title={title} text={text} />
         <HeaderFooter
-          heading="Panel Footer"
-          miniHeading="Mini Heading"
-          styleClass="c--purple"
+          heading="Panel Footer + Plain Tabs"
+          styleClass="c--pink"
         />
       </React.Fragment>
     );
   }
 }
 
-export default BodyHeaderTabsFooter;
+export default HeaderBodyTabsFooter;

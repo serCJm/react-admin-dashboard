@@ -16,6 +16,9 @@
     .c--purple
         background: rgb(180, 161, 221)
         color: $white
+    .c--pink
+        background: rgb(227, 148, 179)
+        color: $white
     .tabs
         display: grid
         grid-template-columns: repeat( auto-fit, minmax(25px, 1fr))
@@ -25,32 +28,49 @@
             font-size: 1.3rem
             position: relative
             cursor: pointer
-            
             &.active:after
                 content: ""
                 position: absolute
-                bottom: 0
                 left: 50%
                 width: 10px
                 height: 10px
-                transform: translate(-50%, 50%) rotate(45deg)
                 background: $white
+            &.active--header:after
+                bottom: 0
+                transform: translate(-50%, 50%) rotate(45deg)
+            &.active--footer:after
+                top: 0
+                transform: translate(-50%, -50%) rotate(45deg)
             .tabs__dropdown
                 position: absolute
                 right: 0
-                bottom: 0
                 width: 15rem
                 background: $white
-                transform: translate(0, 100%)
                 border: thin solid rgba(0, 0, 0, .3)
-                border-top: none
-                border-bottom-right-radius: 5px
-                border-bottom-left-radius: 5px
                 text-align: left
-                box-shadow: 0 7px 10px 0px rgba(0, 0, 0, .3)
+                &.tabs__dropdown--header
+                    bottom: 0
+                    border-top: none
+                    border-bottom-right-radius: 5px
+                    border-bottom-left-radius: 5px
+                    transform: translate(0, 100%)
+                    box-shadow: 0 7px 10px 0px rgba(0, 0, 0, .3)
+                &.tabs__dropdown--footer
+                    top: 0
+                    border-bottom: none
+                    border-top-right-radius: 5px
+                    border-top-left-radius: 5px
+                    transform: translate(0, -100%)
+                    box-shadow: 0 -7px 10px 0px rgba(0, 0, 0, .3)
                 & .text:hover
                     background: rgba(0, 0, 0, .05)
                     color: black
+    .tabs--style2
+        .tabs__icon.active
+            background: $white
+            color: $greyFont
+            &:after
+                content: none
                 
 
 

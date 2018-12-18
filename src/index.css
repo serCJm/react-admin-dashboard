@@ -3012,6 +3012,9 @@ input, textarea {
 .panels .c--purple {
   background: #b4a1dd;
   color: #fff; }
+.panels .c--pink {
+  background: #e394b3;
+  color: #fff; }
 .panels .tabs {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25px, 1fr)); }
@@ -3023,27 +3026,44 @@ input, textarea {
     .panels .tabs .tabs__icon.active:after {
       content: "";
       position: absolute;
-      bottom: 0;
       left: 50%;
       width: 10px;
       height: 10px;
-      transform: translate(-50%, 50%) rotate(45deg);
       background: #fff; }
+    .panels .tabs .tabs__icon.active--header:after {
+      bottom: 0;
+      transform: translate(-50%, 50%) rotate(45deg); }
+    .panels .tabs .tabs__icon.active--footer:after {
+      top: 0;
+      transform: translate(-50%, -50%) rotate(45deg); }
     .panels .tabs .tabs__icon .tabs__dropdown {
       position: absolute;
       right: 0;
-      bottom: 0;
       width: 15rem;
       background: #fff;
-      transform: translate(0, 100%);
       border: thin solid rgba(0, 0, 0, 0.3);
-      border-top: none;
-      border-bottom-right-radius: 5px;
-      border-bottom-left-radius: 5px;
-      text-align: left;
-      box-shadow: 0 7px 10px 0px rgba(0, 0, 0, 0.3); }
+      text-align: left; }
+      .panels .tabs .tabs__icon .tabs__dropdown.tabs__dropdown--header {
+        bottom: 0;
+        border-top: none;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        transform: translate(0, 100%);
+        box-shadow: 0 7px 10px 0px rgba(0, 0, 0, 0.3); }
+      .panels .tabs .tabs__icon .tabs__dropdown.tabs__dropdown--footer {
+        top: 0;
+        border-bottom: none;
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+        transform: translate(0, -100%);
+        box-shadow: 0 -7px 10px 0px rgba(0, 0, 0, 0.3); }
       .panels .tabs .tabs__icon .tabs__dropdown .text:hover {
         background: rgba(0, 0, 0, 0.05);
         color: black; }
+.panels .tabs--style2 .tabs__icon.active {
+  background: #fff;
+  color: #89949b; }
+  .panels .tabs--style2 .tabs__icon.active:after {
+    content: none; }
 
 /*# sourceMappingURL=index.css.map */

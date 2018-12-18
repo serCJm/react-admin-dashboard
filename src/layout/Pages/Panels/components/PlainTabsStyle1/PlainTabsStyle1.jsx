@@ -4,7 +4,8 @@ import {
   faHome,
   faUser,
   faCog,
-  faAngleDown
+  faAngleDown,
+  faAngleUp
 } from "@fortawesome/free-solid-svg-icons";
 
 const contents = [
@@ -48,9 +49,15 @@ class PlainTabsHeader extends Component {
   render() {
     let dropdownIcon = null;
     let dropdown = null;
+    let tabsActiveTypeClass = "active active--header";
+    let dropdownTypeClass = "tabs__dropdown--header";
+    if (this.props.footer) {
+      tabsActiveTypeClass = "active active--footer";
+      dropdownTypeClass = "tabs__dropdown--footer";
+    }
     if (this.state.showDropdown) {
       dropdown = (
-        <div className="tabs__dropdown">
+        <div className={`tabs__dropdown ${dropdownTypeClass}`}>
           <p
             className="m0 p1 text"
             onClick={e => this.props.handleSwitchTitle("star", e)}
@@ -73,7 +80,7 @@ class PlainTabsHeader extends Component {
           className="p1 tabs__icon"
           onClick={this.handleDropdown}
         >
-          <FontAwesomeIcon icon={faAngleDown} />
+          <FontAwesomeIcon icon={this.props.footer ? faAngleUp : faAngleDown} />
           {dropdown}
         </div>
       );
@@ -85,7 +92,7 @@ class PlainTabsHeader extends Component {
             key={item.id}
             className={
               this.props.active === item.id
-                ? "p1 tabs__icon active"
+                ? `p1 tabs__icon ${tabsActiveTypeClass}`
                 : "p1 tabs__icon"
             }
             onClick={e => this.props.handleSwitchActive(item.id, e)}

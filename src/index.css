@@ -3017,6 +3017,33 @@ input, textarea {
   grid-template-columns: repeat(auto-fit, minmax(25px, 1fr)); }
   .panels .tabs .tabs__icon {
     text-align: center;
-    font-size: 1.3rem; }
+    font-size: 1.3rem;
+    position: relative;
+    cursor: pointer; }
+    .panels .tabs .tabs__icon.active:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 10px;
+      height: 10px;
+      transform: translate(-50%, 50%) rotate(45deg);
+      background: #fff; }
+    .panels .tabs .tabs__icon .tabs__dropdown {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 15rem;
+      background: #fff;
+      transform: translate(0, 100%);
+      border: thin solid rgba(0, 0, 0, 0.3);
+      border-top: none;
+      border-bottom-right-radius: 5px;
+      border-bottom-left-radius: 5px;
+      text-align: left;
+      box-shadow: 0 7px 10px 0px rgba(0, 0, 0, 0.3); }
+      .panels .tabs .tabs__icon .tabs__dropdown .text:hover {
+        background: rgba(0, 0, 0, 0.05);
+        color: black; }
 
 /*# sourceMappingURL=index.css.map */

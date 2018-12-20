@@ -1,4 +1,14 @@
 .panels
+    .three-column-grid
+        @media #{$large-screen}
+            display: grid
+            grid-template-columns: repeat(3, 1fr)
+            grid-gap: 20px
+    .two-column-grid
+        @media #{$large-screen}
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-gap: 20px
     .panels__basic
         color: $greyFont
     .c--lightRed
@@ -19,9 +29,22 @@
     .c--pink
         background: rgb(227, 148, 179)
         color: $white
+    .c--orange
+        background: rgb(255, 196, 151)
+        color: $white
+    .c--lightBlue
+        background: rgb(146, 189, 193)
+        color: $white
+    .c--Blue
+        background: rgb(104, 160, 165)
+        color: $white
     .tabs
         display: grid
         grid-template-columns: repeat( auto-fit, minmax(25px, 1fr))
+        &.tabs--alt
+            grid-auto-flow: row
+            grid-template-columns: 6rem
+            grid-template-rows: repeat(3, 1fr)
         .tabs__icon
             //color: $white
             text-align: center
@@ -71,6 +94,12 @@
             color: $greyFont
             &:after
                 content: none
+    .tabs-side-container
+        display: flex
+        justify-content: space-between
+    .panel--long
+        grid-column: span 2
+
                 
 
 

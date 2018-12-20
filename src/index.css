@@ -2995,6 +2995,15 @@ input, textarea {
     .pricing__item .theme-bay {
       background: #68a0a5; }
 
+@media screen and (min-width: 800px) {
+  .panels .three-column-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px; } }
+.panels .two-column-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px; }
 .panels .panels__basic {
   color: #89949b; }
 .panels .c--lightRed {
@@ -3015,9 +3024,22 @@ input, textarea {
 .panels .c--pink {
   background: #e394b3;
   color: #fff; }
+.panels .c--orange {
+  background: #ffc497;
+  color: #fff; }
+.panels .c--lightBlue {
+  background: #92bdc1;
+  color: #fff; }
+.panels .c--Blue {
+  background: #68a0a5;
+  color: #fff; }
 .panels .tabs {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25px, 1fr)); }
+  .panels .tabs.tabs--alt {
+    grid-auto-flow: row;
+    grid-template-columns: 6rem;
+    grid-template-rows: repeat(3, 1fr); }
   .panels .tabs .tabs__icon {
     text-align: center;
     font-size: 1.3rem;
@@ -3065,5 +3087,10 @@ input, textarea {
   color: #89949b; }
   .panels .tabs--style2 .tabs__icon.active:after {
     content: none; }
+.panels .tabs-side-container {
+  display: flex;
+  justify-content: space-between; }
+.panels .panel--long {
+  grid-column: span 2; }
 
 /*# sourceMappingURL=index.css.map */

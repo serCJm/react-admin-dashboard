@@ -46,15 +46,15 @@ class SideMenuHomeComponents extends Component {
           submenu: null
         },
         {
-          id: "chars",
+          id: "charts",
           icon: <FontAwesomeIcon icon={faChartPie} />,
           text: "Charts",
           countstyle: { color: "#fff", background: "rgb(214, 127, 107)" },
           submenu: [
             {
-              id: "rubix",
+              id: "d3",
               icon: <FontAwesomeIcon icon={faChartLine} />,
-              text: "Rubix Charts",
+              text: "d3",
               submenu: [
                 {
                   id: "line-series",

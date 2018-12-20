@@ -67,7 +67,10 @@ class SideMenuHomeItem extends Component {
           {({ handleAuthentication }) => (
             <ThemeContext>
               {({ theme }) =>
-                id === "mailbox" || id === "blog" ? (
+                id === "mailbox" ||
+                id === "blog" ||
+                id === "charts" ||
+                id === "d3" ? (
                   <button
                     onMouseEnter={this.handleHover}
                     onMouseLeave={this.handleHover}

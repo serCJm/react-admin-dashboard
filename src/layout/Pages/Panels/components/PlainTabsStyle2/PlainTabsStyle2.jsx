@@ -1,16 +1,37 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome, faUser, faCog } from "@fortawesome/free-solid-svg-icons";
+import {
+  faHome,
+  faUser,
+  faCog,
+  faBars,
+  faFolder,
+  faFolderOpen
+} from "@fortawesome/free-solid-svg-icons";
 
-const contents = [
+const contents1 = [
   { icon: faHome, id: "home" },
   { icon: faUser, id: "user" },
   { icon: faCog, id: "cog" }
 ];
 
+const contents2 = [
+  { icon: faBars, id: "home (footer)" },
+  { icon: faFolderOpen, id: "user (footer)" },
+  { icon: faFolder, id: "cog (footer)" }
+];
+
 const PlainTabsStyle2 = props => {
+  let contents = contents1;
+  if (props.iconSet2) {
+    contents = contents2;
+  }
+  let gridClass = `tabs tabs--style2 ${props.styleClass}`;
+  if (props.tabAlt) {
+    gridClass = `tabs tabs--alt tabs--style2 ${props.styleClass}`;
+  }
   return (
-    <div className={`tabs tabs--style2 ${props.styleClass}`}>
+    <div className={gridClass}>
       {contents.map(item => (
         <div
           key={item.id}

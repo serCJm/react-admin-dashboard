@@ -11,6 +11,7 @@ import Invoice from "./Invoice/Invoice";
 import Pricing from "./Pricing/Pricing";
 import { Route } from "react-router-dom";
 import Panels from "./Panels/Panels";
+import LineSeries from "./Charts/D3/LineSeries/LineSeries";
 
 class Pages extends Component {
   state = {
@@ -49,6 +50,7 @@ class Pages extends Component {
         <Route exact path="/invoice" component={Invoice} />
         <Route exact path="/pricing-tables" component={Pricing} />
         <Route exact path="/panels" component={Panels} />
+        <Route exact path="/line-series" component={LineSeries} />
       </main>
     );
   }

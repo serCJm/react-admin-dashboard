@@ -175,6 +175,12 @@ p {
 .mt0 {
   margin-top: 0; }
 
+.mt1 {
+  margin-top: 1rem; }
+
+.mt2 {
+  margin-top: 2rem; }
+
 .mr05 {
   margin-right: 0.5rem; }
 
@@ -3092,5 +3098,59 @@ input, textarea {
   justify-content: space-between; }
 .panels .panel--long {
   grid-column: span 2; }
+
+.line-series {
+  text-align: center; }
+  .line-series .no-markers {
+    color: steelblue; }
+  .line-series .single-line-no-markers {
+    stroke: #0054a9;
+    stroke-width: 2;
+    stroke-linecap: round; }
+  .line-series .rect-tooltip {
+    display: block;
+    position: fixed;
+    width: 8rem;
+    padding: 0;
+    background: #fff;
+    color: #89949b;
+    text-align: center;
+    border: 3px solid #0054a9;
+    border-radius: 5px; }
+  .line-series .btn-toggle-chart {
+    background: transparent;
+    position: relative;
+    width: 8rem;
+    border: none;
+    font-weight: bold;
+    font-size: 1.3rem;
+    cursor: pointer; }
+    .line-series .btn-toggle-chart:before {
+      content: "";
+      position: absolute;
+      width: 1rem;
+      height: 1rem;
+      left: 0;
+      top: 50%;
+      transform: translate(0, -50%); }
+  .line-series .btn-toggle-chart--blue {
+    color: #0054a9; }
+    .line-series .btn-toggle-chart--blue:before {
+      background: #0054a9; }
+
+.grid path {
+  stroke-width: 0; }
+
+.grid line {
+  stroke: #c0d0e0;
+  opacity: 0.7; }
+
+.axis .domain {
+  stroke: #c0d0e0; }
+.axis .tick line {
+  stroke: #c0d0e0; }
+.axis .tick text {
+  color: #666666;
+  font-size: 1rem; }
 
 /*# sourceMappingURL=index.css.map */

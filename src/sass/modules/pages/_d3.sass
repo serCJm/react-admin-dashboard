@@ -2,10 +2,15 @@
     text-align: center
     .no-markers
         color: rgb(70, 130, 180)
-    .single-line-no-markers
-        stroke: rgb(0, 84, 169)
+    .circular
+        color: green
+    .single-line
         stroke-width: 2
         stroke-linecap: round
+    .single-line--no-markers
+        stroke: rgb(0, 84, 169)
+    .single-line--circular
+        stroke: green
     .rect-tooltip
         display: block
         position: fixed
@@ -14,8 +19,11 @@
         background: $white
         color: $greyFont
         text-align: center
-        border: 3px solid rgb(0, 84, 169)
         border-radius: 5px
+    .rect-tooltip--no-markers
+        border: 3px solid rgb(0, 84, 169)
+    .rect-tooltip--circular
+        border: 3px solid green
     .btn-toggle-chart
         background: transparent
         position: relative
@@ -36,6 +44,10 @@
         color: rgb(0, 84, 169)
         &:before
             background: rgb(0, 84, 169)
+    .btn-toggle-chart--green
+        color: green
+        &:before
+            background: green
 
 .grid path
     stroke-width: 0

@@ -3103,10 +3103,15 @@ input, textarea {
   text-align: center; }
   .line-series .no-markers {
     color: steelblue; }
-  .line-series .single-line-no-markers {
-    stroke: #0054a9;
+  .line-series .circular {
+    color: green; }
+  .line-series .single-line {
     stroke-width: 2;
     stroke-linecap: round; }
+  .line-series .single-line--no-markers {
+    stroke: #0054a9; }
+  .line-series .single-line--circular {
+    stroke: green; }
   .line-series .rect-tooltip {
     display: block;
     position: fixed;
@@ -3115,8 +3120,11 @@ input, textarea {
     background: #fff;
     color: #89949b;
     text-align: center;
-    border: 3px solid #0054a9;
     border-radius: 5px; }
+  .line-series .rect-tooltip--no-markers {
+    border: 3px solid #0054a9; }
+  .line-series .rect-tooltip--circular {
+    border: 3px solid green; }
   .line-series .btn-toggle-chart {
     background: transparent;
     position: relative;
@@ -3137,6 +3145,10 @@ input, textarea {
     color: #0054a9; }
     .line-series .btn-toggle-chart--blue:before {
       background: #0054a9; }
+  .line-series .btn-toggle-chart--green {
+    color: green; }
+    .line-series .btn-toggle-chart--green:before {
+      background: green; }
 
 .grid path {
   stroke-width: 0; }

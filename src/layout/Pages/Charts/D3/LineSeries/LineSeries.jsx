@@ -1,11 +1,13 @@
 import React from "react";
 import NoMarkers from "./NoMarkers/NoMarkers";
+import Circular from "./Circular/Circular";
 
 const LineSeries = () => {
   return (
-    <React.Fragment>
+    <div className="line-series">
       <NoMarkers />
-    </React.Fragment>
+      <Circular />
+    </div>
   );
 };
 

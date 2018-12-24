@@ -1,11 +1,11 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import * as d3 from "d3";
 import LineWithCircle from "../../../../../../components/graphs/tooltips/LineWithCircle";
 import TooltipBox from "../../../../../../components/graphs/tooltips/TooltipBox";
 
 const margin = { top: 20, bottom: 20, left: 50, right: 50 };
 
-class SingleLine extends Component {
+class SingleLine extends PureComponent {
   width = this.props.width - margin.left - margin.right;
   height = this.props.height - margin.top - margin.bottom;
   state = {
@@ -36,8 +36,12 @@ class SingleLine extends Component {
   xAxisNoDisplayRef = React.createRef();
   yAxisNoDisplayRef = React.createRef();
 
-  xAxis = d3.axisBottom(this.state.xScale).tickValues(d3.range(10, 100, 10));
-  yAxis = d3.axisLeft(this.state.yScale).tickValues(d3.range(10, 90, 10));
+  xAxis = d3
+    .axisBottom(this.state.xScale)
+    .tickValues(d3.range(10, d3.max(this.props.data, (d, i) => i), 10));
+  yAxis = d3
+    .axisLeft(this.state.yScale)
+    .tickValues(d3.range(10, d3.max(this.props.data, d => d), 10));
   xAxisNoDisplay = d3.axisBottom(this.state.xScale).tickValues([]);
   yAxisNoDisplay = d3.axisLeft(this.state.yScale).tickValues([]);
   xAxisGrid = d3
@@ -98,10 +102,13 @@ class SingleLine extends Component {
       this.svg.current.getScreenCTM().inverse()
     );
 
-    const { xScale, yScale } = { ...this.state };
+    if (
+      cursporpt.x >= margin.left &&
+      cursporpt.x <= this.props.width - margin.right
+    ) {
+      const { xScale, yScale } = { ...this.state };
 
-    const xValue = Math.floor(xScale.invert(cursporpt.x - margin.left));
-    if (xValue >= 0 && xValue <= 100) {
+      const xValue = Math.round(xScale.invert(cursporpt.x - margin.left));
       const yValue = this.props.data[xValue];
 
       const tooltip = { ...this.state.tooltip };
@@ -132,7 +139,7 @@ class SingleLine extends Component {
           }}
           text1={this.state.tooltip.text1}
           text2={this.state.tooltip.text2}
-          tooltipClass="rect-tooltip"
+          tooltipClass={this.props.tooltipClass}
         />
       );
     }
@@ -142,14 +149,33 @@ class SingleLine extends Component {
         <LineWithCircle
           tooltip={this.state.tooltip}
           circleRadius="6"
-          circleFill="rgb(0, 84, 169)"
+          circleFill={this.props.theme}
           circleStroke="white"
           circleStrokeWidth="2"
           lineColor="rgb(192, 208, 224)"
         />
       );
     }
+
     let markers = null;
+    if (this.props.markersPath) {
+      markers = (
+        <g>
+          {this.props.data.map((d, i) => (
+            <path
+              key={i}
+              d={this.props.markersPath}
+              transform={`translate(${this.state.xScale(
+                i
+              )}, ${this.state.yScale(d)})`}
+              fill={this.props.theme}
+              stroke="white"
+              strokeWidth="2"
+            />
+          ))}
+        </g>
+      );
+    }
 
     let chart = (
       <React.Fragment>
@@ -185,6 +211,7 @@ class SingleLine extends Component {
               />
               <g ref={this.yAxisRef} />
             </g>
+            <g className="markers">{markers}</g>
             {tooltipLine}
           </g>
         </svg>

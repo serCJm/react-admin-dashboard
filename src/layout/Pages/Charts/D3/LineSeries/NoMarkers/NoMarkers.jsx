@@ -21,31 +21,31 @@ class NoMarkers extends Component {
   };
   render() {
     return (
-      <div className="line-series">
-        <PageElementWrapper>
-          <div className="p1 no-markers">
-            <h1 className="mt2">Single Line Chart</h1>
-            <p className="mb0">No markers</p>
-            <ContainerDimensions>
-              {({ width }) => (
-                <SingleLine
-                  data={data1}
-                  width={width}
-                  height={250}
-                  lineStyle="single-line-no-markers"
-                  show={this.state.chart}
-                />
-              )}
-            </ContainerDimensions>
-            <button
-              className="mtb1 btn-toggle-chart btn-toggle-chart--blue"
-              onClick={this.handleShowChart}
-            >
-              Series A
-            </button>
-          </div>
-        </PageElementWrapper>
-      </div>
+      <PageElementWrapper>
+        <div className="p1 no-markers">
+          <h1 className="mt2">Single Line Chart</h1>
+          <p className="mb0">No markers</p>
+          <ContainerDimensions>
+            {({ width }) => (
+              <SingleLine
+                data={data1}
+                width={width}
+                height={250}
+                lineStyle="single-line single-line--no-markers"
+                theme="rgb(0, 84, 169)"
+                tooltipClass="rect-tooltip rect-tooltip--no-markers"
+                show={this.state.chart}
+              />
+            )}
+          </ContainerDimensions>
+          <button
+            className="mtb1 btn-toggle-chart btn-toggle-chart--blue"
+            onClick={this.handleShowChart}
+          >
+            Series A
+          </button>
+        </div>
+      </PageElementWrapper>
     );
   }
 }

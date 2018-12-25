@@ -1,7 +1,7 @@
 import React, { PureComponent } from "react";
 import * as d3 from "d3";
-import LineWithCircle from "../../../../../../components/graphs/tooltips/LineWithCircle";
-import TooltipBox from "../../../../../../components/graphs/tooltips/TooltipBox";
+import LineWithCircle from "../../../../../../../components/graphs/tooltips/LineWithCircle";
+import TooltipBox from "../../../../../../../components/graphs/tooltips/TooltipBox";
 
 const margin = { top: 20, bottom: 20, left: 50, right: 50 };
 
@@ -38,7 +38,7 @@ class SingleLine extends PureComponent {
 
   xAxis = d3
     .axisBottom(this.state.xScale)
-    .tickValues(d3.range(10, d3.max(this.props.data, (d, i) => i), 10));
+    .tickValues(d3.range(10, this.props.data.length, 10));
   yAxis = d3
     .axisLeft(this.state.yScale)
     .tickValues(d3.range(10, d3.max(this.props.data, d => d), 10));

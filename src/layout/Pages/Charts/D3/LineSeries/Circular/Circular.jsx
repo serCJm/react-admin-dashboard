@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PageElementWrapper from "../../../../PageElementWrapper";
-import SingleLine from "../SingleLine/SingleLine";
+import SingleLine from "../Charts/SingleLine/SingleLine";
 import ContainerDimensions from "react-container-dimensions";
 
 const data1 = [];

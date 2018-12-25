@@ -4,12 +4,12 @@ import SingleLine from "../Charts/SingleLine/SingleLine";
 import ContainerDimensions from "react-container-dimensions";
 
 const data1 = [];
-for (let i = 0; i <= 100; i++) {
-  const number = Math.random() * 90;
+for (let i = 0; i <= 20; i++) {
+  const number = Math.random() * 35;
   data1.push(number);
 }
 
-class NoMarkers extends Component {
+class TriangleUp extends Component {
   state = {
     chart: true
   };
@@ -22,27 +22,28 @@ class NoMarkers extends Component {
   render() {
     return (
       <PageElementWrapper>
-        <div className="p1 no-markers">
-          <h1 className="mt2">Single Line Chart</h1>
-          <p className="mb0">No markers</p>
+        <div className="p1 triangle-up">
+          <h1 className="mt2">Markers</h1>
+          <p className="mb0">Triangle Up</p>
           <ContainerDimensions>
             {({ width }) => (
               <SingleLine
                 data={data1}
                 width={width}
                 height={250}
-                lineStyle="single-line single-line--no-markers"
-                theme="rgb(0, 84, 169)"
-                tooltipClass="rect-tooltip rect-tooltip--no-markers"
+                lineStyle="single-line single-line--triangle-up"
+                theme="rgb(185, 29, 71)"
+                tooltipClass="rect-tooltip rect-tooltip--triangle-up"
                 show={this.state.chart}
+                markersPath="M0,-5.26429605180997L6.078685485212741,5.26429605180997 -6.078685485212741,5.26429605180997Z"
               />
             )}
           </ContainerDimensions>
           <button
-            className="mtb1 btn-toggle-chart btn-toggle-chart--blue"
+            className="mtb1 btn-toggle-chart btn-toggle-chart--dark-red"
             onClick={this.handleShowChart}
           >
-            Series A
+            triangle up
           </button>
         </div>
       </PageElementWrapper>
@@ -50,4 +51,4 @@ class NoMarkers extends Component {
   }
 }
 
-export default NoMarkers;
+export default TriangleUp;

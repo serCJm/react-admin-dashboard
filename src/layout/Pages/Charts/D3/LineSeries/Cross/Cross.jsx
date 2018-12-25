@@ -4,12 +4,12 @@ import SingleLine from "../Charts/SingleLine/SingleLine";
 import ContainerDimensions from "react-container-dimensions";
 
 const data1 = [];
-for (let i = 0; i <= 100; i++) {
-  const number = Math.random() * 90;
+for (let i = 0; i <= 20; i++) {
+  const number = Math.random() * 35;
   data1.push(number);
 }
 
-class NoMarkers extends Component {
+class Cross extends Component {
   state = {
     chart: true
   };
@@ -22,27 +22,28 @@ class NoMarkers extends Component {
   render() {
     return (
       <PageElementWrapper>
-        <div className="p1 no-markers">
-          <h1 className="mt2">Single Line Chart</h1>
-          <p className="mb0">No markers</p>
+        <div className="p1 cross">
+          <h1 className="mt2">Markers</h1>
+          <p className="mb0">Cross shaped</p>
           <ContainerDimensions>
             {({ width }) => (
               <SingleLine
                 data={data1}
                 width={width}
                 height={250}
-                lineStyle="single-line single-line--no-markers"
-                theme="rgb(0, 84, 169)"
-                tooltipClass="rect-tooltip rect-tooltip--no-markers"
+                lineStyle="single-line single-line--cross"
+                theme="rgb(159, 0, 167)"
+                tooltipClass="rect-tooltip rect-tooltip--cross"
                 show={this.state.chart}
+                markersPath="M-5.366563145999495,-1.7888543819998317H-1.7888543819998317V-5.366563145999495H1.7888543819998317V-1.7888543819998317H5.366563145999495V1.7888543819998317H1.7888543819998317V5.366563145999495H-1.7888543819998317V1.7888543819998317H-5.366563145999495Z"
               />
             )}
           </ContainerDimensions>
           <button
-            className="mtb1 btn-toggle-chart btn-toggle-chart--blue"
+            className="mtb1 btn-toggle-chart btn-toggle-chart--purple"
             onClick={this.handleShowChart}
           >
-            Series A
+            cross
           </button>
         </div>
       </PageElementWrapper>
@@ -50,4 +51,4 @@ class NoMarkers extends Component {
   }
 }
 
-export default NoMarkers;
+export default Cross;

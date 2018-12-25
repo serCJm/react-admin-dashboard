@@ -3105,6 +3105,18 @@ input, textarea {
     color: steelblue; }
   .line-series .circular {
     color: green; }
+  .line-series .square {
+    color: #da532c; }
+  .line-series .triangle-up {
+    color: #b91d47; }
+  .line-series .cross {
+    color: #9f00a7; }
+  .line-series .diamond {
+    color: #00aba9; }
+  .line-series .triangle-down {
+    color: #2d89ef; }
+  .line-series .scatter1000 {
+    color: steelblue; }
   .line-series .single-line {
     stroke-width: 2;
     stroke-linecap: round; }
@@ -3112,6 +3124,20 @@ input, textarea {
     stroke: #0054a9; }
   .line-series .single-line--circular {
     stroke: green; }
+  .line-series .single-line--square {
+    stroke: #da532c; }
+  .line-series .single-line--triangle-up {
+    stroke: #b91d47; }
+  .line-series .single-line--cross {
+    stroke: #9f00a7; }
+  .line-series .single-line--diamond {
+    stroke: #00aba9; }
+  .line-series .single-line--triangle-down {
+    stroke: #2d89ef; }
+  .line-series .scatterplot1000 {
+    fill: steelblue;
+    stroke: white;
+    stroke-width: 1; }
   .line-series .rect-tooltip {
     display: block;
     position: fixed;
@@ -3125,10 +3151,22 @@ input, textarea {
     border: 3px solid #0054a9; }
   .line-series .rect-tooltip--circular {
     border: 3px solid green; }
+  .line-series .rect-tooltip--square {
+    border: 3px solid #da532c; }
+  .line-series .rect-tooltip--triangle-up {
+    border: 3px solid #b91d47; }
+  .line-series .rect-tooltip--cross {
+    border: 3px solid #9f00a7; }
+  .line-series .rect-tooltip--diamond {
+    border: 3px solid #00aba9; }
+  .line-series .rect-tooltip--triangle-down {
+    border: 3px solid #2d89ef; }
+  .line-series .rect-tooltip--scatter1000 {
+    border: 3px solid steelblue; }
   .line-series .btn-toggle-chart {
     background: transparent;
     position: relative;
-    width: 8rem;
+    padding: 1rem 2rem;
     border: none;
     font-weight: bold;
     font-size: 1.3rem;
@@ -3149,6 +3187,30 @@ input, textarea {
     color: green; }
     .line-series .btn-toggle-chart--green:before {
       background: green; }
+  .line-series .btn-toggle-chart--red {
+    color: #da532c; }
+    .line-series .btn-toggle-chart--red:before {
+      background: #da532c; }
+  .line-series .btn-toggle-chart--dark-red {
+    color: #b91d47; }
+    .line-series .btn-toggle-chart--dark-red:before {
+      background: #b91d47; }
+  .line-series .btn-toggle-chart--purple {
+    color: #9f00a7; }
+    .line-series .btn-toggle-chart--purple:before {
+      background: #9f00a7; }
+  .line-series .btn-toggle-chart--ocean {
+    color: #00aba9; }
+    .line-series .btn-toggle-chart--ocean:before {
+      background: #00aba9; }
+  .line-series .btn-toggle-chart--dark-blue {
+    color: #2d89ef; }
+    .line-series .btn-toggle-chart--dark-blue:before {
+      background: #2d89ef; }
+  .line-series .btn-toggle-chart--steelblue {
+    color: steelblue; }
+    .line-series .btn-toggle-chart--steelblue:before {
+      background: steelblue; }
 
 .grid path {
   stroke-width: 0; }

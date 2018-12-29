@@ -16,6 +16,10 @@
         color: rgb(45, 137, 239)
     .scatter1000
         color: rgb(70, 130, 180)
+    .b-spline
+        color: rgb(128, 0, 64)
+    .monotoneX
+        color: rgb(100, 149, 237)
     .single-line
         stroke-width: 2
         stroke-linecap: round
@@ -33,10 +37,14 @@
         stroke: rgb(0, 171, 169)
     .single-line--triangle-down
         stroke: rgb(45, 137, 239)
+    .single-line--b-spline
+        stroke: rgb(128, 0, 64)
     .scatterplot1000
         fill: rgb(70, 130, 180)
         stroke: white
         stroke-width: 1
+    .single-line--monotoneX
+        stroke: rgb(100, 149, 237)
     .rect-tooltip
         display: block
         position: fixed
@@ -62,6 +70,10 @@
         border: 3px solid rgb(45, 137, 239)
     .rect-tooltip--scatter1000
         border: 3px solid rgb(70, 130, 180)
+    .rect-tooltip--b-spline
+        border: 3px solid rgb(128, 0, 64)
+    .rect-tooltip--monotoneX
+        border: 3px solid rgb(100, 149, 237)
     .btn-toggle-chart
         background: transparent
         position: relative
@@ -110,6 +122,14 @@
         color: rgb(70, 130, 180)    
         &:before
             background: rgb(70, 130, 180)
+    .btn-toggle-chart--dark-pink
+        color: rgb(128, 0, 64)   
+        &:before
+            background: rgb(128, 0, 64)
+    .btn-toggle-chart--monotoneX
+        color: rgb(100, 149, 237)   
+        &:before
+            background: rgb(100, 149, 237)
 
 .grid path
     stroke-width: 0

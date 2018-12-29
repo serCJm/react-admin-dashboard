@@ -3117,6 +3117,10 @@ input, textarea {
     color: #2d89ef; }
   .line-series .scatter1000 {
     color: steelblue; }
+  .line-series .b-spline {
+    color: #800040; }
+  .line-series .monotoneX {
+    color: cornflowerblue; }
   .line-series .single-line {
     stroke-width: 2;
     stroke-linecap: round; }
@@ -3134,10 +3138,14 @@ input, textarea {
     stroke: #00aba9; }
   .line-series .single-line--triangle-down {
     stroke: #2d89ef; }
+  .line-series .single-line--b-spline {
+    stroke: #800040; }
   .line-series .scatterplot1000 {
     fill: steelblue;
     stroke: white;
     stroke-width: 1; }
+  .line-series .single-line--monotoneX {
+    stroke: cornflowerblue; }
   .line-series .rect-tooltip {
     display: block;
     position: fixed;
@@ -3163,6 +3171,10 @@ input, textarea {
     border: 3px solid #2d89ef; }
   .line-series .rect-tooltip--scatter1000 {
     border: 3px solid steelblue; }
+  .line-series .rect-tooltip--b-spline {
+    border: 3px solid #800040; }
+  .line-series .rect-tooltip--monotoneX {
+    border: 3px solid cornflowerblue; }
   .line-series .btn-toggle-chart {
     background: transparent;
     position: relative;
@@ -3211,6 +3223,14 @@ input, textarea {
     color: steelblue; }
     .line-series .btn-toggle-chart--steelblue:before {
       background: steelblue; }
+  .line-series .btn-toggle-chart--dark-pink {
+    color: #800040; }
+    .line-series .btn-toggle-chart--dark-pink:before {
+      background: #800040; }
+  .line-series .btn-toggle-chart--monotoneX {
+    color: cornflowerblue; }
+    .line-series .btn-toggle-chart--monotoneX:before {
+      background: cornflowerblue; }
 
 .grid path {
   stroke-width: 0; }

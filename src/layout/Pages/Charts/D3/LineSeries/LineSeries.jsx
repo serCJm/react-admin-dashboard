@@ -7,6 +7,8 @@ import Cross from "./Cross/Cross";
 import Diamond from "./Diamond/Diamond";
 import TriangleDown from "./TriangleDown/TriangleDown";
 import ScatterPlot1000 from "./ScatterPlot/ScatterPlot";
+import BSplineInterpolation from "./BSplineInterpolation/BSplineInterpolation";
+import MonotoneInterpolation from "./MonotoneInterpolation/MonotoneInterpolation";
 
 const LineSeries = () => {
   return (
@@ -19,6 +21,8 @@ const LineSeries = () => {
       <Diamond />
       <TriangleDown />
       <ScatterPlot1000 />
+      <BSplineInterpolation />
+      <MonotoneInterpolation />
     </div>
   );
 };

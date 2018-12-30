@@ -1,5 +1,25 @@
 #root
     height: 100%
+html 
+    box-sizing: border-box
+*, *:before, *:after
+    box-sizing: inherit
+html, body
+    height: 100%
+ul
+    list-style-type: none
+    padding-left: 0
+button
+    border: none
+    outline: none
+a
+    outline: none
+button:focus, button:active
+    outline: 0
+    border: 0
+button::-moz-focus-inner
+    outline: 0
+    border: 0
 // base imports
 @import 'base/vars', 'base/mixins', 'base/typography' 
 // modules imports

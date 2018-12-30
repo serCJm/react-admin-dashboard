@@ -20,6 +20,8 @@
         color: rgb(128, 0, 64)
     .monotoneX
         color: rgb(100, 149, 237)
+    .step-before
+        color: rgb(0, 128, 255)
     .single-line
         stroke-width: 2
         stroke-linecap: round
@@ -45,6 +47,8 @@
         stroke-width: 1
     .single-line--monotoneX
         stroke: rgb(100, 149, 237)
+    .single-line--step-before
+        stroke: rgb(0, 128, 255)
     .rect-tooltip
         display: block
         position: fixed
@@ -74,6 +78,8 @@
         border: 3px solid rgb(128, 0, 64)
     .rect-tooltip--monotoneX
         border: 3px solid rgb(100, 149, 237)
+    .rect-tooltip--step-before
+        border: 3px solid rgb(0, 128, 255)
     .btn-toggle-chart
         background: transparent
         position: relative
@@ -130,6 +136,10 @@
         color: rgb(100, 149, 237)   
         &:before
             background: rgb(100, 149, 237)
+    .btn-toggle-chart--step-before
+        color: rgb(100, 149, 237)   
+        &:before
+            background: rgb(0, 128, 255)
 
 .grid path
     stroke-width: 0

@@ -1,6 +1,34 @@
 #root {
   height: 100%; }
 
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+html, body {
+  height: 100%; }
+
+ul {
+  list-style-type: none;
+  padding-left: 0; }
+
+button {
+  border: none;
+  outline: none; }
+
+a {
+  outline: none; }
+
+button:focus, button:active {
+  outline: 0;
+  border: 0; }
+
+button::-moz-focus-inner {
+  outline: 0;
+  border: 0; }
+
 :root {
   font-size: calc(0.600em + .5vw); }
   @media screen and (min-width: 800px) {
@@ -663,6 +691,8 @@ input, textarea {
         border-left: 4px solid #68a0a5; }
     .home .menu-item.animate-close {
       animation: closeSubmenu 0.2s ease-in-out 1; }
+    .home .menu-item.submenu-parent {
+      width: 100%; }
     .home .menu-item.submenu-parent:after {
       display: inline-block;
       content: "";
@@ -678,7 +708,8 @@ input, textarea {
       transform: rotate(-45deg); }
     .home .menu-item .menu-icon {
       padding: 1rem;
-      width: 3rem; }
+      width: 3rem;
+      text-align: left; }
     .home .menu-item.hover {
       background: #1f272a; }
     .home .menu-item .text {
@@ -2755,6 +2786,9 @@ input, textarea {
     margin-top: 1rem;
     margin-bottom: 15%;
     border-radius: 10px; }
+    @media screen and (min-width: 800px) {
+      .login-container .login-form, .signup-container .login-form {
+        margin-bottom: 0; } }
   .login-container .heading, .signup-container .heading {
     height: 7rem;
     color: #fff;
@@ -3121,6 +3155,8 @@ input, textarea {
     color: #800040; }
   .line-series .monotoneX {
     color: cornflowerblue; }
+  .line-series .step-before {
+    color: #0080ff; }
   .line-series .single-line {
     stroke-width: 2;
     stroke-linecap: round; }
@@ -3146,6 +3182,8 @@ input, textarea {
     stroke-width: 1; }
   .line-series .single-line--monotoneX {
     stroke: cornflowerblue; }
+  .line-series .single-line--step-before {
+    stroke: #0080ff; }
   .line-series .rect-tooltip {
     display: block;
     position: fixed;
@@ -3175,6 +3213,8 @@ input, textarea {
     border: 3px solid #800040; }
   .line-series .rect-tooltip--monotoneX {
     border: 3px solid cornflowerblue; }
+  .line-series .rect-tooltip--step-before {
+    border: 3px solid #0080ff; }
   .line-series .btn-toggle-chart {
     background: transparent;
     position: relative;
@@ -3231,6 +3271,10 @@ input, textarea {
     color: cornflowerblue; }
     .line-series .btn-toggle-chart--monotoneX:before {
       background: cornflowerblue; }
+  .line-series .btn-toggle-chart--step-before {
+    color: cornflowerblue; }
+    .line-series .btn-toggle-chart--step-before:before {
+      background: #0080ff; }
 
 .grid path {
   stroke-width: 0; }

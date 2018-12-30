@@ -22,6 +22,12 @@
         color: rgb(100, 149, 237)
     .step-before
         color: rgb(0, 128, 255)
+    .step-after
+        color: rgb(255, 0, 0)
+    .cardinal
+        color: rgb(128, 0, 255)
+    .linear
+        color: rgb(128, 64, 0)
     .single-line
         stroke-width: 2
         stroke-linecap: round
@@ -49,6 +55,12 @@
         stroke: rgb(100, 149, 237)
     .single-line--step-before
         stroke: rgb(0, 128, 255)
+    .single-line--step-after
+        stroke: rgb(255, 0, 0)
+    .single-line--cardinal
+        stroke: rgb(128, 0, 255)
+    .single-line--linear
+        stroke: rgb(128, 64, 0)
     .rect-tooltip
         display: block
         position: fixed
@@ -80,6 +92,12 @@
         border: 3px solid rgb(100, 149, 237)
     .rect-tooltip--step-before
         border: 3px solid rgb(0, 128, 255)
+    .rect-tooltip--step-after
+        border: 3px solid rgb(255, 0, 0)
+    .rect-tooltip--cardinal
+        border: 3px solid rgb(128, 0, 255)
+    .rect-tooltip--linear
+        border: 3px solid rgb(128, 64, 0)
     .btn-toggle-chart
         background: transparent
         position: relative
@@ -137,9 +155,21 @@
         &:before
             background: rgb(100, 149, 237)
     .btn-toggle-chart--step-before
-        color: rgb(100, 149, 237)   
+        color: rgb(0, 128, 255)  
         &:before
             background: rgb(0, 128, 255)
+    .btn-toggle-chart--step-after
+        color: rgb(255, 0, 0) 
+        &:before
+            background: rgb(255, 0, 0)
+    .btn-toggle-chart--cardinal
+        color: rgb(128, 0, 255)
+        &:before
+            background: rgb(128, 0, 255)
+    .btn-toggle-chart--linear
+        color: rgb(128, 64, 0)
+        &:before
+            background: rgb(128, 64, 0)
 
 .grid path
     stroke-width: 0

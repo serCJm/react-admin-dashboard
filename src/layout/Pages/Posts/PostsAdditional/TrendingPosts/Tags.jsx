@@ -19,7 +19,7 @@ const Tags = () => {
   return (
     <div className="trending-tags">
       {contents.map((content, i) => (
-        <a key={i} className="tag">
+        <a href="#" key={i} className="tag">
           {content}
         </a>
       ))}

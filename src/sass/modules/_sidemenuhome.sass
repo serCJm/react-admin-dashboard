@@ -46,6 +46,8 @@ input, textarea
             @include themes-lighten-border-left(0)
         &.animate-close
             animation: closeSubmenu .2s ease-in-out 1
+        &.submenu-parent
+            width: 100%
         &.submenu-parent:after
             display: inline-block
             content: ''
@@ -62,6 +64,7 @@ input, textarea
         .menu-icon
             padding: 1rem
             width: 3rem
+            text-align: left
         &.hover
             background: shade($darkGrey, 20%)
         .text

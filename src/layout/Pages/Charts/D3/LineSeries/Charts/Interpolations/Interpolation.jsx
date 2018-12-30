@@ -98,6 +98,12 @@ class Interpolation extends PureComponent {
       interpolationType = d3.curveMonotoneX;
     } else if (type === "step-before") {
       interpolationType = d3.curveStepBefore;
+    } else if (type === "step-after") {
+      interpolationType = d3.curveStepAfter;
+    } else if (type === "cardinal") {
+      interpolationType = d3.curveCardinal;
+    } else if (type === "linear") {
+      interpolationType = d3.curveLinear;
     }
 
     lineGenerator.curve(interpolationType);

@@ -10,6 +10,9 @@ import ScatterPlot1000 from "./ScatterPlot/ScatterPlot";
 import BSplineInterpolation from "./BSplineInterpolation/BSplineInterpolation";
 import MonotoneInterpolation from "./MonotoneInterpolation/MonotoneInterpolation";
 import StepBefore from "./StepBefore/StepBefore";
+import StepAfter from "./StepAfter/StepAfter";
+import Cardinal from "./Cardinal/Cardinal";
+import Linear from "./Linear/Linear";
 
 const LineSeries = () => {
   return (
@@ -25,6 +28,9 @@ const LineSeries = () => {
       <BSplineInterpolation />
       <MonotoneInterpolation />
       <StepBefore />
+      <StepAfter />
+      <Cardinal />
+      <Linear />
     </div>
   );
 };

@@ -1,17 +1,19 @@
-import React, { Component } from "react";
+import React, { Component, Suspense } from "react";
+import { Route } from "react-router-dom";
 import Dashboard from "./Dashboard/Dashboard";
 import Inbox from "./Mailbox/Inbox/Inbox";
 import Mail from "./Mailbox/Mail/Mail";
 import Compose from "./Mailbox/Compose/Compose";
 import Gallery from "./Gallery/Gallery";
 import Social from "./Social/Social";
-import Posts from "./Posts/Posts";
+//import Posts from "./Posts/Posts";
 import SinglePost from "./Posts/SinglePost";
 import Invoice from "./Invoice/Invoice";
 import Pricing from "./Pricing/Pricing";
-import { Route } from "react-router-dom";
 import Panels from "./Panels/Panels";
 import LineSeries from "./Charts/D3/LineSeries/LineSeries";
+
+const Posts = React.lazy(() => import("./Posts/Posts"));
 
 class Pages extends Component {
   state = {
@@ -45,7 +47,9 @@ class Pages extends Component {
         <Route exact path="/compose" component={Compose} />
         <Route exact path="/gallery" component={Gallery} />
         <Route exact path="/social" component={Social} />
-        <Route exact path="/posts" component={Posts} />
+        <Suspense fallback={<div>Loading...</div>}>
+          <Route exact path="/posts" render={() => <Posts />} />
+        </Suspense>
         <Route exact path="/singlePost" component={SinglePost} />
         <Route exact path="/invoice" component={Invoice} />
         <Route exact path="/pricing-tables" component={Pricing} />

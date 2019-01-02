@@ -65,7 +65,7 @@ class SideMenuHomeItem extends Component {
       <li>
         <AuthContext.Consumer>
           {({ handleAuthentication }) => (
-            <ThemeContext>
+            <ThemeContext.Consumer>
               {({ theme }) =>
                 id === "mailbox" ||
                 id === "blog" ||
@@ -136,7 +136,7 @@ class SideMenuHomeItem extends Component {
                   </NavLink>
                 )
               }
-            </ThemeContext>
+            </ThemeContext.Consumer>
           )}
         </AuthContext.Consumer>
         {submenu && this.state.showSubmenu ? (

@@ -9,7 +9,7 @@ const ListMenuOptionsItem = props => {
     styleClass += " " + props.classNames.active;
   }
   return (
-    <ThemeContext>
+    <ThemeContext.Consumer>
       {({ theme }) => (
         <li
           className={`${styleClass} ${theme}`}
@@ -18,7 +18,7 @@ const ListMenuOptionsItem = props => {
           {props.item}
         </li>
       )}
-    </ThemeContext>
+    </ThemeContext.Consumer>
   );
 };
 

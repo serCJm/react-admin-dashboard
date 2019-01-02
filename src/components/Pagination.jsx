@@ -134,7 +134,7 @@ class Pagination extends Component {
               </li>
             );
           return (
-            <ThemeContext key={i}>
+            <ThemeContext.Consumer key={i}>
               {({ theme }) => (
                 <li
                   className={`page-item${
@@ -149,7 +149,7 @@ class Pagination extends Component {
                   </button>
                 </li>
               )}
-            </ThemeContext>
+            </ThemeContext.Consumer>
           );
         })}
       </ul>

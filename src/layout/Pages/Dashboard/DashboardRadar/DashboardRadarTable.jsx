@@ -21,14 +21,14 @@ const content = [
     text: "43,000 (+50%)",
     data: Array.from({ length: 15 }, () => Math.floor(Math.random() * 20)),
     areaColor: "rgb(184, 212, 242)",
-    className: "transactions"
+    className: "mlr05 transactions"
   },
   {
     title: "Conversions:",
     text: "2000 (+75%)",
     data: Array.from({ length: 15 }, () => Math.floor(Math.random() * 20)),
     areaColor: "rgb(69, 225, 206)",
-    className: "conversions"
+    className: "mlr05 conversions"
   }
 ];
 

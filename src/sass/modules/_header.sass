@@ -2,15 +2,14 @@
 .header-top-menu
     height: 6rem
     margin-left: 0
-    min-width: 400px
     display: flex
     justify-content: space-between
     transition: all .5s
     &.sidemenu-open
         margin-left: $sidemenuWidth
     .menu-btn
+        flex: 0 6rem
         @include flexCenter
-        width: 8rem
         @include themes-lighten-hover(2%)
         &-icon
             display: flex
@@ -24,15 +23,17 @@
                 background: $white
                 height: .3rem
     .logo
+        flex: auto
         @include flexCenter
         background: $darkGrey
         margin: 0
-        width: 100%
         color: #fff
         text-transform: uppercase
+        overflow: hidden
         @media #{$large-screen}
             justify-content: space-between
             padding-left: 2rem
+            overflow: visible
     .header-controls
         display: flex
         height: 100%

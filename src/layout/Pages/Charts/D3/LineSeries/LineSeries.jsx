@@ -17,14 +17,18 @@ import Linear from "./Linear/Linear";
 const LineSeries = () => {
   return (
     <div className="line-series">
-      <NoMarkers />
+      <div className="line-series__row">
+        <NoMarkers />
+      </div>
       <Circular />
       <Square />
       <TriangleUp />
       <Cross />
       <Diamond />
       <TriangleDown />
-      <ScatterPlot1000 />
+      <div className="line-series__row">
+        <ScatterPlot1000 />
+      </div>
       <BSplineInterpolation />
       <MonotoneInterpolation />
       <StepBefore />

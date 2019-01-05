@@ -3181,7 +3181,14 @@ input, textarea {
   grid-column: span 2; }
 
 .line-series {
-  text-align: center; }
+  text-align: center;
+  display: grid; }
+  @media screen and (min-width: 800px) {
+    .line-series {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px; }
+      .line-series .line-series__row {
+        grid-column: 1/3; } }
   .line-series .no-markers {
     color: steelblue; }
   .line-series .circular {

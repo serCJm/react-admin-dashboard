@@ -15,7 +15,7 @@ const InboxMailItem = ({ contents }) => {
                 height={50}
                 alt={item.name}
               />
-              <div>
+              <div className="inbox-mail-desc">
                 <h3>
                   {item.name}
                   {item.count ? <span> ({item.count})</span> : null}

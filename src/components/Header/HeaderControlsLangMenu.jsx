@@ -9,7 +9,7 @@ const HeaderControlsLangMenu = ({
 }) => {
   return (
     <HeaderHoverMenu heading="Choose A Locale" positionClass="''">
-      <ThemeContext>
+      <ThemeContext.Consumer>
         {({ theme }) => (
           <ul className="hover-menu-list">
             {languages.map(lang => (
@@ -28,7 +28,7 @@ const HeaderControlsLangMenu = ({
             ))}
           </ul>
         )}
-      </ThemeContext>
+      </ThemeContext.Consumer>
     </HeaderHoverMenu>
   );
 };

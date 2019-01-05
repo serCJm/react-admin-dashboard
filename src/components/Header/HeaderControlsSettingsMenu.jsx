@@ -5,7 +5,7 @@ import { ThemeContext } from "./theme-context";
 const HeaderControlsSettingsMenu = ({ current, handleChooseDimension }) => {
   return (
     <HeaderHoverMenu heading="Dimension" positionClass="settings-menu">
-      <ThemeContext>
+      <ThemeContext.Consumer>
         {({ theme }) => (
           <React.Fragment>
             <h2
@@ -59,7 +59,7 @@ const HeaderControlsSettingsMenu = ({ current, handleChooseDimension }) => {
             </form>
           </React.Fragment>
         )}
-      </ThemeContext>
+      </ThemeContext.Consumer>
     </HeaderHoverMenu>
   );
 };

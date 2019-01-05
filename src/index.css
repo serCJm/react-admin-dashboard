@@ -228,6 +228,10 @@ p {
   margin-top: 2rem;
   margin-bottom: 2rem; }
 
+.mlr05 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem; }
+
 .p1 {
   padding: 1rem; }
 
@@ -287,17 +291,16 @@ p {
 .header-top-menu {
   height: 6rem;
   margin-left: 0;
-  min-width: 400px;
   display: flex;
   justify-content: space-between;
   transition: all 0.5s; }
   .header-top-menu.sidemenu-open {
     margin-left: 26rem; }
   .header-top-menu .menu-btn {
+    flex: 0 6rem;
     display: flex;
     justify-content: center;
-    align-items: center;
-    width: 8rem; }
+    align-items: center; }
     .header-top-menu .menu-btn.theme-default:hover {
       background: #eb7e6a; }
     .header-top-menu .menu-btn.theme-green:hover {
@@ -322,18 +325,20 @@ p {
         background: #fff;
         height: 0.3rem; }
   .header-top-menu .logo {
+    flex: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     background: #273135;
     margin: 0;
-    width: 100%;
     color: #fff;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    overflow: hidden; }
     @media screen and (min-width: 800px) {
       .header-top-menu .logo {
         justify-content: space-between;
-        padding-left: 2rem; } }
+        padding-left: 2rem;
+        overflow: visible; } }
   .header-top-menu .header-controls {
     display: flex;
     height: 100%; }
@@ -1155,7 +1160,8 @@ input, textarea {
     width: 100%;
     color: #fff; }
   .lock-time {
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    text-align: center; }
   .lock-date {
     flex: 1; }
   .lock-form {
@@ -1580,12 +1586,16 @@ input, textarea {
         color: #fff;
         padding: 0.5rem; }
       .dashboard-radar .radar-table .radar-table-row .bounce-rate {
+        text-align: center;
         background: #ea7882; }
       .dashboard-radar .radar-table .radar-table-row .new-visits {
+        text-align: center;
         background: #34b398; }
       .dashboard-radar .radar-table .radar-table-row .transactions {
+        text-align: center;
         background: #79b0ec; }
       .dashboard-radar .radar-table .radar-table-row .conversions {
+        text-align: center;
         background: #fac497; }
 
 .dashboard-summary-menu {
@@ -1825,8 +1835,13 @@ input, textarea {
   overflow-y: auto;
   position: relative; }
 
+.direction-container {
+  width: 100%; }
+
 .MicrosoftMap.dirSDK .directionsPanel {
-  margin: 0 auto; }
+  margin: 0 auto;
+  width: 100% !important;
+  max-width: 500px; }
 
 @media screen and (min-width: 800px) {
   .dashboard {
@@ -1911,6 +1926,7 @@ input, textarea {
     .inbox .instrument-panel .avatar-container {
       flex: 0 0 11rem;
       display: flex;
+      margin-left: 1rem;
       justify-content: space-between;
       align-items: center;
       color: #7b7b7b; }
@@ -1918,6 +1934,11 @@ input, textarea {
         border-radius: 50%;
         width: 50px;
         height: 50px; }
+      .inbox .instrument-panel .avatar-container .avatar-name {
+        display: none; }
+        @media screen and (min-width: 800px) {
+          .inbox .instrument-panel .avatar-container .avatar-name {
+            display: block; } }
   .inbox .sidemenu {
     display: none;
     grid-column: 1/2;
@@ -1997,6 +2018,7 @@ input, textarea {
           color: #43525a;
           margin: 0; }
       .inbox .inbox-mail .inbox-mail-item .inbox-mail-avatar {
+        display: none;
         border-radius: 50%;
         margin-right: 1.5rem;
         padding: 0.2rem; }
@@ -2020,6 +2042,9 @@ input, textarea {
           border: 2px solid #ee682f; }
         .inbox .inbox-mail .inbox-mail-item .inbox-mail-avatar.label-style10 {
           border: 2px solid #fadd7f; }
+        @media screen and (min-width: 800px) {
+          .inbox .inbox-mail .inbox-mail-item .inbox-mail-avatar {
+            display: block; } }
       .inbox .inbox-mail .inbox-mail-item .inbox-mail-text {
         margin: 0;
         margin-top: 0.5rem; }
@@ -2050,7 +2075,11 @@ input, textarea {
           .inbox .inbox-mail .inbox-mail-item .inbox-mail-text .inbox-mail-label.label-style10 {
             background: #fadd7f; }
       .inbox .inbox-mail .inbox-mail-item .inbox-mail-date {
+        display: none;
         flex: 0 0 9rem; }
+        @media screen and (min-width: 800px) {
+          .inbox .inbox-mail .inbox-mail-item .inbox-mail-date {
+            display: block; } }
       .inbox .inbox-mail .inbox-mail-item .inbox-mail-date p {
         margin: 0 2rem;
         text-align: right;
@@ -2109,11 +2138,17 @@ input, textarea {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-left: 1rem;
     color: #7b7b7b; }
     .mail .instrument-panel .avatar-container .inbox-avatar {
       border-radius: 50%;
       width: 50px;
       height: 50px; }
+    .mail .instrument-panel .avatar-container .avatar-name {
+      display: none; }
+      @media screen and (min-width: 800px) {
+        .mail .instrument-panel .avatar-container .avatar-name {
+          display: block; } }
 .mail .mail-header {
   display: flex;
   justify-content: space-between;
@@ -2135,7 +2170,8 @@ input, textarea {
       border-radius: 50%; }
   .mail .mail-header-date {
     margin: 0 2rem;
-    text-align: center; }
+    text-align: center;
+    display: none; }
     .mail .mail-header-date p {
       font-size: 1.3rem;
       margin: 0 0 0.3rem; }
@@ -2144,6 +2180,9 @@ input, textarea {
       background: #79b0ec;
       color: #fff;
       border-radius: 20px; }
+    @media screen and (min-width: 800px) {
+      .mail .mail-header-date {
+        display: block; } }
 .mail .mail-body {
   padding: 2rem;
   color: #89949b;
@@ -2242,6 +2281,11 @@ input, textarea {
         border-radius: 50%;
         width: 50px;
         height: 50px; }
+      .compose .compose-controls .avatar-container .avatar-name {
+        display: none; }
+        @media screen and (min-width: 800px) {
+          .compose .compose-controls .avatar-container .avatar-name {
+            display: block; } }
   .compose .compose-send-form {
     margin-top: 1rem;
     padding-bottom: 2rem;
@@ -2286,6 +2330,8 @@ input, textarea {
     .gallery .gallery-item .gallery-img {
       padding: 1rem;
       width: 100%;
+      height: 100%;
+      object-fit: cover;
       max-height: 25rem; }
     .gallery .gallery-item .gallery-title {
       color: #43525a; }
@@ -2777,8 +2823,8 @@ input, textarea {
     font-style: italic; }
 
 .login-container, .signup-container {
-  width: 100vw;
-  height: 100vh;
+  min-width: 100vw;
+  min-height: 100vh;
   background: #43525a; }
   .login-container .login-form, .signup-container .login-form {
     width: 40rem;

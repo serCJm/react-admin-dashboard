@@ -949,6 +949,7 @@ input, textarea {
         height: 40px;
         color: #fff; }
         .side-menu .graphs .stock-info .yearly-change .text, .side-menu .graphs .market-info .yearly-change .text {
+          color: #fff;
           padding: 0; }
     .side-menu .graphs .cur {
       color: #fadd7c;

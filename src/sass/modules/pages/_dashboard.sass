@@ -138,8 +138,10 @@
                     &:before
                         background: rgb(255, 38, 166)
         .social-toggles
+            display: block
             width: 100%
             border-collapse: collapse
+            padding-right: .5rem
             @media #{$large-screen}
                 flex: 85%
             .social-toggle-row:not(:last-of-type)
@@ -231,7 +233,7 @@
                 border: 0
             &-text
                 color: rgb(136, 135, 146)
-                padding: 2rem 0
+                padding: 2rem 1rem
     .dashboard-overview-revenue
         background: rgb(124, 212, 186)
         color: $white

@@ -1972,6 +1972,9 @@ input, textarea {
     display: flex;
   }
 }
+.dashboard-overview .dashboard-overview-revenue .revenue-info {
+  padding: 0 1rem;
+}
 @media screen and (min-width: 800px) {
   .dashboard-overview .dashboard-overview-revenue .revenue-info {
     flex: 30%;

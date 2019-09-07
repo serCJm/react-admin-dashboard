@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Header from "./layout/Header";
 import Pages from "./layout/Pages/Pages";
 import { ThemeContext, themes } from "./components/Header/theme-context";
+import Spinner from "./components/UI/Spinner/Spinner";
 
 class Main extends Component {
   handleThemeChange = themeID => {

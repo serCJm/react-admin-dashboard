@@ -1,6 +1,8 @@
 import React, { Component, Suspense } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { AuthContext } from "./components/Header/auth-context";
+import Spinner from "./components/UI/Spinner/Spinner";
+
 
 const Lock = React.lazy(() => import("./layout/Pages/Lock"))
 const Login = React.lazy(() => import("./layout/Pages/Login"))
@@ -47,7 +49,7 @@ class App extends Component {
       );
     }
     return (
-      <Suspense fallback={"...loading"}>
+      <Suspense fallback={<Spinner/>}>
       <BrowserRouter>
         <AuthContext.Provider value={this.state}>
           {content}

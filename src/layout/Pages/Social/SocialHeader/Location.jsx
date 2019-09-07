@@ -27,7 +27,7 @@ class Location extends Component {
           >
             <FontAwesomeIcon icon={faHeart} />
           </span>
-          {this.state.likes + "likes"}
+          {this.state.likes + " likes"}
         </button>
       </div>
     );

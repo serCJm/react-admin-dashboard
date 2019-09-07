@@ -29,11 +29,11 @@
         &:before
             position: absolute
             bottom: 4px
-            left: 0
+            left: -1rem
             content: ''
             width: 1rem
             height: 1rem
-            background: rgb(102, 102, 255)    
+            background: rgb(102, 102, 255)
         &.hide
             color: lighten(rgb(102, 102, 255), 20%)
             &:before
@@ -128,7 +128,7 @@
                         content: ''
                         width: 1rem
                         height: 1rem
-                        background: rgb(102, 102, 255) 
+                        background: rgb(102, 102, 255)
                 .male
                     color: rgb(76, 154, 241)
                     &:before
@@ -182,8 +182,8 @@
                 border: 2px solid #e9e9e9
                 background-color: $white
                 box-shadow: 0px 0px 0px 0px rgb(223, 223, 223) inset
-                transition: border 1s ease 0s, box-shadow 3s ease 0s 
-            .slider:before 
+                transition: border 1s ease 0s, box-shadow 3s ease 0s
+            .slider:before
                 position: absolute
                 content: ""
                 height: 3rem
@@ -200,7 +200,7 @@
                 box-shadow: 0px 0px 0px 16px rgb(100, 189, 99) inset
                 transition: border 2.4s ease 0s, box-shadow 0.4s ease 0s, background-color 2s ease 0s
             input:focus + .slider
-                outline: none 
+                outline: none
                 box-shadow: none
             input:checked + .slider:before
                 transform: translateX(2rem)
@@ -247,7 +247,7 @@
                 justify-content: center
         .title
             margin: 0 auto 2rem
-            padding-top: 2rem   
+            padding-top: 2rem
         .hr
             width: 90%
             background-color: rgb(98, 205, 173)
@@ -290,7 +290,7 @@
         display: flex
         justify-content: center
         margin-top: 2rem
-        .toolTip 
+        .toolTip
             pointer-events: none
             position: fixed
             display: none
@@ -303,7 +303,7 @@
             line-height: 1.3
             color: $white
             box-shadow: 0px 3px 9px rgba(0, 0, 0, .15)
-            &:after 
+            &:after
                 content: ""
                 width: 0
                 height: 0
@@ -314,7 +314,7 @@
                 bottom: -10px
                 left: 50%
                 margin-left: -12px
-            & span 
+            & span
                 font-weight: 500
                 color: $white
     .radar-table
@@ -517,7 +517,7 @@
                         border-radius: 5px
                         height: 2.5rem
                         overflow: hidden
-                        color: $white   
+                        color: $white
                 .tickets-performance-value
                     margin-right: 2rem
                     padding: .2rem .5rem
@@ -531,7 +531,7 @@
     .time-icon-container
         width: 90%
         height: 5rem
-        margin: 2rem auto 
+        margin: 2rem auto
         display: flex
         justify-content: center
         align-items: center
@@ -545,7 +545,7 @@
             vertical-align: middle
             color: rgb(52, 179, 153)
             &:hover
-                background: rgb(237, 238, 237)  
+                background: rgb(237, 238, 237)
                 color: darken(rgb(52, 179, 153), 10%)
     .time-picker-container
         display: flex
@@ -595,7 +595,7 @@
         display: grid
         grid-template-columns: repeat(5, minmax(0, 1fr))
         // grid-template-rows: auto 100px 100px 100px auto
-        grid-gap: 20px 
+        grid-gap: 20px
         max-width: 100%
     .page-element-container.dashboard-overview
         @media #{$large-screen}
@@ -617,23 +617,23 @@
             grid-column: 3/6
             grid-row: 3/4
 
-        
-            
-            
-            
-
-
-            
-
-                
-                
-                
-
-
-                
 
 
 
-        
 
-                        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

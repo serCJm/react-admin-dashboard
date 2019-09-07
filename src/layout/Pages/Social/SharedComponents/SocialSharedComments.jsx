@@ -19,7 +19,7 @@ const SocialSharedComments = ({ comments }) => {
                 <p className="text">{comment.comment}</p>
               </div>
             </div>
-            <p>
+            <p className="shared-comments-time">
               <strong>{comment.time}</strong>
             </p>
           </li>

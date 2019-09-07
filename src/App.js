@@ -1,10 +1,11 @@
-import React, { Component } from "react";
-import Lock from "./layout/Pages/Lock";
-import Login from "./layout/Pages/Login";
-import Signup from "./layout/Pages/Signup";
-import Main from "./Main";
+import React, { Component, Suspense } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { AuthContext } from "./components/Header/auth-context";
+
+const Lock = React.lazy(() => import("./layout/Pages/Lock"))
+const Login = React.lazy(() => import("./layout/Pages/Login"))
+const Signup = React.lazy(() => import("./layout/Pages/Signup"))
+const Main = React.lazy(() => import("./Main"))
 
 class App extends Component {
   handleAuthentication = () => {
@@ -46,11 +47,13 @@ class App extends Component {
       );
     }
     return (
+      <Suspense fallback={"...loading"}>
       <BrowserRouter>
         <AuthContext.Provider value={this.state}>
           {content}
         </AuthContext.Provider>
       </BrowserRouter>
+      </Suspense>
     );
   }
 }

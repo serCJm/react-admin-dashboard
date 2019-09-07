@@ -693,9 +693,10 @@ p {
 }
 .header-top-menu .header-controls .hover-menu-notifications-btn {
   width: 50%;
-  padding: 0.5rem;
+  padding: 1rem;
   background: #f9fafb;
   transition: background 0.7s;
+  cursor: pointer;
 }
 .header-top-menu .header-controls .hover-menu-notifications-btn:first-of-type {
   border-right: 2px solid #e9ebee;
@@ -1690,7 +1691,7 @@ input, textarea {
 .dashboard-overview .intChartToggle:before {
   position: absolute;
   bottom: 4px;
-  left: 0;
+  left: -1rem;
   content: "";
   width: 1rem;
   height: 1rem;
@@ -1779,20 +1780,20 @@ input, textarea {
     justify-content: space-around;
   }
 }
-.dashboard-overview .dashboard-overview-toggles .demographics .male {
+.dashboard-overview .dashboard-overview-toggles .visitors-chart .demographics .male {
   fill: #4c9af1;
 }
-.dashboard-overview .dashboard-overview-toggles .demographics .female {
+.dashboard-overview .dashboard-overview-toggles .visitors-chart .demographics .female {
   fill: #ff26a6;
 }
-.dashboard-overview .dashboard-overview-toggles .demographics .xAxisGrid line, .dashboard-overview .dashboard-overview-toggles .demographics .yAxisGrid line {
+.dashboard-overview .dashboard-overview-toggles .visitors-chart .demographics .xAxisGrid line, .dashboard-overview .dashboard-overview-toggles .visitors-chart .demographics .yAxisGrid line {
   stroke: #d3d8ff;
 }
-.dashboard-overview .dashboard-overview-toggles .demographics .center-axis path {
+.dashboard-overview .dashboard-overview-toggles .visitors-chart .demographics .center-axis path {
   stroke: #d3d8ff;
   stroke-width: 3;
 }
-.dashboard-overview .dashboard-overview-toggles .demographics .rect-tooltip {
+.dashboard-overview .dashboard-overview-toggles .visitors-chart .demographics .rect-tooltip {
   display: block;
   position: fixed;
   padding: 0 1rem;
@@ -1802,40 +1803,42 @@ input, textarea {
   border: 3px solid #273135;
   border-radius: 5px;
 }
-.dashboard-overview .dashboard-overview-toggles .demographics .male-female-visitors {
+.dashboard-overview .dashboard-overview-toggles .visitors-chart .male-female-visitors {
   display: flex;
   justify-content: center;
 }
-.dashboard-overview .dashboard-overview-toggles .demographics .male-female-visitors .male, .dashboard-overview .dashboard-overview-toggles .demographics .male-female-visitors .female {
+.dashboard-overview .dashboard-overview-toggles .visitors-chart .male-female-visitors .male, .dashboard-overview .dashboard-overview-toggles .visitors-chart .male-female-visitors .female {
   cursor: pointer;
   width: 10rem;
   margin: 0 0 1rem;
   position: relative;
 }
-.dashboard-overview .dashboard-overview-toggles .demographics .male-female-visitors .male:before, .dashboard-overview .dashboard-overview-toggles .demographics .male-female-visitors .female:before {
+.dashboard-overview .dashboard-overview-toggles .visitors-chart .male-female-visitors .male:before, .dashboard-overview .dashboard-overview-toggles .visitors-chart .male-female-visitors .female:before {
   position: absolute;
   bottom: 2px;
-  left: 5px;
+  left: 0;
   content: "";
   width: 1rem;
   height: 1rem;
   background: #6666ff;
 }
-.dashboard-overview .dashboard-overview-toggles .demographics .male-female-visitors .male {
+.dashboard-overview .dashboard-overview-toggles .visitors-chart .male-female-visitors .male {
   color: #4c9af1;
 }
-.dashboard-overview .dashboard-overview-toggles .demographics .male-female-visitors .male:before {
+.dashboard-overview .dashboard-overview-toggles .visitors-chart .male-female-visitors .male:before {
   background: #4c9af1;
 }
-.dashboard-overview .dashboard-overview-toggles .demographics .male-female-visitors .female {
+.dashboard-overview .dashboard-overview-toggles .visitors-chart .male-female-visitors .female {
   color: #ff26a6;
 }
-.dashboard-overview .dashboard-overview-toggles .demographics .male-female-visitors .female:before {
+.dashboard-overview .dashboard-overview-toggles .visitors-chart .male-female-visitors .female:before {
   background: #ff26a6;
 }
 .dashboard-overview .dashboard-overview-toggles .social-toggles {
+  display: block;
   width: 100%;
   border-collapse: collapse;
+  padding-right: 0.5rem;
 }
 @media screen and (min-width: 800px) {
   .dashboard-overview .dashboard-overview-toggles .social-toggles {
@@ -1956,7 +1959,7 @@ input, textarea {
 }
 .dashboard-overview .dashboard-overview-toggles .note-text {
   color: #888792;
-  padding: 2rem 0;
+  padding: 2rem 1rem;
 }
 .dashboard-overview .dashboard-overview-revenue {
   background: #7cd4ba;
@@ -3330,8 +3333,7 @@ input, textarea {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 2rem;
-  height: 7rem;
+  padding: 1rem 2rem;
   color: #89949b;
   border-bottom: 1px solid #eaedf1;
 }
@@ -3347,6 +3349,10 @@ input, textarea {
   margin: 0 0 0.5rem;
   color: #43525a;
   font-size: 1.6rem;
+}
+.social .shared-comments-time {
+  width: 12rem;
+  text-align: right;
 }
 
 @media screen and (min-width: 800px) {

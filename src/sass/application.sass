@@ -1,11 +1,20 @@
+@font-face
+    font-family: 'Roboto'
+    src: local('Roboto'), url(./fonts/Roboto/Roboto-Regular.ttf) format('ttf')
+@font-face
+    font-family: 'OpenSans'
+    src: local('OpenSans'), url(./fonts/Open_Sans/OpenSans-Regular.ttf) format('ttf')
 #root
     height: 100%
-html 
+html
     box-sizing: border-box
 *, *:before, *:after
     box-sizing: inherit
 html, body
     height: 100%
+    font-family: 'OpenSans', sans-serif
+h1, h2, h3, h4, h5
+    font-family: 'Roboto', sans-serif
 ul
     list-style-type: none
     padding-left: 0
@@ -21,6 +30,6 @@ button::-moz-focus-inner
     outline: 0
     border: 0
 // base imports
-@import 'base/vars', 'base/mixins', 'base/typography' 
+@import 'base/vars', 'base/mixins', 'base/typography'
 // modules imports
 @import 'base/_globals', 'modules/_header', 'modules/_sidemenu', 'modules/_lock', 'modules/pages/_pages', 'modules/pages/_dashboard', 'modules/pages/mailbox/_inbox', 'modules/pages/mailbox/_mail', 'modules/pages/mailbox/_compose', 'modules/pages/_gallery', 'modules/pages/_social', 'modules/pages/_posts', 'modules/_pagination', 'modules/pages/_single-post', 'modules/_login', 'modules/pages/_invoice', 'modules/pages/_pricing', 'modules/pages/_panels', 'modules/pages/_d3'

@@ -1,4 +1,4 @@
-import React, { Component, Suspense } from "react";
+import React, { Suspense } from "react";
 import { Route } from "react-router-dom";
 import Dashboard from "./Dashboard/Dashboard";
 import Spinner from "../../components/UI/Spinner/Spinner";

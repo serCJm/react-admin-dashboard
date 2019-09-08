@@ -4,13 +4,8 @@ import { faSyncAlt } from "@fortawesome/free-solid-svg-icons";
 
 class PageElementWrapper extends Component {
   state = {
-    controlsMenu: false,
     minimize: false,
     showElement: true
-  };
-
-  handleHover = () => {
-    this.setState(prevState => ({ controlsMenu: !prevState.controlsMenu }));
   };
 
   handleMinimize = () => {
@@ -35,8 +30,6 @@ class PageElementWrapper extends Component {
         className={`page-element-container ${
           this.props.classId ? this.props.classId : ""
         }`}
-        onMouseOver={this.handleHover}
-        onMouseOut={this.handleHover}
       >
         {this.state.showElement ? (
           <div className={pageElementClass}>

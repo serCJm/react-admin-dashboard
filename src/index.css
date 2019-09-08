@@ -1707,7 +1707,7 @@ input, textarea {
 .dashboard-overview .time-label {
   margin-top: 0;
 }
-.dashboard-overview .dashboard-oberview-extra {
+.dashboard-overview .dashboard-overview-extra {
   display: flex;
   flex-wrap: wrap;
 }

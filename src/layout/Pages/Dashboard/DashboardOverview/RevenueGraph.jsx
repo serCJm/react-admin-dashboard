@@ -2,11 +2,7 @@ import React from "react";
 import SimpleBarChart from "../../../../components/graphs/SimpleBarChart";
 import ContainerDimensions from "react-container-dimensions";
 
-const dataDailyLoad = [];
-for (let i = 0; i < 14; i++) {
-  const newNumber = Math.round(Math.random() * 100);
-  dataDailyLoad.push(newNumber);
-}
+const dataDailyLoad = [54, 90, 85, 20, 36, 76, 35, 96, 50, 46, 25, 73, 72, 50];
 
 const RevenueGraph = () => {
   return (

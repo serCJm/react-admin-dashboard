@@ -136,35 +136,37 @@ class InteractiveChart extends Component {
   }
 
   handleMouseHover = e => {
-    // get mouse coordinates
-    this.pt.x = e.clientX;
+    if (this.props.data) {
+      // get mouse coordinates
+      this.pt.x = e.clientX;
 
-    // mouse coordinates relative to svg
-    const cursporpt = this.pt.matrixTransform(
-      this.svg.current.getScreenCTM().inverse()
-    );
+      // mouse coordinates relative to svg
+      const cursporpt = this.pt.matrixTransform(
+        this.svg.current.getScreenCTM().inverse()
+      );
 
-    const { xScale, yScale } = { ...this.state };
+      const { xScale, yScale } = { ...this.state };
 
-    const xValue = xScale.invert(Math.round(cursporpt.x) - margin.left - 1);
+      const xValue = xScale.invert(Math.round(cursporpt.x) - margin.left - 1);
 
-    const bisectDate = d3.bisector(d => d.date).left;
-    const i = bisectDate(this.props.data, xValue, 1);
-    const d0 = this.props.data[i - 1];
-    const d1 = this.props.data[i];
-    const d = xValue - d0.date > d1.date - xValue ? d1 : d0;
+      const bisectDate = d3.bisector(d => d.date).left;
+      const i = bisectDate(this.props.data, xValue, 1);
+      const d0 = this.props.data[i - 1];
+      const d1 = this.props.data[i];
+      const d = xValue - d0.date > d1.date - xValue ? d1 : d0;
 
-    const tooltip = { ...this.state.tooltip };
-    tooltip.show = true;
-    tooltip.xGraph = xScale(d.date);
-    tooltip.yGraph = yScale(d.number);
-    tooltip.mouseXAbs = e.clientX;
-    tooltip.mouseYAbs = e.clientY;
-    const timeFormat = d3.timeFormat("%b %Y");
-    tooltip.text1 = timeFormat(d.date);
-    tooltip.text2 = d.number;
-    if (tooltip.text1 !== this.state.tooltip.text1) {
-      this.setState({ tooltip: tooltip });
+      const tooltip = { ...this.state.tooltip };
+      tooltip.show = true;
+      tooltip.xGraph = xScale(d.date);
+      tooltip.yGraph = yScale(d.number);
+      tooltip.mouseXAbs = e.clientX;
+      tooltip.mouseYAbs = e.clientY;
+      const timeFormat = d3.timeFormat("%b %Y");
+      tooltip.text1 = timeFormat(d.date);
+      tooltip.text2 = d.number;
+      if (tooltip.text1 !== this.state.tooltip.text1) {
+        this.setState({ tooltip: tooltip });
+      }
     }
   };
 

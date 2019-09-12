@@ -1,19 +1,11 @@
-import React, { Component, Suspense } from "react";
+import React, { Component } from "react";
 import Avatar from "../Avatar";
 import SideMenuOptions from "./SideMenuOptions";
 import SideMenuHome from "./SideMenuHome";
-import Spinner from "../UI/Spinner/Spinner";
-// import SideMenuUsers from "./SideMenuUsers";
-// import SideMenuGraphs from "./SideMenuGraphs";
-// import SideMenuHistory from "./SideMenuHistory";
-// import SideMenuNotifications from "./SideMenuNotifications";
-
-const SideMenuUsers = React.lazy(() => import("./SideMenuUsers"));
-const SideMenuGraphs = React.lazy(() => import("./SideMenuGraphs"));
-const SideMenuHistory = React.lazy(() => import("./SideMenuHistory"));
-const SideMenuNotifications = React.lazy(() =>
-  import("./SideMenuNotifications")
-);
+import SideMenuUsers from "./SideMenuUsers";
+import SideMenuGraphs from "./SideMenuGraphs";
+import SideMenuHistory from "./SideMenuHistory";
+import SideMenuNotifications from "./SideMenuNotifications";
 
 class SideMenu extends Component {
   constructor(props) {
@@ -74,7 +66,7 @@ class SideMenu extends Component {
           currentOption={this.state.currentOption}
           handleOptionClick={this.handleOptionClick}
         />
-        <Suspense fallback={<Spinner></Spinner>}>{currentTab}</Suspense>
+        {currentTab}
       </nav>
     );
   }

@@ -21,9 +21,9 @@ const Dashboard = () => {
       <PageElementWrapper classId="calendar-time">
         <DashboardCalendarTime />
       </PageElementWrapper>
-      <PageElementWrapper classId="navigation">
+      {/* <PageElementWrapper classId="navigation">
         <Navigation />
-      </PageElementWrapper>
+      </PageElementWrapper> */}
     </div>
   );
 };

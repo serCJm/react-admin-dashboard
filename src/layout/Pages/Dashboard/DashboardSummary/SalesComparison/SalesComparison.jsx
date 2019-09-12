@@ -3,15 +3,43 @@ import ContainerDimensions from "react-container-dimensions";
 import PhoneComparisonGraph from "../../../../../components/graphs/PhoneComparisonGraph";
 import TotalOrdersTable from "./TotalOrdersTable";
 
-const phoneData = [];
-const days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
-for (let i = 0; i < days.length; i++) {
-  const newEntry = {};
-  newEntry.date = days[i];
-  newEntry.android = Math.floor(Math.random() * 10);
-  newEntry.apple = Math.floor(Math.random() * 10);
-  phoneData.push(newEntry);
-}
+const phoneData = [
+  {
+    date: "Mon",
+    android: 7,
+    apple: 2
+  },
+  {
+    date: "Tue",
+    android: 4,
+    apple: 8
+  },
+  {
+    date: "Wed",
+    android: 4,
+    apple: 8
+  },
+  {
+    date: "Thu",
+    android: 8,
+    apple: 8
+  },
+  {
+    date: "Fri",
+    android: 3,
+    apple: 8
+  },
+  {
+    date: "Sat",
+    android: 6,
+    apple: 5
+  },
+  {
+    date: "Sun",
+    android: 7,
+    apple: 0
+  }
+];
 
 const SalesComparison = () => {
   return (

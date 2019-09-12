@@ -5,11 +5,26 @@ import AgentsList from "./AgentsList";
 import AgentsPerformance from "./AgentsPerformance";
 
 const data = [
-  { name: "Abraham Lincoln", value: Math.floor(Math.random() * 100) },
-  { name: "Agatha Christie", value: Math.floor(Math.random() * 100) },
-  { name: "Albert Einstein", value: Math.floor(Math.random() * 100) },
-  { name: "Cleopatra", value: Math.floor(Math.random() * 100) },
-  { name: "Benjamin Franklin", value: Math.floor(Math.random() * 100) }
+  {
+    name: "Abraham Lincoln",
+    value: 72
+  },
+  {
+    name: "Agatha Christie",
+    value: 65
+  },
+  {
+    name: "Albert Einstein",
+    value: 11
+  },
+  {
+    name: "Cleopatra",
+    value: 18
+  },
+  {
+    name: "Benjamin Franklin",
+    value: 0
+  }
 ];
 
 const Tickets = () => {

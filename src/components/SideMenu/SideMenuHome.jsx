@@ -46,6 +46,7 @@ class SideMenuHome extends Component {
           placeholder="Search"
           className="search"
           onChange={this.handleSearchChange}
+          aria-label="search navigation menu"
         />
 
         <SideMenuHomePages

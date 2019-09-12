@@ -23,7 +23,7 @@ const ToggleMenu = props => {
               : "toggle-menu-btn"
           }
           onClick={props.handleActive}
-          areaLabel={item.id}
+          area-label={item.id}
         >
           {item.icon}
         </button>

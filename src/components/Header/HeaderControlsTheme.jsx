@@ -33,7 +33,7 @@ class HeaderControlsTheme extends Component {
               <button
                 className={`theme-btn ${theme}`}
                 onClick={this.displayThemePicker}
-                area-label="choose theme"
+                aria-label="choose theme"
               />
               {this.state.displayThemePicker ? (
                 <HeaderControlsThemePick

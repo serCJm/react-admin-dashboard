@@ -14,7 +14,7 @@ const DashboardSummaryMenu = ({ handleMenuClick, active }) => {
           active === "sales-graph" ? buttonClass + " active" : buttonClass
         }
         onClick={handleMenuClick}
-        area-label="sales-graph"
+        aria-label="sales-graph"
       >
         <FontAwesomeIcon icon={faChartBar} />
       </button>
@@ -22,7 +22,7 @@ const DashboardSummaryMenu = ({ handleMenuClick, active }) => {
         id="friends"
         className={active === "friends" ? buttonClass + " active" : buttonClass}
         onClick={handleMenuClick}
-        area-label="friends"
+        aria-label="friends"
       >
         <FontAwesomeIcon icon={faUserAlt} />
       </button>
@@ -30,7 +30,7 @@ const DashboardSummaryMenu = ({ handleMenuClick, active }) => {
         id="tickets"
         className={active === "tickets" ? buttonClass + " active" : buttonClass}
         onClick={handleMenuClick}
-        area-label="tickets"
+        aria-label="tickets"
       >
         <FontAwesomeIcon icon={faChartPie} />
       </button>

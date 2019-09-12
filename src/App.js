@@ -7,7 +7,6 @@ import Main from "./Main";
 const Lock = React.lazy(() => import("./layout/Pages/Lock"));
 const Login = React.lazy(() => import("./layout/Pages/Login"));
 const Signup = React.lazy(() => import("./layout/Pages/Signup"));
-//const Main = React.lazy(() => import("./Main"))
 
 class App extends Component {
   handleAuthentication = () => {

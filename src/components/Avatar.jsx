@@ -25,7 +25,11 @@ function Avatar() {
           </div>
           <AuthContext.Consumer>
             {({ handleAuthentication }) => (
-              <Link to="/lock" onClick={handleAuthentication}>
+              <Link
+                to="/lock"
+                onClick={handleAuthentication}
+                aria-label="Logout"
+              >
                 <span className={`avatar-lock ${theme}`}>
                   <FontAwesomeIcon icon={faCoffee} />
                 </span>

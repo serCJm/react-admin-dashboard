@@ -77,7 +77,12 @@ class HeaderControlsLang extends Component {
         onMouseEnter={this.handleLangMenuClick}
         onMouseLeave={this.handleLangMenuClick}
       >
-        <img src={currentFlag} alt="us flag" width="35" height="30" />
+        <img
+          src={currentFlag}
+          alt={this.state.current}
+          width="57"
+          height="30"
+        />
         {headerControlsLangMenu}
       </div>
     );

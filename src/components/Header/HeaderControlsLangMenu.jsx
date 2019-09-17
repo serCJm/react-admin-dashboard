@@ -22,7 +22,7 @@ const HeaderControlsLangMenu = ({
                 }
                 onClick={e => handleChooseLocaleClick(lang.title, e)}
               >
-                <img src={lang.flag} alt="us flag" width="35" height="30" />
+                <img src={lang.flag} alt="us flag" width="57" height="30" />
                 <h2 className="hover-menu-lang-title">{lang.title}</h2>
               </li>
             ))}

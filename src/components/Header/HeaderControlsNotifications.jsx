@@ -73,7 +73,11 @@ class HeaderControlsNotifications extends Component {
     }
     return (
       <div className="header-controls-item">
-        <NavLink className="header-controls-icon" to="/inbox">
+        <NavLink
+          className="header-controls-icon"
+          to="/inbox"
+          aria-label="Go to inbox"
+        >
           <span>
             <FontAwesomeIcon icon={faEnvelope} />
           </span>

@@ -51,7 +51,11 @@ class HeaderControlsProfile extends Component {
     }
     return (
       <div className="header-controls-item">
-        <NavLink className="header-controls-icon" to="/social">
+        <NavLink
+          className="header-controls-icon"
+          to="/social"
+          aria-label="Go to social page"
+        >
           <span>
             <FontAwesomeIcon icon={faUser} />
           </span>

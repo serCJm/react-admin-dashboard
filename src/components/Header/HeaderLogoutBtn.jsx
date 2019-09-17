@@ -15,6 +15,7 @@ const HeaderLogoutBtn = () => {
               className={`menu-btn ${theme}`}
               onClick={handleAuthentication}
               to="/lock"
+              aria-label="Logout"
             >
               <span className="menu-btn-icon">
                 <FontAwesomeIcon icon={faSignOutAlt} />

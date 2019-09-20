@@ -48,13 +48,13 @@ class App extends Component {
       );
     }
     return (
-      <Suspense fallback={<Spinner />}>
-        <BrowserRouter>
+      <BrowserRouter>
+        <Suspense fallback={<Spinner />}>
           <AuthContext.Provider value={this.state}>
             {content}
           </AuthContext.Provider>
-        </BrowserRouter>
-      </Suspense>
+        </Suspense>
+      </BrowserRouter>
     );
   }
 }

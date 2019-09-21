@@ -23,17 +23,17 @@ const Pages = ({ sideMenu }) => {
     <main className={mainClass}>
       <Route exact path="/" component={Dashboard} />
       <Suspense fallback={<Spinner></Spinner>}>
-        <Route exact path="/inbox" render={() => <Inbox />} />
-        <Route exact path="/mail" render={() => <Mail />} />
-        <Route exact path="/compose" render={() => <Compose />} />
-        <Route exact path="/gallery" render={() => <Gallery />} />
-        <Route exact path="/social" render={() => <Social />} />
-        <Route exact path="/posts" render={() => <Posts />} />
-        <Route exact path="/singlePost" render={() => <SinglePost />} />
-        <Route exact path="/invoice" render={() => <Invoice />} />
-        <Route exact path="/pricing-tables" render={() => <Pricing />} />
-        <Route exact path="/panels" render={() => <Panels />} />
-        <Route exact path="/line-series" render={() => <LineSeries />} />
+        <Route exact path="/inbox" component={Inbox} />
+        <Route exact path="/mail" component={Mail} />
+        <Route exact path="/compose" component={Compose} />
+        <Route exact path="/gallery" component={Gallery} />
+        <Route exact path="/social" component={Social} />
+        <Route exact path="/posts" component={Posts} />
+        <Route exact path="/singlePost" component={SinglePost} />
+        <Route exact path="/invoice" component={Invoice} />
+        <Route exact path="/pricing-tables" component={Pricing} />
+        <Route exact path="/panels" component={Panels} />
+        <Route exact path="/line-series" component={LineSeries} />
       </Suspense>
     </main>
   );

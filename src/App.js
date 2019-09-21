@@ -27,21 +27,14 @@ class App extends Component {
   render() {
     let content = null;
     if (this.state.authenticated) {
+      content = <Main></Main>;
+    } else {
       content = (
         <React.Fragment>
           <Switch>
             <Route exact path="/lock" component={Lock} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/signup" component={Signup} />
-            <Route path="/" component={Main} />
-          </Switch>
-        </React.Fragment>
-      );
-    } else {
-      content = (
-        <React.Fragment>
-          <Switch>
-            <Route exact path="/lock" component={Lock} />
             <Route path="/" component={Login} />
           </Switch>
         </React.Fragment>

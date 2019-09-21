@@ -30,23 +30,21 @@ class App extends Component {
       content = <Main></Main>;
     } else {
       content = (
-        <React.Fragment>
+        <Suspense fallback={<Spinner />}>
           <Switch>
             <Route exact path="/lock" component={Lock} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/signup" component={Signup} />
             <Route path="/" component={Login} />
           </Switch>
-        </React.Fragment>
+        </Suspense>
       );
     }
     return (
       <BrowserRouter>
-        <Suspense fallback={<Spinner />}>
-          <AuthContext.Provider value={this.state}>
-            {content}
-          </AuthContext.Provider>
-        </Suspense>
+        <AuthContext.Provider value={this.state}>
+          {content}
+        </AuthContext.Provider>
       </BrowserRouter>
     );
   }

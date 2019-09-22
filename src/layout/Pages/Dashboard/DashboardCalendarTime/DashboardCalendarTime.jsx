@@ -1,4 +1,4 @@
-import React, { useState, Component } from "react";
+import React, { useState } from "react";
 import Calendar from "react-calendar";
 import Time from "./Time";
 import TimeToggle from "./TimeToggle";

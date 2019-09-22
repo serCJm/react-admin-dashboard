@@ -14,7 +14,7 @@ class HeaderMenuBtn extends Component {
   render() {
     return (
       <button
-        className="menu-btn"
+        className="menu-btn sidemenu-btn"
         onMouseEnter={this.handleHover}
         onMouseLeave={this.handleHover}
         style={

@@ -5,14 +5,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrain } from "@fortawesome/free-solid-svg-icons";
 
 const HeaderTopMenu = props => {
-  let sideMenuClass;
-  let headerControls = null;
-  if (props.mobile) {
-    sideMenuClass = props.sideMenu ? " sidemenu-open" : "";
-  } else {
-    sideMenuClass = " sidemenu-open";
-    headerControls = <HeaderControls />;
-  }
+  let sideMenuClass = props.sideMenu ? " sidemenu-open" : "";
+
   return (
     <div className={`header-top-menu${sideMenuClass}`}>
       {props.headerMenuBtn}
@@ -21,7 +15,7 @@ const HeaderTopMenu = props => {
           <FontAwesomeIcon icon={faTrain} transform="left-8" />
           {props.logo}
         </h1>
-        {headerControls}
+        <HeaderControls />
       </div>
       <HeaderLogoutBtn />
     </div>

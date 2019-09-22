@@ -53,12 +53,7 @@ class SideMenu extends Component {
       );
     }
 
-    let sideMenuClass;
-    if (this.props.mobile) {
-      sideMenuClass = this.props.sideMenu ? " open" : "";
-    } else {
-      sideMenuClass = " open";
-    }
+    let sideMenuClass = this.props.sideMenu ? " open" : "";
     return (
       <nav className={`side-menu${sideMenuClass}`}>
         <Avatar />

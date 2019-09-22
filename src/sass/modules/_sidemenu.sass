@@ -25,6 +25,8 @@
     width: 0
     transition: all .5s
     font-size: 1.5rem
+    @media #{$large-screen}
+        width: $sidemenuWidth
     &.open
         width: $sidemenuWidth
     .avatar

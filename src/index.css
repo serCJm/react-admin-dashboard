@@ -408,6 +408,11 @@ p {
   justify-content: space-between;
   transition: all 0.5s;
 }
+@media screen and (min-width: 800px) {
+  .header-top-menu {
+    margin-left: 26rem;
+  }
+}
 .header-top-menu.sidemenu-open {
   margin-left: 26rem;
 }
@@ -434,6 +439,11 @@ p {
 }
 .header-top-menu .menu-btn.theme-bay:hover {
   background: #6ea4a9;
+}
+@media screen and (min-width: 800px) {
+  .header-top-menu .menu-btn.sidemenu-btn {
+    display: none;
+  }
 }
 .header-top-menu .menu-btn-icon {
   display: flex;
@@ -467,8 +477,13 @@ p {
   }
 }
 .header-top-menu .header-controls {
-  display: flex;
-  height: 100%;
+  display: none;
+}
+@media screen and (min-width: 800px) {
+  .header-top-menu .header-controls {
+    display: flex;
+    height: 100%;
+  }
 }
 .header-top-menu .header-controls-item {
   display: flex;
@@ -1026,6 +1041,11 @@ input, textarea {
   width: 0;
   transition: all 0.5s;
   font-size: 1.5rem;
+}
+@media screen and (min-width: 800px) {
+  .side-menu {
+    width: 26rem;
+  }
 }
 .side-menu.open {
   width: 26rem;

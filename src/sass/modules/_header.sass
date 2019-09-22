@@ -5,12 +5,17 @@
     display: flex
     justify-content: space-between
     transition: all .5s
+    @media #{$large-screen}
+        margin-left: $sidemenuWidth
     &.sidemenu-open
         margin-left: $sidemenuWidth
     .menu-btn
         flex: 0 6rem
         @include flexCenter
         @include themes-lighten-hover(2%)
+        &.sidemenu-btn
+            @media #{$large-screen}
+                display: none
         &-icon
             display: flex
             flex-direction: column
@@ -35,8 +40,10 @@
             padding-left: 2rem
             overflow: visible
     .header-controls
-        display: flex
-        height: 100%
+        display: none
+        @media #{$large-screen}
+            display: flex
+            height: 100%
         &-item
             display: flex
             position: relative
